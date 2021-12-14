@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+			<meta name="theme-color" content="black">
+			<link rel="shortcut icon" href="https://raw.githubusercontent.com/RupanSamanta/www.dls2022friendlyseries.com/main/main_logo.ico" type="image/x-icon">
+			<title>DLS 2022 FRIENDLY SERIES</title>
+</head>
+<style>
+				@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+				html{scroll-behavior: smooth;}
+			body
+			{
+						background: linear-gradient(-135deg, #7500b6, #1f00cd);	
+						background-repeat: no-repeat;
+						color: ghostwhite;
+						margin: 0;
+						font-family: 'Outfit', san-serif;						
+			}
+			
+			*{transition-duration: 0.3s; text-transform: none}
+			header
+			{
+						width: 100%;
+						height: auto;
+						line-height: 60px;
+						background: linear-gradient(90deg,magenta, yellow);
+						text-align: left;
+						font-size: 22px;
+						font-weight: 1000;
+						white-space: nowrap;
+						padding: 0 0 4px 0;
+			}
+			header img
+			{
+						width: 60px;
+						height: 60px;
+						vertical-align: middle;
+			}
+			header div
+			{
+						height: 50px;
+						background: black;
+						line-height: 50px;
+						padding: 0 5px;
+			}
+			header .series-name
+			{
+						display: flex;
+						flex-wrap: nowrap;
+						justify-content: space-between;
+						align-items: center;
+						padding: 0 0 10px 0;
+			}
+			.header-button
+			{
+						width: 25px;
+						height: 25px;
+						float: right;
+						background: rgb(255,255,255,0.1);
+						border: solid 1px yellow;
+						position: absolute; 
+					 top: 0;
+					 right: 0;
+						margin: 15px 10px 0 0;											 						
+			}
+			.header-button div
+			{
+						width: 15px;
+						height: 2px;
+						background: yellow;
+						position: absolute;			
+					 top: 0;
+					 right: 0;
+						margin: 8px 5px 8px 0;									
+			}
+			.header-button div:nth-child(2)
+		 {
+						margin: 15px 5px 5px 0;						
+			}
+			header .drop-list 
+			{		
+						height: 0;	
+						opacity: 0;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: space-around;
+						align-items: center;		
+						border-top: solid 1px magenta;
+			}
+			.drop-list div
+		 {
+		 			 min-width: 100px;
+		 			 width: auto;
+		 			 height: auto;
+		 			 font-size: 12px;
+		 			 text-align: center;
+		 			 margin: 5px auto;
+		 			 line-height: 25px;
+		 			 padding: 0 5px;
+		 			 border-bottom: solid 1px black;
+		 			 user-select: none;
+		 			 text-decoration: none;
+		 			 color: ghostwhite;
+		 			 display: none;
+			}					
+			
+			.drop-list a{text-decoration: none}
+			.drop-list div:hover
+			{
+						border-bottom-color: yellow;
+						color: yellow;
+			}
+			section
+			{
+						margin: 30px 0;
+						border-top: solid 2px yellow;
+						border-bottom: solid 2px yellow;
+			}
+			main{padding: 0 5px}
+			p
+			{
+						font-size: 18px;
+						font-weight: 800;
+						background: linear-gradient(30deg, rgba(255,255,0,0.4), transparent);
+						border-bottom: solid 2px yellow;
+						padding: 5px;
+			}
+		 .title
+			{
+						width: 100%;
+						height: 40px;
+						display: inline-block;
+						line-height: 40px;
+						text-align: center;
+						font-size: 20px;
+						font-weight: 500;
+						background: rgba(0,0,0,1);
+						font-weight: 1000;
+			}
+			.box
+			{
+						width: 100%;
+						height: auto;
+						background: rgba(0,0,0,0.2);
+			}
+			.logo, .rating
+			{
+						width: 100%;
+						height: auto;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: rgba(0,0,0,.2);
+						padding: 10px 0;
+			}
+			.logo div, .rating div
+			{
+						width: 50%;
+						height: auto;
+					 display: flex;
+					 justify-content: center;
+					 align-items: center;
+					 text-align: center;
+					 padding: 5px 0;
+			}
+			.logo img
+			{
+						margin: 5px 0;
+			}
+			.rating div:nth-child(2)
+			{
+						background: rgba(255,255,255,0.2);
+			}
+			figcaption
+			{
+						line-height: 20px;
+						background: rgba(255,255,255,0.2);
+						text-align: center;
+						padding: 4px;
+			}
+			figure img
+			{
+						width: 120px;
+						height: 120px;
+			}
+			.container
+			{
+						width: 100%;
+					font-size: 14px;
+		  		background: rgba(0,0,0,.1);						
+		  		border-bottom: solid 1px transparent;		  		
+			}
+			.team-logo
+			{
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						background: rgba(0,0,0,.6);
+			}
+			.team-logo div
+			{
+						margin: 5px 15px;
+			}
+			.team-logo img
+			{
+						width: 30px;
+						height: 30px;
+						vertical-align: middle;
+			}
+			.details-container
+			{
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+			}
+			.details 
+			{
+						width: 100%;
+						display: flex;
+						text-align: center;
+			}
+			.details div
+			{
+						margin: 5px auto;
+						padding: 5px 0;
+						width: 10%;
+			}
+			
+			.details div:nth-of-type(even)
+			{						
+						width: 40%;
+						background: rgba(0,0,0,.3);
+			}
+			.details:nth-child(1) div, .details:last-child div
+			{	
+						width: 100%;
+						background: rgba(0,0,0,.3);
+						margin: 0 auto;
+			}
+			.table-content
+			{
+						width: 100%;
+						display: flex;
+						justify-content: center;
+			}
+			.table-content div
+			{
+						width: 25%;
+						height: 40px;
+						text-align: center;
+						line-height: 40px;
+						background: rgba(0,0,0,0.6);
+						border-top: solid 1px transparent;
+						font-size: 16px;
+						user-select: none;
+			}
+		.stats-table
+	  	{	
+						width: 100%;
+						border-collapse: collapse;
+			}
+			.stats-table td
+			{
+						width: 34%;
+						text-align: center;
+						padding: 10px 0;
+			}
+			.stats-table td:nth-child(1), .stats-table td:nth-child(2)
+			{
+						width: 16%;						
+			}
+		.stats-table tr:nth-child(1)
+			{
+						background: rgba(0,0,0,.3);
+			}
+			.stats-table tr:nth-child(even)
+			{
+						background: rgba(255,255,255,.1);
+			}
+			.stats-table img
+			{
+						width: 25px;
+						height: 25px;
+						vertical-align: middle;
+			}
+			.fixture-body
+			{
+						width: 100%; 
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-wrap: wrap;
+		 }
+			.fixture-container
+			{ 			
+						width: 350px;
+						height: auto;
+						text-align: center;	
+						margin: 50px auto 20px auto;
+						border-top: solid 2px magenta;
+						background: rgba(255,255,255,0.1);
+						padding: 5px 0;
+					font-size: 12px;
+					display: none;
+			}
+			.fixture-container .match
+			{
+						width: 50%;
+						background: #1e0091;
+						border: solid 2px magenta;
+						border-radius: 15px;
+						font-size: 15px;
+						margin: -18px auto 5px auto;
+			}
+			.series-table
+			{
+						width: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						user-select: none;
+			}
+			.series-table div
+			{
+						width: 33.3%;		
+						border-top: solid 1px transparent;	
+						height: 40px;
+						text-align: center;
+						line-height: 40px;
+						background: rgba(0,0,0,0.4);
+						border-top: solid 1px transparent;
+						font-size: 16px;
+			}
+			.series-table div:hover
+			{
+						border-top-color: magenta;
+						background: transparent;
+			}
+			.logo-score
+			{
+						width: 100%;
+						display: flex;
+			}		
+			.logo-score figcaption
+			{
+						background: transparent;
+			}	
+			.logo-score div
+			{
+						width: 20%;
+						display: flex;
+						align-items: center;
+						justify-content: center;		
+			}
+			.logo-score div:nth-child(1), .logo-score div:last-child
+			{
+						font-size: 15px;
+			}
+			.logo-score div:nth-child(3)
+			{
+						font-size: 20px;
+						color: magenta;
+						font-weight: 1000;
+			}
+			.logo-score img
+			{
+						width: 50px;
+						height: 50px;
+			}
+			span
+			{
+						display: inline-block;
+						width: 80%;
+						padding: 0 0 1px 0;						
+						border: solid 2px magenta;
+						background: rgba(255,255,255,0.2);						
+						border-radius: 20px;
+						margin: 0 -2px;
+						color: ghostwhite;
+						font-weight: normal;
+						font-size: 15px;
+			}
+			.match-centre
+			{
+						width: 50%;
+						border: solid 2px magenta;
+						background: #1e0091;
+						margin: 10px auto;
+						padding: 2px;
+						border-radius: 20px;
+						display: ;
+			}
+			.match-centre:hover
+			{
+						transform: scale(1.1);
+			}
+			.gallery-table
+			{
+						width: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						user-select: none;
+			}
+			.gallery-table div
+			{
+						width: 50%;		
+						border-top: solid 1px transparent;	
+						height: 40px;
+						text-align: center;
+						line-height: 40px;
+						background: rgba(0,0,0,0.6);
+						border-top: solid 1px transparent;
+						font-size: 16px;
+			}
+			.gallery-table div:hover
+			{
+						border-top-color: magenta;
+						background: rgba(0,0,0,0.4);
+			}
+			.gallery-photo, .gallery-video
+			{
+						width: 100%;
+						padding: 5px 0;
+						background: rgba(0,0,0,0.4);
+			}
+			.gallery-photo figure, .gallery-video figure
+			{
+						width: 100%;
+					 height: auto;
+						margin: 0;
+						padding: 0;
+						border: solid 1px;
+						border-color: magenta magenta yellow yellow;
+			}
+		 .gallery-photo figcaption, .gallery-video figcaption	
+		 {
+		 			width: 100%;
+		 			padding: 5px 0;
+		 			margin: 0;
+		 			font-size: 13px;
+		 }
+			.gallery-photo div, .gallery-video div
+		 {
+		 			width: 90%;
+		 		 margin: 15px auto;
+		 }
+		 .gallery-photo img, .gallery-video video
+			{
+						width: 100%;
+						height: auto;
+						box-shadow: 0 0 2px aqua;						
+			}
+		 
+			footer
+			{
+						width: 100%;
+						background: linear-gradient(90deg, magenta, yellow);
+						text-align: center;
+						padding: 4px 0 0 0;
+			}
+			footer .powered-by, footer .copyright, footer .game
+			{
+						width: 100%;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						flex-wrap: wrap;
+						padding: 15px 0;
+						background: black;
+			}
+			.game{padding: 0 0 30px 0}
+			.copyright{padding: 0}
+			.powered-by div
+			{
+						margin: 0 0 20px 0;
+						min-width: 150px;
+						text-align: center;
+			}
+			.powered-by img,.game img
+			{
+						width: 100px;
+						height: auto;
+						vertical-align: middle;
+			}
+			.goTop
+			{		
+						width: 40px;
+						position: fixed;
+						bottom: 0;
+						right: 0;
+						margin: 0 20px 20px 0;
+						border: solid 1px magenta;
+						background: rgba(0,0,0,.5);
+						backdrop-filter: blur(5px);
+						text-align: center;						
+						padding: 2px;
+						font-size: 30px;
+						font-weight: 1000;
+						box-shadow: 0 0 5px magenta;
+			}
+			.goTop:hover
+			{
+						border-color: yellow;
+						box-shadow: 0 0 5px yellow;
+			}
+</style>
+<body>	
+			<header>
+						<div class="series-name">
+									<div><img src="https://i.imgur.com/VwPqe2f.png" alt="dls 22 friendly series">DLS 22 FRIENDLY SERIES</div>
+									<div class="header-button">
+												<div></div><div></div>
+									</div>
+						</div>
+						<div class="drop-list">
+							 <a href="#teams"><div>TEAMS</div></a>
+							 <a href="#head2head"><div>HEAD TO HEAD</div></a>
+							 <a href="#fixtures"><div>FIXTURES & RESULTS</div></a>
+								<a href="#stats"><div>STATISTICS</div></a>							
+								<a href="#gallery"><div>GALLERY</div></a>
+						</div>
+			</header>
+			<main>
+						<p>SEASON 1</p>
+				<section id="teams">
+						<div class="box">
+									<div>
+												<div class="title">TEAMS</div>
+									</div>
+									<div class="logo"> 
+												<div>
+															<figure>
+																		<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																		<figcaption>RS FOOTBALL CLUB</figcaption>
+															</figure>
+												</div>
+												<div>
+															<figure>
+																		<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																		<figcaption>ATK MOHUNBAGAN FC INDIA</figcaption>
+															</figure>
+												</div>												
+									</div>	
+									<div class="rating">
+												<div>
+															95.1<br>
+												⭐⭐⭐⭐⭐
+												</div>
+												<div>TEAM RATING</div>
+												<div>
+															96<br>
+											⭐⭐⭐⭐⭐
+												</div>
+									</div>
+									<div class="rating">
+												<div>
+															37
+												</div>
+												<div>SQUAD SIZE</div>
+												<div>
+															40
+												</div>
+									</div>
+									<div class="rating">
+												<div>
+															11
+												</div>
+												<div>TIER</div>
+												<div>
+															10
+												</div>
+									</div>				
+									<div class="rating">
+												<div>
+															LEGENDARY
+												</div>
+												<div>DIVISION</div>
+												<div>
+															LEGENDARY
+												</div>
+									</div>														
+				</section>
+				<!-- teams -->
+				
+			<section id="head2head">
+				<div class="box">
+							<div>
+										<div class="title">HEAD TO HEAD</div>
+							</div>
+							<div class="container">
+										<div class="team-logo">
+													<div>
+																<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc"> RFC
+													</div>
+													<div>
+															 AMB <img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+													</div>
+										</div>
+										<div class="details-container">	
+													<div class="details">	
+																<div>Played 0</div>															
+													</div>	
+													<div class="details">	
+														 <div>0</div>
+														 <div>Win</div>
+														 <div>0</div>
+													</div>	
+													<div class="details">	
+															<div>0</div>		
+															<div>Draw</div>
+															<div>0</div>											
+													</div>	
+													<div class="details">	
+																<div>0</div>
+																<div>Loss</div>
+																<div>0</div>										
+													</div>	
+													<div class="details">	
+																<div>0</div>
+																<div>Goal Scored</div>
+																<div>0</div>										
+													</div>	
+													<div class="details">	
+																<div>0</div>
+																<div>Goal Conceded</div>
+																<div>0</div>										
+													</div>	
+													<div class="details">	
+																<div>0</div>
+																<div>Cleansheet</div>
+																<div>0</div>										
+													</div>	
+													<div class="details">	
+																<div>Recent Result N/A</div>															
+													</div>									
+										</div><!-- details-container -->
+							</div><!-- container -->
+				</div>								 								
+		</section>
+		<!-- Head to Head -->		
+		
+		<section id="fixtures">
+					<div class="box">
+							<div>
+										<div class="title">FIXTURES & RESULTS</div>
+							</div>
+							<div class="container" style="background: rgba(0,0,0,.4)">
+										<div class="series-table">
+													<div>Series 1</div>
+													<div>Series 2</div>
+													<div>Series 3</div>
+								  </div>
+					<div class="fixture-body">				
+					<!--  									MATCH 1 												-->
+										<div class="fixture-container">
+													<div class="match">Match 1</div>
+													<div>10th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+							
+			<!-- 									MATCH 2									 -->			
+												<div class="fixture-container">
+													<div class="match">Match 2</div>
+													<div>10th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																					<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+				
+	<!-- 									MATCH 3									 -->						
+												<div class="fixture-container">
+													<div class="match">Match 3</div>
+													<div>10th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img 																						src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+		
+		<!-- 						MATCH 4									 -->								
+												<div class="fixture-container">
+													<div class="match">Match 4</div>
+													<div>10th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>												
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+			
+			
+			<!--						 MATCH 5 						-->							
+												<div class="fixture-container">
+													<div class="match">Match 5</div>
+													<div>10th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+					<!--						 MATCH 6						-->							
+												<div class="fixture-container">
+													<div class="match">Match 6</div>
+													<div>10th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+
+<!-- SERIES 2 -->
+								<div class="fixture-container">
+													<div class="match">Match 1</div>
+													<div>15th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+							
+			<!-- 									MATCH 2									 -->			
+												<div class="fixture-container">
+													<div class="match">Match 2</div>
+													<div>16th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+				
+	<!-- 									MATCH 3									 -->						
+												<div class="fixture-container">
+													<div class="match">Match 3</div>
+													<div>17th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="rfc">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="atkmb">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+		
+		<!-- 						MATCH 4									 -->								
+												<div class="fixture-container">
+													<div class="match">Match 4</div>
+													<div>18th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+			
+			
+			<!--						 MATCH 5 						-->							
+												<div class="fixture-container">
+													<div class="match">Match 5</div>
+													<div>17th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="rfc">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="atkmb">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+					<!--						 MATCH 6						-->							
+												<div class="fixture-container">
+													<div class="match">Match 6</div>
+													<div>18th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+
+<!-- SERIES 3 -->
+<div class="fixture-container">
+													<div class="match">Match 1</div>
+													<div>20th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+							
+			<!-- 									MATCH 2									 -->			
+												<div class="fixture-container">
+													<div class="match">Match 2</div>
+													<div>20th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="rfc">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="atkmb">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+				
+	<!-- 									MATCH 3									 -->						
+												<div class="fixture-container">
+													<div class="match">Match 3</div>
+													<div>20th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+		
+		<!-- 						MATCH 4									 -->								
+												<div class="fixture-container">
+													<div class="match">Match 4</div>
+													<div>20th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="rfc">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="atkmb">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+			
+			
+			<!--						 MATCH 5 						-->							
+												<div class="fixture-container">
+													<div class="match">Match 5</div>
+													<div>20th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>RS City Stadium</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->
+					<!--						 MATCH 6						-->							
+												<div class="fixture-container">
+													<div class="match">Match 6</div>
+													<div>20th December, 2021</div>
+													<div class="logo-score">
+																<div>
+																			<figure>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="rfc">
+																						<figcaption>AMB</figcaption>
+																			</figure>
+																</div>
+																<div></div>
+																<div>
+																-<span>vs</span>-
+																</div>
+																<div></div>
+																<div>
+																			<figure>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="atkmb">
+																						<figcaption>RFC</figcaption>
+																			</figure>
+																</div>
+													</div><!-- lscore score -->
+													<div>Juva Bharati Krirangan</div>
+													<div class="match-centre">
+																Match Centre
+													</div>
+										</div><!-- fixture container -->				
+									</div>											
+							</div><!-- container -->
+					</div>
+		</section><!-- fixture container -->
+		
+		<section id="stats"><!-- stats -->
+				<div class="box">
+							<div>
+										<div class="title">STATISTICS</div>
+							</div>
+							<div class="table-content">
+										<div>Goals</div>
+										<div>Assists</div>
+										<div>Yellow Card</div>
+										<div>Red Card</div>
+							</div>
+							<div class="container">
+													<table class="stats-table">
+																<tr>
+																			<td>Pos.</td>
+																			<td>Team</td>
+																			<td>Player</td>
+																			<td>Goals</td>
+																</tr>
+																<tr>
+																			<td>1</td>
+																			<td>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+																<tr>
+																			<td>2</td>
+																			<td>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+													</table>
+													<table class="stats-table">
+																<tr>
+																			<td>Pos.</td>
+																			<td>Team</td>
+																			<td>Player</td>
+																			<td>Assists</td>
+																</tr>
+																<tr>
+																			<td>1</td>
+																			<td>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+																<tr>
+																			<td>2</td>
+																			<td>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+													</table>
+													<table class="stats-table">
+																<tr>
+																			<td>Pos.</td>
+																			<td>Team</td>
+																			<td>Player</td>
+																			<td>Yellow Card</td>
+																</tr>
+																<tr>
+																			<td>1</td>
+																			<td>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+																<tr>
+																			<td>2</td>
+																			<td>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+													</table>
+													<table class="stats-table">
+																<tr>
+																			<td>Pos.</td>
+																			<td>Team</td>
+																			<td>Player</td>
+																			<td>Red Card</td>
+																</tr>
+																<tr>
+																			<td>1</td>
+																			<td>
+																						<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+																<tr>
+																			<td>2</td>
+																			<td>
+																						<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">
+																			</td>
+																			<td>Lionel Messi</td>
+																			<td>3</td>
+																</tr>
+													</table>
+							</div><!-- container -->
+			 </div>								 								
+		</section>
+		<!-- Stats -->
+		
+		<section id="gallery"><!-- gallery -->
+				<div class="box">
+							<div>
+										<div class="title">GALLERY</div>
+							</div>							
+							<div class="container">
+							<div class="gallery-table">
+										<div>Photos</div>
+										<div>Videos</div>
+							</div>
+										<div class="gallery-photo">
+													<div>
+																<figure>
+																			<img src="/storage/emulated/0/Program/friendseries/1.png" alt="">
+																			<figcaption>Madrid Stadium</figcaption>
+																</figure>																
+													</div>
+													<div>
+																<figure>
+																			<img src="/storage/emulated/0/Program/friendseries/1.png" alt="">
+																			<figcaption>Stadium view of the match between Real Madrid and RS Football Club</figcaption>
+																</figure>												 			
+													</div>
+										</div>
+										<div class="gallery-video">
+													<div>
+																<figure>
+																			<video controls preload="auto" poster="/storage/emulated/0/Program/friendseries/banner.jpg">
+																			<source src="/storage/emulated/0/Program/friendseries/video~2.mp4" type="video/mp4">																		
+																</video>
+																			<figcaption>
+																					DLS 2022 FRIENDLY SERIES SEASON 1 <br> SERIES 1 MATCH 1 <br> Goal of The Match - Lionel Messi	
+																			</figcaption>
+																</figure>
+													</div>
+													<div>
+																<figure>
+																			<video controls preload="auto" poster="/storage/emulated/0/Program/friendseries/series 1 match 2.png">
+																			<source src="/storage/emulated/0/Program/friendseries/video~2.mp4" type="video/mp4">																		
+																</video>
+																			<figcaption>
+																						DLS 2022 FRIENDLY SERIES SEASON 1 <br> SERIES 1 MATCH 2 <br> Goal of The Match - Kylian Mbappe
+																			</figcaption>
+																</figure>																
+													</div>
+										</div>
+						 </div>
+				</div>
+		 </section><!-- gallery -->
+		 <div class="goTop">&#8593;</div>
+			</main>
+		
+	  <footer>
+						<!-- game -->
+						<div class="title">GAMING PARTNER</div>
+						<div class="game">
+									<img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022">
+						</div>
+						<div class="title">POWERED BY</div>
+						<div class="powered-by">
+						  	<div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo -->
+									<div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel -->
+									<div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit -->
+									<div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome -->
+									<div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab -->
+									<div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur -->
+									<div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos -->
+									<div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub -->
+									<div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut -->
+									<div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder -->
+						</div>
+						<div class="copyright">&copy;rupan 2021</div>
+			</footer>
+</body>
+<script>
+			var drop_list = document.querySelector(".drop-list");
+			var drop_list_item = document.querySelectorAll("div.drop-list div");
+			var button_div = document.querySelectorAll("div.header-button div");
+			var d=0;
+document.querySelector(".header-button").onclick = function()
+{
+			if(d%2==0)
+			{												
+						drop_list.style.opacity = "1";	
+						drop_list.style.height = "70px";
+					  for(var i = 0; i<drop_list_item.length; i++)
+						{
+									drop_list_item[i].style.height = "25px";
+									drop_list_item[i].style.display = "block";
+						}
+						button_div[0].style.transform = "translateY(3px) rotateZ(47deg)";
+						button_div[0].style.background = "magenta";
+						button_div[1].style.transform = "translateY(-4px) rotateZ(-47deg)";
+					 button_div[1].style.background = "magenta";	document.querySelector(".header-button").style.borderColor = "magenta";
+			}
+			else
+			{
+						drop_list.style.opacity = "0";
+						for(var i = 0; i<drop_list_item.length; i++)
+						{
+									drop_list_item[i].style.height = "0";
+									drop_list_item[i].style.display = "none";
+						}
+						button_div[0].style.transform = "translateY(0) rotateZ(0)";
+					 button_div[0].style.background = "yellow";
+						button_div[1].style.transform = "translateY(0) rotateZ(0)";
+						button_div[1].style.background = "yellow";	document.querySelector(".header-button").style.borderColor = "yellow";
+						drop_list.style.opacity = "0";
+						drop_list.style.height = "0";
+			}
+			drop_list.style.transitionDuration = ".3s";					
+			button_div[0].style.transitionDuration = "0.4s";	
+			button_div[1].style.transitionDuration = "0.4s";	
+	  	document.querySelector(".header-button").style.transitionDuration = "0.23s";
+			d++;
+}
+/*              Drop Down List            */
+
+
+
+/*             Statistics Buttons Controls      */
+var stats = document.querySelectorAll("div.table-content div");
+var stats_table = document.getElementsByClassName("stats-table");
+
+stats[0].style.background = "rgba(0,0,0,0.4)";
+stats[0].style.borderTopColor = "magenta";
+for(var i = 0; i<stats_table.length; i++)
+stats_table[i].style.display = "none";
+stats_table[0].style.display = "table";
+
+stats[0].onclick = function() 
+{
+			for(var i = 0; i<stats.length; i++)
+			{
+						if(i==0)
+						{
+									stats[i].style.background = "rgba(0,0,0,0.4)";
+							  	stats[i].style.borderTopColor = "magenta";
+						}
+						else
+						{
+									stats[i].style.background = "rgba(0,0,0,0.6)";
+							  	stats[i].style.borderTopColor = "transparent";
+						}
+			}
+			for(var i = 0; i<stats_table.length; i++)
+						if(i==0)
+									stats_table[i].style.display = "table";
+						else
+									stats_table[i].style.display = "none";
+}
+
+stats[1].onclick = function() 
+{
+			for(var i = 0; i<stats.length; i++)
+			{
+						if(i==1)
+						{
+									stats[i].style.background = "rgba(0,0,0,0.4)";
+							  	stats[i].style.borderTopColor = "magenta";
+						}
+						else
+						{
+									stats[i].style.background = "rgba(0,0,0,0.6)";
+							  	stats[i].style.borderTopColor = "transparent";
+						}
+			}
+			for(var i = 0; i<stats_table.length; i++)
+						if(i==1)
+									stats_table[i].style.display = "table";
+						else
+									stats_table[i].style.display = "none";
+}
+
+stats[2].onclick = function() 
+{
+			for(var i = 0; i<stats.length; i++)
+			{
+						if(i==2)
+						{
+									stats[i].style.background = "rgba(0,0,0,0.4)";
+							  	stats[i].style.borderTopColor = "magenta";
+						}
+						else
+						{
+									stats[i].style.background = "rgba(0,0,0,0.6)";
+							  	stats[i].style.borderTopColor = "transparent";
+						}
+			}
+			for(var i = 0; i<stats_table.length; i++)
+						if(i==2)
+									stats_table[i].style.display = "table";
+						else
+									stats_table[i].style.display = "none";
+}
+
+stats[3].onclick = function() 
+{
+			for(var i = 0; i<stats.length; i++)
+			{
+						if(i==3)
+						{
+									stats[i].style.background = "rgba(0,0,0,0.4)";
+							  	stats[i].style.borderTopColor = "magenta";
+						}
+						else
+						{
+									stats[i].style.background = "rgba(0,0,0,0.6)";
+							  	stats[i].style.borderTopColor = "transparent";
+						}
+			}
+			for(var i = 0; i<stats_table.length; i++)
+						if(i==3)
+							{stats_table[i].style.display = "table";
+							stats_table[i].style.width = "100%";}
+						else
+									stats_table[i].style.display = "none";
+}
+			
+ /*           Statistics Buttons Controls       */
+
+
+ 
+ /*												 Fixtures & Results 									*/
+
+ var i = 0; 
+ var fixture = document.querySelectorAll("div.series-table div");
+ fixture[0].style.background = "transparent";
+ fixture[0].style.borderTopColor = "magenta";
+ var fixture_list = document.getElementsByClassName("fixture-container");
+ while(i<6) 
+ {
+ 			fixture_list[i].style.display = "block";
+ 			i++;
+ }
+ 
+ fixture[0].onclick = function() 
+ {
+ 			for(var i = 0; i<fixture.length; i++)
+ 			{
+ 						if(i==0)
+ 						{
+ 									fixture[i].style.background = "transparent";
+								 fixture[i].style.borderTopColor = "magenta";
+						}
+						else
+						{
+									fixture[i].style.background = "rgba(0,0,0,.4)";
+								 fixture[i].style.borderTopColor = "transparent";								 
+						}
+ 			}
+ 			for(var i = 0; i<fixture_list.length; i++) 
+ 			{
+ 						if(i<=5)
+ 									fixture_list[i].style.display = "block";
+ 						else
+									fixture_list[i].style.display = "none";
+ 			}
+ }
+ 
+ fixture[1].onclick = function() 
+ {
+ 			for(var i = 0; i<fixture.length; i++)
+ 			{
+ 						if(i==1)
+ 						{
+ 									fixture[i].style.background = "transparent";
+								 fixture[i].style.borderTopColor = "magenta";
+						}
+						else
+						{
+									fixture[i].style.background = "rgba(0,0,0,.4)";
+								 fixture[i].style.borderTopColor = "transparent";								 
+						}
+ 			}
+			for(var i = 0; i<fixture_list.length; i++) 
+ 			{
+ 						if(i>=6 && i<=11)
+ 									fixture_list[i].style.display = "block";
+ 						else
+									fixture_list[i].style.display = "none";
+ 			}
+ }
+ 
+ fixture[2].onclick = function() 
+ {
+ 			for(var i = 0; i<fixture.length; i++)
+ 			{
+ 						if(i==2)
+ 						{
+ 									fixture[i].style.background = "transparent";
+								 fixture[i].style.borderTopColor = "magenta";
+						}
+						else
+						{
+									fixture[i].style.background = "rgba(0,0,0,.4)";
+								 fixture[i].style.borderTopColor = "transparent";								 
+						}
+ 			}
+ 		for(var i = 0; i<fixture_list.length; i++) 
+ 			{
+ 						if(i>=12 && i<=17)
+ 									fixture_list[i].style.display = "block";
+ 						else
+									fixture_list[i].style.display = "none";
+ 			}
+ }
+ 
+ /*												 Fixtures & Results 									*/
+ 
+ var gallery_list = document.querySelectorAll("div.gallery-table div");
+ var photo = document.querySelectorAll("div.gallery-photo div");
+ var video = document.querySelectorAll("div.gallery-video div");
+ 
+ gallery_list[0].style.background = "rgba(0,0,0,0.4)";
+ gallery_list[0].style.borderTopColor = "magenta";
+ for(var i = 0; i<video.length; i++)
+ 			video[i].style.display = "none";
+ 			
+ gallery_list[0].onclick = function() 
+ {
+ 			for(var i = 0; i<gallery_list.length; i++)
+ 			{
+ 						if(i==0)
+ 						{
+ 									 gallery_list[i].style.background = "rgba(0,0,0,0.4)";
+ 									gallery_list[i].style.borderTopColor = "magenta";
+ 						}
+ 						else
+						{
+									 gallery_list[i].style.background = "rgba(0,0,0,0.6)";
+									 gallery_list[i].style.borderTopColor = "transparent";
+						}
+ 			}
+ 			for(var i = 0; i<video.length; i++)
+ 						video[i].style.display = "none";
+ 		
+		 for(var i = 0; i<photo.length; i++)
+ 							photo[i].style.display = "block";
+ }
+ gallery_list[1].onclick = function() 
+ {
+ 			for(var i = 0; i<gallery_list.length; i++)
+ 			{
+ 						if(i==1)
+ 						{
+ 									 gallery_list[i].style.background = "rgba(0,0,0,0.4)";
+ 									gallery_list[i].style.borderTopColor = "magenta";
+ 						}
+ 						else
+						{
+									 gallery_list[i].style.background = "rgba(0,0,0,0.6)";
+									 gallery_list[i].style.borderTopColor = "transparent";
+						}
+ 			}
+ 			for(var i = 0; i<video.length; i++)
+ 						video[i].style.display = "block";
+ 						
+		 for(var i = 0; i<photo.length; i++)
+ 						photo[i].style.display = "none";
+ }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+var goTop = document.querySelector(".goTop");
+goTop.style.display = "none";
+window.onscroll = function() 
+ {
+  		if(document.documentElement.scrollTop > 200)
+    			goTop.style.display = "block";
+    else 
+  				 goTop.style.display = "none";  
+}
+goTop.onclick = function()
+{
+			document.documentElement.scrollTop = 0;
+}
+</script>
+</html>
