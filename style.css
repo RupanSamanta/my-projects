@@ -220,7 +220,6 @@
 			}
 			.details-container
 			{
-						width: 100%;
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
@@ -236,13 +235,13 @@
 			{
 						margin: 5px auto;
 						padding: 5px 0;
-						width: 10%;
+						width: 30%;
 			}
 			
 			.details div:nth-of-type(even)
 			{						
-						width: 40%;
 						background: rgba(0,0,0,.3);
+						width: 40%;
 			}
 			.details:nth-child(1) div, .details:last-child div
 			{	
@@ -785,9 +784,8 @@
 			}
 			.match-stats-details div
 			{
-						width: 33.3%;
+						width: 30%;
 						height: 30px;
-						background: rgba(255,255,255,0.1);
 						text-align: center;
 						display: grid;
 						align-items: center;
@@ -796,4 +794,5 @@
 			.match-stats-details div:nth-child(2)
 			{
 						background: rgba(0,0,0,0.2);
+						width: 40%;
 			}
