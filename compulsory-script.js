@@ -165,10 +165,10 @@ stats[3].onclick = function()
 
  var fixture_home_team_score = document.getElementsByClassName("home-team-score"), fixture_away_team_score = document.getElementsByClassName("away-team-score");
 
- var result_home_team_score = [1, 0, 6, 9, 2, 1, 3, 2, 2, 0, 3, 4, 5, 6, 2, 1, 0, 1];
- var result_away_team_score = [1, 0, 6, 9, 2, 1, 3, 2, 2, 0, 3, 4, 5, 6, 2, 1, 0, 1];
+ var result_home_team_score = [" "];
+ var result_away_team_score = [" "];
  
- for(var i = 0; i<18; i++)
+ for(var i = 0; i<result_home_team_score.length; i++)
  {
 			 fixture_home_team_score[i].innerHTML = result_home_team_score[i];
 			 fixture_away_team_score[i].innerHTML = result_away_team_score[i];
