@@ -8,7 +8,7 @@ document.querySelector(".header-button").onclick = function()
 			{												
 						drop_list.style.opacity = "1";	
 						drop_list.style.height = "80px";
-						drop_list.style.borderTop = "solid 1px lime";
+						drop_list.style.borderTop = "solid 1px yellow";
 					  for(var i = 0; i<drop_list_item.length; i++)
 						{
 									drop_list_item[i].style.height = "25px";
@@ -350,6 +350,7 @@ for(var i = 0; i<all_p.length; i++)
 		all_p[i].style.transform = "translateX(100%)";
 		all_p[i].style.opacity = "0";
 		all_p[i].style.display = "none";
+		all_p[i].style.width = "0";
  }
 
 for(var i = 0; i<all_div.length; i++)			
@@ -384,6 +385,12 @@ setInterval(function()
 						for(var i = 0; i<all_image.length; i++)
 	  							all_image[i].style.opacity = "1";		
 	  				document.querySelector("body").style.color = "rgba(255,255,255,1)";
+	  				for(var i = 0; i<all_p.length; i++)
+		{			
+					all_p[i].style.width = "auto";
+					all_p[i].style.opacity = "1";					
+				 all_p[i].style.transform = "none";
+		}
 	  }
 		 
 		 else if(interval==1.5)
@@ -392,11 +399,6 @@ setInterval(function()
 		 						all_div[i].style.opacity = "1";
 		 						all_div[i].style.transform = "none";
 			}
-			for(var i = 0; i<all_p.length; i++)
-		{
-					all_p[i].style.opacity = "1";
-				all_p[i].style.transform = "none";
-		}
 		}
 			interval+=0.5;
 },500);
