@@ -1,4 +1,5 @@
 			var drop_list = document.querySelector(".drop-list");
+			drop_list.style.opacity = 0;
 			var drop_list_item = document.querySelectorAll("div.drop-list div");
 			var button_div = document.querySelectorAll("div.header-button div");
 			var d=0;
@@ -20,7 +21,6 @@ document.querySelector(".header-button").onclick = function()
 			}
 			else
 			{
-						drop_list.style.opacity = "0";
 						for(var i = 0; i<drop_list_item.length; i++)
 						{
 									drop_list_item[i].style.height = "0";
@@ -165,8 +165,8 @@ stats[3].onclick = function()
 
  var fixture_home_team_score = document.getElementsByClassName("home-team-score"), fixture_away_team_score = document.getElementsByClassName("away-team-score");
 
- var result_home_team_score = [" "];
- var result_away_team_score = [" "];
+ var result_home_team_score = [];
+ var result_away_team_score = [];
  
  for(var i = 0; i<result_home_team_score.length; i++)
  {
