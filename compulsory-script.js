@@ -150,9 +150,32 @@ stats[3].onclick = function()
  /*												 Fixtures & Results 									*/
 
  var match_centre = document.querySelectorAll("div.match-centre");
- for(var i = 1; i < match_centre.length; i++)
-			 match_centre[i].style.display = "none";
-  
+ var span = document.querySelectorAll("span");
+
+	for(var i = 0; i < match_centre.length; i++)
+	{			
+				match_centre[i].style.display = "block";
+				span[i].innerHTML = "FT";
+	}
+ for(var i = 0; i < match_centre.length; i++)
+	{			
+				match_centre[i].style.display = "none";
+				span[i].innerHTML = "VS";
+	}
+
+ var fixture_home_team_score = document.getElementsByClassName("home-team-score"), fixture_away_team_score = document.getElementsByClassName("away-team-score");
+
+ var result_home_team_score = [1, 0, 6, 9, 2, 1, 3, 2, 2, 0, 3, 4, 5, 6, 2, 1, 0, 1];
+ var result_away_team_score = [1, 0, 6, 9, 2, 1, 3, 2, 2, 0, 3, 4, 5, 6, 2, 1, 0, 1];
+ 
+ for(var i = 0; i<18; i++)
+ {
+			 fixture_home_team_score[i].innerHTML = result_home_team_score[i];
+			 fixture_away_team_score[i].innerHTML = result_away_team_score[i];
+			 	fixture_home_team_score[i].style.fontSize = "18px";
+			 	fixture_away_team_score[i].style.fontSize = "18px";
+		}
+ 
  
  var i = 0; 
  var fixture = document.querySelectorAll("div.series-table div");
@@ -238,6 +261,15 @@ stats[3].onclick = function()
  }
  
  /*												 Fixtures & Results 									*/ 
+
+
+/* 						head to head 						*/
+
+var head_to_head_string = '<div class="details"><div>Played 0</div></div><div class="details"><div>0</div><div>Win</div><div>0</div></div><div class="details"><div>0</div><div>Draw</div><div>0</div></div><div class="details"><div>0</div><div>Loss</div><div>0</div></div><div class="details"><div>0</div><div>Goal Scored</div><div>0</div></div><div class="details"><div>0</div><div>Goal Conceded</div><div>0</div></div><div class="details"><div>0</div><div>Cleansheet</div><div>0</div></div><div class="details"><div>Recent Result N/A</div></div>';
+document.querySelector(".details-container").innerHTML = 	head_to_head_string;
+/* 						head to head						 */
+
+
  /* Series in Number */
 document.querySelector("#series-in-number").innerHTML = '<div class="box"><div><div class="title">SERIES IN NUMBERS</div></div><div class="container"><div class="series-stats-title"><div>Series 1</div><div>Series 2</div><div>Series 3</div></div><div class="series-stats-details"><div class="series-stats-box"><img src="https://www.pngkit.com/png/full/292-2928062_football-icon-png-white.png" alt="football"><br><li>Goals</li><li id="goal"></li></div><!-- goals --><div class="series-stats-box"><img src="https://i.imgur.com/0OdGHXd.png" alt="football"><br><li>Shots Taken</li><li id="shots-taken"></li></div><!-- shots taken --><div class="series-stats-box"><img src="https://i.imgur.com/6AirFua.png" alt=""><br><li>Average Goals</li><li id="average-goal"></li></div><!-- average goals --><div class="series-stats-box"><img src="https://i.imgur.com/4eLBh27.png" alt="watch"><br><li>Minutes Per Goal</li><li id="minutes-per-goal"></li></div><!-- minutes per goal --><div class="series-stats-box"><img src="https://i.imgur.com/E6wTRRh.png" alt="football"><br><li>Fouls</li><li id="fouls"></li></div><!-- fouls --><div class="series-stats-box"><img src="https://i.imgur.com/1mIMCnp.png" alt="football"><br><li>Yellow Cards</li><li id="yellow-card"></li></div><!-- yellow card--><div class="series-stats-box"><img src="https://i.imgur.com/RP44wPx.png" alt="football"><br><li>Red Cards</li><li id="red-card"></li></div><!-- red card --><div class="series-stats-box"><img src="https://i.imgur.com/O140xYL.png" alt="gloves"><br><li>Clean Sheets</li><li id="cleansheet"></li></div><!-- clean sheet --></div>	<!-- series-stats-details --></div><!-- container --></div>'
 				
@@ -256,7 +288,23 @@ document.querySelector("#cleansheet").innerHTML = "N/A";
 /* Series in Numbers */
 
 
+/* 						Statistics									 */
 
+var stats_table = document.getElementsByClassName("stats-table");
+var goals = stats_table[0], assists = stats_table[1], yellow_card = stats_table[2], red_card = stats_table[3];
+var rfc_logo = '<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">', amb_logo = '<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">';
+
+goals.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Goals</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+
+assists.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Assists</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+
+yellow_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Yellow Card</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+
+red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+
+
+
+/* 						Statistics									 */
 
 var goTop = document.querySelector(".goTop");
 goTop.style.display = "none";
@@ -287,3 +335,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* powered by script  */
 
 document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --></div><div class="copyright">&copy;rupan 2021</div>';
+
+document.querySelector("body").style.color = "rgba(0,0,0,0)";
+var section = document.querySelectorAll("section");
+var all_image = document.querySelectorAll("img");
+var all_div = document.querySelectorAll("div");
+
+for(var i = 0; i<all_image.length; i++)
+			all_image[i].style.opacity = "0";
+
+for(var i = 0; i<all_div.length; i++)			
+			all_div[i].style.opacity = "0";	
+						
+for(var i = 0; i<section.length; i++)
+	{
+		section[i].style.transform = "translateY(50%)";
+		section[i].style.opacity = "0";
+ }
+var interval = 0;
+setInterval(function()
+{
+						
+			if(interval==1)
+			for(var i = 0; i<section.length; i++)
+			{
+					 section[i].style.transform = "none";
+					 section[i].style.opacity = "1";
+			}
+			
+		 else if(interval==2)
+	 	{
+						for(var i = 0; i<all_image.length; i++)
+	  							all_image[i].style.opacity = "1";		
+	  				document.querySelector("body").style.color = "rgba(255,255,255,1)";
+	  }
+		 
+		 else if(interval==1.5)
+			for(var i = 0; i<all_div.length; i++)	
+		 				all_div[i].style.opacity = "1";
+
+			interval+=0.5;
+},500);
