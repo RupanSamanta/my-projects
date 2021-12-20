@@ -164,7 +164,7 @@ stats[3].onclick = function()
 				match_centre[i].style.color = "rgb(240,240,240)";
 	}
 	
- for(var i = 99; i < match_centre.length; i++)
+ for(var i = 0; i < match_centre.length; i++)
 	{			
 				match_centre[i].style.display = "none";
 				span[i].innerHTML = "VS";
