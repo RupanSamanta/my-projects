@@ -76,18 +76,18 @@
 									</div>				
 									<div class="rating">
 												<div>
-															LEGENDARY
+															Legendary
 												</div>
-												<div>DIVISION</div>
+												<div>Division</div>
 												<div>
-															LEGENDARY
+															Legendary
 												</div>
 									</div>		
 									<div class="rating">
 												<div>
 															85326
 												</div>
-												<div>STADIUM CAPACITY</div>
+												<div>Stadium Capacity</div>
 												<div>
 															92362
 												</div>
@@ -151,10 +151,10 @@
 																			</figure>
 																</div>
 													</div><!-- lscore score -->
-													<div id="venue">RS City Stadium</div>
-													<div class="match-centre">
-																Match Centre
-													</div>
+													<div id="venue">RS City Stadium</div>													
+													 <a href=""><div class="match-centre">
+														  Match Centre
+													 </div></a>													
 										</div><!-- fixture container -->
 							
 			<!-- 									MATCH 2									 -->			
@@ -734,7 +734,8 @@
  var video = document.querySelectorAll("div.gallery-video div");
  
  gallery_list[0].style.background = "rgba(0,0,0,0.3)";
- gallery_list[0].style.borderTopColor = "#ff00b2";
+ gallery_list[0].style.borderColor = "#ff00b2";
+ gallery_list[0].style.borderBottomColor = "transparent";
  for(var i = 0; i<video.length; i++)
  			video[i].style.display = "none";
  			
@@ -745,12 +746,13 @@
  						if(i==0)
  						{
  									 gallery_list[i].style.background = "rgba(0,0,0,0.3)";
- 									gallery_list[i].style.borderTopColor = "#ff00b2";
+ 									gallery_list[i].style.borderColor = "#ff00b2";		
+ 							  	gallery_list[i].style.borderBottomColor = "transparent";	 									
  						}
  						else
 						{
 									 gallery_list[i].style.background = "rgba(0,0,0,0.6)";
-									 gallery_list[i].style.borderTopColor = "transparent";
+									 gallery_list[i].style.borderColor = "transparent";
 						}
  			}
  			for(var i = 0; i<video.length; i++)
@@ -765,13 +767,14 @@
  			{
  						if(i==1)
  						{
- 									 gallery_list[i].style.background = "rgba(0,0,0,0.3)";
- 									gallery_list[i].style.borderTopColor = "#ff00b2";
+ 									 gallery_list[i].style.background = "rgba(0,0,0,0.3)"; 					
+ 									gallery_list[i].style.borderColor = "#ff00b2";
+ 									gallery_list[i].style.borderBottomColor = "transparent";
  						}
  						else
 						{
 									 gallery_list[i].style.background = "rgba(0,0,0,0.6)";
-									 gallery_list[i].style.borderTopColor = "transparent";
+									 gallery_list[i].style.borderColor = "transparent";
 						}
  			}
  			for(var i = 0; i<video.length; i++)
