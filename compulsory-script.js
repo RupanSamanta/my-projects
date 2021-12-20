@@ -49,7 +49,8 @@ var stats = document.querySelectorAll("div.table-content div");
 var stats_table = document.getElementsByClassName("stats-table");
 
 stats[0].style.background = "rgba(0,0,0,0.4)";
-stats[0].style.borderTopColor = "#ff00b2";
+stats[0].style.borderColor = "#ff00b2";
+stats[0].style.borderBottomColor = "transparent";
 for(var i = 0; i<stats_table.length; i++)
 stats_table[i].style.display = "none";
 stats_table[0].style.display = "table";
@@ -61,12 +62,13 @@ stats[0].onclick = function()
 						if(i==0)
 						{
 									stats[i].style.background = "rgba(0,0,0,0.4)";
-							  	stats[i].style.borderTopColor = "#ff00b2";
+							  	stats[i].style.borderColor = "#ff00b2";
+							  	stats[i].style.borderBottomColor = "transparent";
 						}
 						else
 						{
 									stats[i].style.background = "rgba(0,0,0,0.6)";
-							  	stats[i].style.borderTopColor = "transparent";
+							  	stats[i].style.borderColor = "transparent";
 						}
 			}
 			for(var i = 0; i<stats_table.length; i++)
@@ -83,12 +85,13 @@ stats[1].onclick = function()
 						if(i==1)
 						{
 									stats[i].style.background = "rgba(0,0,0,0.4)";
-							  	stats[i].style.borderTopColor = "#ff00b2";
+							  	stats[i].style.borderColor = "#ff00b2";
+							  	stats[i].style.borderBottomColor = "transparent";
 						}
 						else
 						{
 									stats[i].style.background = "rgba(0,0,0,0.6)";
-							  	stats[i].style.borderTopColor = "transparent";
+							  	stats[i].style.borderColor = "transparent";
 						}
 			}
 			for(var i = 0; i<stats_table.length; i++)
@@ -105,12 +108,13 @@ stats[2].onclick = function()
 						if(i==2)
 						{
 									stats[i].style.background = "rgba(0,0,0,0.4)";
-							  	stats[i].style.borderTopColor = "#ff00b2";
+							  	stats[i].style.borderColor = "#ff00b2";
+							  	stats[i].style.borderBottomColor = "transparent";
 						}
 						else
 						{
 									stats[i].style.background = "rgba(0,0,0,0.6)";
-							  	stats[i].style.borderTopColor = "transparent";
+							  	stats[i].style.borderColor = "transparent";
 						}
 			}
 			for(var i = 0; i<stats_table.length; i++)
@@ -127,12 +131,13 @@ stats[3].onclick = function()
 						if(i==3)
 						{
 									stats[i].style.background = "rgba(0,0,0,0.4)";
-							  	stats[i].style.borderTopColor = "#ff00b2";
+							  	stats[i].style.borderColor = "#ff00b2";
+							  	stats[i].style.borderBottomColor = "transparent";
 						}
 						else
 						{
 									stats[i].style.background = "rgba(0,0,0,0.6)";
-							  	stats[i].style.borderTopColor = "transparent";
+							  	stats[i].style.borderColor = "transparent";
 						}
 			}
 			for(var i = 0; i<stats_table.length; i++)
@@ -152,13 +157,14 @@ stats[3].onclick = function()
 
  var match_centre = document.querySelectorAll("div.match-centre");
  var span = document.querySelectorAll("span");
-
-	for(var i = 0; i < match_centre.length; i++)
+  for(var i = 0; i < match_centre.length; i++)
 	{			
 				match_centre[i].style.display = "block";
 				span[i].innerHTML = "FT";
+				match_centre[i].style.color = "rgb(240,240,240)";
 	}
- for(var i = 0; i < match_centre.length; i++)
+	
+ for(var i = 99; i < match_centre.length; i++)
 	{			
 				match_centre[i].style.display = "none";
 				span[i].innerHTML = "VS";
@@ -181,7 +187,8 @@ stats[3].onclick = function()
  var i = 0; 
  var fixture = document.querySelectorAll("div.series-table div");
  fixture[0].style.background = "transparent";
- fixture[0].style.borderTopColor = "#ff00b2";
+ fixture[0].style.borderColor = "#ff00b2";
+ fixture[0].style.borderBottomColor = "transparent";
  var fixture_list = document.getElementsByClassName("fixture-container");
  while(i<6) 
  {
@@ -196,12 +203,13 @@ stats[3].onclick = function()
  						if(i==0)
  						{
  									fixture[i].style.background = "transparent";
-								 fixture[i].style.borderTopColor = "#ff00b2";
+								 fixture[i].style.borderColor = "#ff00b2";
+								 fixture[i].style.borderBottomColor  = "transparent";
 						}
 						else
 						{
 									fixture[i].style.background = "rgba(0,0,0,.4)";
-								 fixture[i].style.borderTopColor = "transparent";								 
+								 fixture[i].style.borderColor = "transparent";								 
 						}
  			}
  			for(var i = 0; i<fixture_list.length; i++) 
@@ -220,12 +228,13 @@ stats[3].onclick = function()
  						if(i==1)
  						{
  									fixture[i].style.background = "transparent";
-								 fixture[i].style.borderTopColor = "#ff00b2";
+								 fixture[i].style.borderColor = "#ff00b2";
+								 fixture[i].style.borderBottomColor = "transparent";
 						}
 						else
 						{
 									fixture[i].style.background = "rgba(0,0,0,.4)";
-								 fixture[i].style.borderTopColor = "transparent";								 
+								 fixture[i].style.borderColor = "transparent";								 
 						}
  			}
 			for(var i = 0; i<fixture_list.length; i++) 
@@ -244,12 +253,13 @@ stats[3].onclick = function()
  						if(i==2)
  						{
  									fixture[i].style.background = "transparent";
-								 fixture[i].style.borderTopColor = "#ff00b2";
+								 fixture[i].style.borderColor = "#ff00b2";
+								 fixture[i].style.borderBottomColor = "transparent";
 						}
 						else
 						{
 									fixture[i].style.background = "rgba(0,0,0,.4)";
-								 fixture[i].style.borderTopColor = "transparent";								 
+								 fixture[i].style.borderColor = "transparent";								 
 						}
  			}
  		for(var i = 0; i<fixture_list.length; i++) 
@@ -266,8 +276,7 @@ stats[3].onclick = function()
 
 /* 						head to head 						*/
 
-var head_to_head_string = '<div class="details"><div>Played 0</div></div><div class="details"><div>0</div><div>Win</div><div>0</div></div><div class="details"><div>0</div><div>Draw</div><div>0</div></div><div class="details"><div>0</div><div>Loss</div><div>0</div></div><div class="details"><div>0</div><div>Goal Scored</div><div>0</div></div><div class="details"><div>0</div><div>Goal Conceded</div><div>0</div></div><div class="details"><div>0</div><div>Cleansheet</div><div>0</div></div><div class="details"><div>Recent Result N/A</div></div>';
-document.querySelector(".details-container").innerHTML = 	head_to_head_string;
+document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 0</div></div><div class="details"><div>0</div><div>Win</div><div>0</div></div><div class="details"><div>0</div><div>Draw</div><div>0</div></div><div class="details"><div>0</div><div>Loss</div><div>0</div></div><div class="details"><div>0</div><div>Goal Scored</div><div>0</div></div><div class="details"><div>0</div><div>Goal Conceded</div><div>0</div></div><div class="details"><div>0</div><div>Cleansheet</div><div>0</div></div><div class="details"><div>Recent Result N/A</div></div>';
 /* 						head to head						 */
 
 
@@ -384,13 +393,14 @@ setInterval(function()
 	 	{
 						for(var i = 0; i<all_image.length; i++)
 	  							all_image[i].style.opacity = "1";		
-	  				document.querySelector("body").style.color = "rgba(255,255,255,1)";
+	  				document.querySelector("body").style.color = "rgba(220, 220, 220, 1)";
 	  				for(var i = 0; i<all_p.length; i++)
 		{			
 					all_p[i].style.width = "auto";
 					all_p[i].style.opacity = "1";					
 				 all_p[i].style.transform = "none";
 		}
+		clearInterval();
 	  }
 		 
 		 else if(interval==1.5)
