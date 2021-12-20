@@ -2,11 +2,11 @@
 				html{scroll-behavior: smooth;}
 			body
 			{
-						background: linear-gradient(-135deg, #7500b6, #1f00cd);	
+						background: linear-gradient(-135deg, #5c00a3, #1f00cd);	
 						background-repeat: no-repeat;
 						margin: 0;
 						font-family: 'Outfit', san-serif;				
-						color: rgba(0,0,0,0);		
+						color: rgba(0,0,0,0);
 			}
 			::selection
 			{
@@ -258,7 +258,7 @@
 						text-align: center;
 						line-height: 40px;
 						background: rgba(0,0,0,0.6);
-						border-top: solid 1px transparent;
+						border: solid 1px transparent;
 						font-size: 16px;
 						user-select: none;
 			}
@@ -331,12 +331,12 @@
 			.series-table div
 			{
 						width: 33.3%;		
-						border-top: solid 1px transparent;	
+						border: solid 1px transparent;	
 						height: 40px;
 						text-align: center;
 						line-height: 40px;
 						background: rgba(0,0,0,0.4);
-						border-top: solid 1px transparent;
+						border: solid 1px transparent;
 						font-size: 16px;
 			}
 			.series-table div:hover
@@ -403,8 +403,15 @@
 			}
 			.match-centre:hover
 			{
-						transform: scale(1.1);
+						transform: scale(1.1) !important;
 			}
+			a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
 			.gallery-table
 			{
 						width: 100%;
@@ -416,12 +423,11 @@
 			.gallery-table div
 			{
 						width: 50%;		
-						border-top: solid 1px transparent;	
 						height: 40px;
 						text-align: center;
 						line-height: 40px;
 						background: rgba(0,0,0,0.6);
-						border-top: solid 1px transparent;
+						border: solid 1px transparent;
 						font-size: 16px;
 			}
 			.gallery-photo, .gallery-video
@@ -468,13 +474,12 @@
 			}
 			.series-stats-title div
 			{
-						width: 100%;		
-						border-top: solid 1px transparent;	
+						width: 100%;	
 						height: 40px;
 						text-align: center;
 						line-height: 40px;
 						background: rgba(0,0,0,0.6);
-						border-top: solid 1px transparent;
+						border: solid 1px transparent;
 						font-size: 16px;
 			}
 		 .series-stats-title div:nth-child(2), .series-stats-title div:nth-child(3)
@@ -625,7 +630,7 @@
 			}
 			.match-score div:nth-of-type(even)
 			{
-						font-size: 16px;
+						font-size: 18px;
 						font-weight: 600;
 						background: rgba(255,255,255,0.1);
 			}
@@ -656,8 +661,7 @@
 						align-items: flex-start;		
 						text-align: left;
 						padding: 5px 0;
-						font-size: 13px;			
-						color: gainsboro;			
+						font-size: 13px;					
 			}
 			.goals div, .card div
 			{
@@ -677,7 +681,8 @@
 			
 		.match-section
 			{
-						display: flex;												
+						display: flex;		
+						margin: 0;										
 			}
 		.match-section div
 			{
@@ -689,6 +694,7 @@
 						padding: 2px 0;
 						display: grid;
 						align-items: center;
+						border: solid 1px transparent;
 			}
 			
 			.home-team-lineup, .away-team-lineup
@@ -720,20 +726,29 @@
 			}
 			.lineup-field
 			{
-						height: 610px;
+						height: 0;
 						background: url("https://www.premierleague.com/resources/prod/f4af34b-3761/i/elements/lineup-pitch.jpg");
 						background-size: 100% 100%;
+						background-repeat: no-repeat;
 						box-shadow: inset 0 0 10px black;						
+						display: none;
+						flex-direction: column;
+						align-items: center;
+						justify-content: space-between;
+						opacity: 0;
 			}
 			.lineup-field .lineup-field-home, .lineup-field .lineup-field-away
 			{
 						width: 100%;
-						height: 50%;		
+						height: 50%;	
 						display: flex;
 						flex-direction: column;
 						justify-content: space-around;
-						align-items: center;				
+						align-items: center;
+						padding: 4px 0;			
 			}
+		.lineup-field .lineup-field-away
+   {flex-direction: column-reverse;}
 			.number-box
 			{
 						width: 100%;
@@ -742,19 +757,24 @@
 						justify-content: center;
 						align-items: center;
 						text-align: center;
+						font-size: 12px;
 			}
 			.number
 			{
 						margin: 0 auto;
+						opacity: 0;
+						text-shadow: 0 0 5px black;
 			}
-			.img
+			.img{margin: 0 auto -5px auto;}
+    .img img
 			{
 						width: 35px;
 						height: 35px;
-						border: solid black 1px;
+					 border: solid white 1px;
 					 border-radius: 50%;
-					 box-shadow: inset 0 0 5px white;
+					 box-shadow: 0 0 5px black;
 					 margin: 0 auto;
+					 backdrop-filter: blur(1px);
 			}
 			.match-stats-team-logo
 			{
@@ -773,7 +793,6 @@
 			{
 						display: flex;
 						flex-direction: column;
-						background: rgba(0,0,0,0.1);
 			}
 			.match-stats-details 
 			{
@@ -792,6 +811,6 @@
 			}
 			.match-stats-details div:nth-child(2)
 			{
-						background: rgba(0,0,0,0.2);
+						background: rgba(0,0,0,0.25);
 						width: 40%;
 			}
