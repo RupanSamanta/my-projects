@@ -280,13 +280,17 @@
 			}
 			.stats-table td
 			{
-						width: 34%;
+						width: 45%;
 						text-align: center;
 						padding: 10px 0;
 			}
 			.stats-table td:nth-child(1), .stats-table td:nth-child(2)
 			{
-						width: 16%;						
+						width: 15%;		
+			}
+		.stats-table td:last-child
+			{
+						width: 25%;
 			}
 		.stats-table tr:nth-child(1)
 			{
