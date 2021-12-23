@@ -156,12 +156,16 @@ stats[3].onclick = function()
  /*												 Fixtures & Results 									*/
 
 	var match_date = document.querySelectorAll("div.match-date");
+	var match_dates = ['Thurday, 23rd December, 2021'];
+	for(var i = 0; i<6; i++)
+	{
+				match_date[i].innerHTML = match_dates[0];
+	}
  var match_centre_box = document.querySelectorAll("div.match-centre-box");
- var match_link = [];
+ var match_link = ['https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%201.html'];
  var span = document.querySelectorAll("span");
  for(var i = 0; i < span.length; i++)
-	{			
-				
+	{							
 				span[i].innerHTML = "VS";
 	}
 	for(var i = 0; i<match_link.length; i++)
@@ -172,8 +176,8 @@ stats[3].onclick = function()
 	}
  var fixture_home_team_score = document.getElementsByClassName("home-team-score"), fixture_away_team_score = document.getElementsByClassName("away-team-score");
 
- var result_home_team_score = [];
- var result_away_team_score = [];
+ var result_home_team_score = [0,3,0,0,2,'1(1)'];
+ var result_away_team_score = [1,2,1,2,1,'1(0)'];
  
  for(var i = 0; i<result_home_team_score.length; i++)
  {
@@ -276,24 +280,24 @@ stats[3].onclick = function()
 
 /* 						head to head 						*/
 
-document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 0</div></div><div class="details"><div>0</div><div>Win</div><div>0</div></div><div class="details"><div>0</div><div>Draw</div><div>0</div></div><div class="details"><div>0</div><div>Loss</div><div>0</div></div><div class="details"><div>0</div><div>Goal Scored</div><div>0</div></div><div class="details"><div>0</div><div>Goal Conceded</div><div>0</div></div><div class="details"><div>0</div><div>Cleansheet</div><div>0</div></div><div class="details"><div>Recent Result N/A</div></div>';
+document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 6</div></div><div class="details"><div>2</div><div>Win</div><div>4</div></div><div class="details"><div>4</div><div>Loss</div><div>2</div></div><div class="details"><div>7</div><div>Goal Scored</div><div>8</div></div><div class="details"><div>8</div><div>Goal Conceded</div><div>7</div></div><div class="details"><div>1</div><div>Cleansheet</div><div>2</div></div><div class="details"><div>Recent Result 1(0) - 1(1)</div></div>';
 /* 						head to head						 */
 
 
  /* Series in Number */
 document.querySelector("#series-in-number").innerHTML = '<div class="box"><div><div class="title">SERIES IN NUMBERS</div></div><div class="container"><div class="series-stats-title"><div>Series 1</div><div>Series 2</div><div>Series 3</div></div><div class="series-stats-details"><div class="series-stats-box"><img src="https://www.pngkit.com/png/full/292-2928062_football-icon-png-white.png" alt="football"><br><li>Goals</li><li id="goal"></li></div><!-- goals --><div class="series-stats-box"><img src="https://i.imgur.com/0OdGHXd.png" alt="football"><br><li>Shots Taken</li><li id="shots-taken"></li></div><!-- shots taken --><div class="series-stats-box"><img src="https://i.imgur.com/6AirFua.png" alt=""><br><li>Average Goals</li><li id="average-goal"></li></div><!-- average goals --><div class="series-stats-box"><img src="https://i.imgur.com/4eLBh27.png" alt="watch"><br><li>Minutes Per Goal</li><li id="minutes-per-goal"></li></div><!-- minutes per goal --><div class="series-stats-box"><img src="https://i.imgur.com/E6wTRRh.png" alt="football"><br><li>Fouls</li><li id="fouls"></li></div><!-- fouls --><div class="series-stats-box"><img src="https://i.imgur.com/1mIMCnp.png" alt="football"><br><li>Yellow Cards</li><li id="yellow-card"></li></div><!-- yellow card--><div class="series-stats-box"><img src="https://i.imgur.com/RP44wPx.png" alt="football"><br><li>Red Cards</li><li id="red-card"></li></div><!-- red card --><div class="series-stats-box"><img src="https://i.imgur.com/O140xYL.png" alt="gloves"><br><li>Clean Sheets</li><li id="cleansheet"></li></div><!-- clean sheet --></div>	<!-- series-stats-details --></div><!-- container --></div>'
 				
-var goals = 100, match = 3;
+var goals = 12, match = 6;
 var average_goal = (goals/match).toString();
 var minutes_per_goal = ((match*90)/goals).toString();
-document.querySelector("#goal").innerHTML = "N/A";// goals;
-document.querySelector("#shots-taken").innerHTML = "N/A";
-document.querySelector("#minutes-per-goal").innerHTML = "N/A"; //minutes_per_goal.substring(0,4);
-document.querySelector("#average-goal").innerHTML = "N/A"; //average_goal.substring(0,4);
-document.querySelector("#fouls").innerHTML = "N/A";
-document.querySelector("#yellow-card").innerHTML = "N/A";
-document.querySelector("#red-card").innerHTML = "N/A";
-document.querySelector("#cleansheet").innerHTML = "N/A";
+document.querySelector("#goal").innerHTML = goals;
+document.querySelector("#shots-taken").innerHTML = 63;
+document.querySelector("#minutes-per-goal").innerHTML = minutes_per_goal.substring(0,4);
+document.querySelector("#average-goal").innerHTML = average_goal.substring(0,4);
+document.querySelector("#fouls").innerHTML = 10;
+document.querySelector("#yellow-card").innerHTML = 2;
+document.querySelector("#red-card").innerHTML = 0;
+document.querySelector("#cleansheet").innerHTML = 3;
 
 /* Series in Numbers */
 
@@ -304,13 +308,26 @@ var stats_table = document.getElementsByClassName("stats-table");
 var goals = stats_table[0], assists = stats_table[1], yellow_card = stats_table[2], red_card = stats_table[3];
 var rfc_logo = '<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">', amb_logo = '<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">';
 
-goals.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Goals</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+goals.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Goals</td></tr>\
+<tr><td>1</td><td>'+amb_logo+'</td><td>Christiano Ronaldo</td><td>4</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>4</td></tr>\
+<tr><td>3</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>2</td></tr>\
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>1</td></tr>\
+<tr><td>6</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>1</td></tr>\
+<tr><td>7</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>1</td></tr>';
 
-assists.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Assists</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+assists.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Assists</td></tr>\
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>3</td></tr>\
+<tr><td>2</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>2</td></tr>\
+<tr><td>3</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>';
 
-yellow_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Yellow Card</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+yellow_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Yellow Card</td></tr>\
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Joáo Cancelo</td><td>1</td></tr>\
+<tr><td>2</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>1</td></tr>';
 
-red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card</td></tr>												<tr><td>0</td><td>'+rfc_logo+'</td><td>N/A</td><td>0</td></tr><tr><td>0</td><td>'+amb_logo+'</td><td>N/A</td><td>0</td></tr>'
+red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card</td></tr>												<tr><td>0</td><td>N/A</td><td>N/A</td><td>0</td></tr>';
 
 
 
@@ -344,7 +361,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* powered by script  */
 
-document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --></div><div class="copyright">&copy;rupan 2021</div><div class="last-update">Last Updated on Thursday at 13:39 IST </div>';
+document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title" style="background:black">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --></div><div class="copyright">&copy;rupan 2021</div><div class="last-update">Last Updated on 12/24/2021 at 13:39 IST </div>';
 
 document.querySelector("body").style.color = "rgba(0,0,0,0)";
 var section = document.querySelectorAll("section");
