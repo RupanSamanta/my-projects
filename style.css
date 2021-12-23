@@ -2,12 +2,14 @@
 				html{scroll-behavior: smooth;}
 			body
 			{
-						background: linear-gradient(-135deg, #5c00a3, #1f00cd);	
+						background: url("https://image.freepik.com/free-vector/neon-lights-technology-geometric-background_52683-13534.jpg");
+						background-size: 100% 100%;					
 						background-repeat: no-repeat;
+						background-attachment: fixed;
 						margin: 0;
 						font-family: 'Outfit', san-serif;				
 						color: rgba(0,0,0,0);
-			}
+				}				
 			::selection
 			{
 						color: yellow;
@@ -30,6 +32,14 @@
 						white-space: nowrap; 
 						padding: 0 0 4px 0;
 			}
+			.head-back
+			{
+					 background: url("https://image.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg");
+					 backdrop-filter: blur(2px);
+						height: auto;
+						padding: 0;
+						margin: 0;
+			}
 			header img
 			{
 						width: 60px;
@@ -39,7 +49,7 @@
 			header div
 			{
 						height: 50px;
-						background: black;
+						background: transparent;
 						line-height: 50px;
 						padding: 0 5px;
 			}
@@ -49,7 +59,7 @@
 						flex-wrap: nowrap;
 						justify-content: space-between;
 						align-items: center;
-						padding: 0 0 10px 0;
+						padding: 0 0 10px 0;						
 			}
 			.header-button
 			{
@@ -94,7 +104,7 @@
 		 			 margin: 5px auto;
 		 			 line-height: 25px;
 		 			 padding: 0 5px;
-		 			 border-bottom: solid 1px black;
+		 			 border-bottom: solid 1px transparent;
 		 			 user-select: none;
 		 			 color: ghostwhite;
 		 			 display: none;
@@ -112,8 +122,9 @@
 						margin: 50px 0;
 						border-top: solid 2px yellow;
 						border-bottom: solid 2px yellow;
+						background: rgba(79,0,172,.5);
 			}
-			main{padding: 0 5px}
+			main{padding: 0 5px;backdrop-filter: blur(5px);}
 			p
 			{
 						font-size: 18px;
@@ -400,6 +411,7 @@
 						margin: 0 auto 10px auto;
 						padding: 2px;
 						border-radius: 20px;
+						color: gainsboro;
 			}
 			.match-centre:hover
 			{
@@ -541,6 +553,8 @@ a:active{
 						padding: 15px 0;
 						background: black;
 			}
+			.last-update
+			{width: width: 100%;font-size: 12px; background: black;padding: 0 0 2px 0;}
 			.game{padding: 0 0 30px 0}
 			.copyright{padding: 0}
 			.powered-by div
