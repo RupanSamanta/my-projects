@@ -853,6 +853,7 @@ a:active{
 			{
 						width: 100%;
 						margin: 10px 0;
+						border-top: solid 1px #ff00b2;
 			}
 			.mom div
 			{
@@ -884,3 +885,40 @@ a:active{
 						background-repeat: no-repeat;
 						backdrop-filter: blur(2px);
 			}
+			.manager
+			{
+						margin: 5px auto;
+						width: 100%;
+			}
+			.manager-team-logo, .manager-logo
+			{
+						width: 100%;
+						height: auto;
+						padding: 10px 0;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						text-align: center;
+			}
+			.manager-team-logo div, .manager-logo div
+			{
+						width: auto;
+					 margin: 0 20px;
+			}
+		.manager .man-tile
+		{
+					background: rgba(0,0,0,0.3);
+					text-align: center;
+					font-size: 20px;
+					padding: 5px 0;
+		}
+		.manager-team-logo img
+		{
+					width: 35px;
+					height: auto;
+		}
+		.manager-logo img
+		{
+						width: 110px;
+						height: auto;
+		}
