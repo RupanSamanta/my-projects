@@ -279,8 +279,34 @@ stats[3].onclick = function()
 
 
 /* 						head to head 						*/
+var rfc_pos = [54,53,49,68,60,55];
+var amb_pos = [46,47,51,32,40,45];
+var rfc_pass = [85,81,80,92,87,87];
+var amb_pass = [69,76,64,72,72,66];
+var rfc_pos_avg = 0, rfc_pass_avg = 0, amb_pos_avg = 0, amb_pass_avg = 0;
+for(var i = 0; i<rfc_pos.length; i++)
+{
+			rfc_pos_avg+= rfc_pos[i];
+			rfc_pass_avg+= rfc_pass[i];
+			amb_pos_avg+= amb_pos[i];
+			amb_pass_avg+= amb_pass[i];
+}
+rfc_pos_avg = ((rfc_pos_avg/rfc_pos.length).toString()).substring(0,2)+'%';
+rfc_pass_avg = ((rfc_pass_avg/rfc_pass.length).toString()).substring(0,2)+'%';
+amb_pos_avg = ((amb_pos_avg/amb_pos.length).toString()).substring(0,2)+'%';
+amb_pass_avg = ((amb_pass_avg/amb_pass.length).toString()).substring(0,2)+'%';
 
-document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 6</div></div><div class="details"><div>2</div><div>Win</div><div>4</div></div><div class="details"><div>4</div><div>Loss</div><div>2</div></div><div class="details"><div>7</div><div>Goal Scored</div><div>8</div></div><div class="details"><div>8</div><div>Goal Conceded</div><div>7</div></div><div class="details"><div>1</div><div>Cleansheet</div><div>2</div></div><div class="details"><div>Recent Result 1(0) - 1(1)</div></div>';
+document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 6</div></div>\
+<div class="details"><div>2</div><div>Won</div><div>4</div></div>\
+<div class="details"><div>4</div><div>Lost</div><div>2</div></div>\
+<div class="details"><div>'+rfc_pos_avg+'</div><div>Average Possession</div><div>'+amb_pos_avg+'</div></div>\
+<div class="details"><div>38</div><div>Total Shots</div><div>22</div></div>\
+<div class="details"><div>7</div><div>Goal Scored</div><div>8</div></div>\
+<div class="details"><div>8</div><div>Goal Conceded</div><div>7</div></div>\
+<div class="details"><div>1</div><div>Cleansheet</div><div>2</div></div>\
+<div class="details"><div>'+rfc_pass_avg+'</div><div>Pass Completion</div><div>'+amb_pass_avg+'</div></div>\
+<div class="details"><div>6</div><div>Fouls</div><div>4</div></div>\
+<div class="details"><div>Recent Result 1(0) - 1(1)</div></div>';
 /* 						head to head						 */
 
 
@@ -361,7 +387,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* powered by script  */
 
-document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title" style="background:black">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --></div><div class="copyright">&copy;rupan 2021</div><div class="last-update">Last Updated on 12/23/2021 at 23:29 IST  Update Pending...It may take 12 hrs</div>';
+document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title" style="background:black">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --></div><div class="copyright">&copy;rupan 2021</div><div class="last-update">Last Updated on 12/24/2021 at 11:03 IST </div>';
 
 document.querySelector("body").style.color = "rgba(0,0,0,0)";
 var section = document.querySelectorAll("section");
