@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+           <meta name="theme-color" content="black">
+            <title>Merry Christmas</title>
+</head>
+<style>
+						@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+
+			@media only screen and (min-width: 480px)
+			{
+						div, footer, section, header{display: none}
+						body {
+									background: black;
+									color: white;
+						}
+						article
+						{
+									display: block;
+							position: absolute;
+			transform: translate(-50%,-50%);
+			left: 50%;
+			top: 50%;
+			color: #ff9d00;
+			font-size: 50px;
+			font-family: 'Mountains of Christmas', cursive;
+			font-weight: 1000;
+			text-align: center;
+						}
+			}
+			@media only screen and (max-width: 500px)
+			{			
+            body
+         {
+                        background: black;
+                        color: white;
+                        font-family: 'Mountains of Christmas', cursive;
+                        overflow: hidden;
+            }
+            header
+            {
+            										width: 80%;
+                        position: absolute;
+                        top: 20%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);        
+                        font-size: 40px;
+                        color: white;
+                        text-align: center;
+                        white-space: wrap;
+            }
+            span
+            {
+                        display: inline-block;
+                        position: absolute;
+                      transform: translate(-50%,-50%);
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        animation: twinkle 4s infinite linear;
+                        transition-duration: 1s;
+            }
+            span:nth-of-type(even)
+            {
+                        animation-delay: 1s;
+            }
+            @keyframes twinkle
+            {
+                        50%{opacity: 0}
+                        100%{opacity: 1}
+            }        
+            div
+            {
+                        position: absolute;
+                        width: 100%;
+                        height: 95%;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);                                             
+            }
+            div:nth-child(2)
+            {
+                        width: 200px;
+                        height: auto;            
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+            }
+            p
+            {
+                        display: block;
+                        width: 0;                        
+                        border: solid 20px transparent;
+                        border-top: none;
+                        border-radius: 100%;                    
+            }
+      p:last-child
+            {
+                        width: auto;
+                        border: none;
+                        font-size: 20px;
+                        text-align: center;
+                        margin: 0 0 40px 0;
+                        background: transparent;
+                        text-shadow: 0 0 2px yellow, 0 0 4px yellow, 0 0 6px yellow;
+                        animation: text 2s infinite linear;
+            }
+            @keyframes text
+         {
+                        50%{text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow}
+            }
+            p:nth-child(1)
+            {
+                        width: 30px;
+                        height: 60px;
+                        border: none;
+                        background: #761e1e;
+                        border-radius: 0;
+                        margin-top: -20px;
+            }
+            li
+            {
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: white;
+                        box-shadow: inset 1px 0 2px gray;
+                        margin: 0 5px;
+                        position: absolute;
+                        top: -10px;
+                        transform: translate(-50%,-50%);
+                        animation: snow 5s infinite ease-in;
+            }            
+            @keyframes snow 
+            {
+                        100%{top: 100%}
+            }
+            .man
+            {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 2%;
+                        left: 60%;
+                        transform: translateX(-50%);
+                        font-size: 60px;
+                        white-space: nowrap;
+                        margin: 0 0 -5px 0;
+            }
+            .gifts
+            {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: 2%;
+                        left: 40%;
+                        transform: translateX(-50%);
+                        font-size: 25px;
+                        white-space: nowrap;
+                        margin: 0 0 -5px 0;
+            }
+            .gifts b:nth-child(1)
+            {
+                        font-size: 20px;
+                        margin: 0 20px 0 0;
+            }
+            .gifts b:nth-child(2)
+            {
+                        margin: 0 -60px 0 0;
+            }
+            .gifts b:nth-child(3)
+            {
+                        font-size: 30px;
+                        margin: 0 30px 0 0;
+            }
+            main
+            {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 10px;
+                
+            }
+    .santa
+			{
+						height: auto;
+						width: auto;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+			}
+			.santa img
+			{
+						width: 140px;
+						height: 160px;
+			}
+			.sledge
+			{
+						width: 100%;
+						height: 100px;
+						position: absolute;
+						top: 50%;
+						right: 100%;
+						opacity: 0;		
+						animation: sledge 8s infinite linear 1s;						
+			}
+			
+			.sledge img
+			{
+						width: auto;
+						height: 100px;
+						filter: drop-shadow(0 0 15px white);								
+			}	
+			@keyframes sledge 
+			{			0%{display: block; top: 30%; right: 100%}
+						10%{opacity: 1}
+						90%{top: 10%; right: -50%; opacity: 0; display: none}
+			}		
+			article{display:none}
+			}
+</style>
+<body>
+            <div></div>
+            <div></div>
+            <footer></footer>   
+            <section class="sledge">
+            		<img src="https://r7.pngwing.com/path/290/750/485/santa-claus-reindeer-christmas-clip-art-sleigh-silhouette-cliparts-b8e0cfce97ea2f013ca95c23405d5cce.png" alt="santa on sledge"></section>
+            <header></header>
+            <div></div>
+            <footer class="man"><b>⛄</b></footer>
+            <footer class="gifts"><b>🎁</b><b>🎁</b><b>🎁</b></footer>
+            <main>&copy;rupan 2021</main>   
+            <article>MERRY CHRISTMAS<br>Desktop version unavailable</article>                                       
+</body>
+<script>
+            var rgb = ["255,0,255", "255,255,0", "0,255,3", "0,255,153"];
+            var body = document.querySelectorAll("div")[0];
+            var tree = document.querySelectorAll("div")[1];
+            var snow = document.querySelectorAll("div")[2];
+            var rgba =""; 
+            var music = new Audio("https://ia601500.us.archive.org/15/items/y-2mate.com-christmas-instrumental-ringtone-jingle-bell-instrumental-ringtone-new-creation_202112/Merry%20Christmas.mp3");
+            var v = 15;
+     window.onload = function()
+        {           
+                var random = Math.round(Math.random()*99)+100;
+            for(var i = 1; i<random; i++)
+            body.innerHTML+= "<span></span>";
+            var span = document.querySelectorAll("span");
+            for(var i = 1; i<span.length; i++)
+            {
+                    span[i].style.top = Math.round(Math.random()*99)+"%";
+                    span[i].style.left = Math.round(Math.random()*99)+"%";
+                    var random_color = Math.round(Math.random()*rgb.length-1);
+                    var a = 0.8;
+                    span[i].style.background = "rgb("+rgb[random_color]+")";
+                    for(var j = 5; j<=v; j+=5)
+                    {
+                                if(j==v)
+                                            rgba+= "0 0 "+j+"px 1px rgba("+ rgb[random_color]+","+a+")";
+                                else
+                                            rgba+= "0 0 "+j+"px 1px rgba("+ rgb[random_color]+","+a+"),";
+                                a-=0.05;
+                    }
+                    span[i].style.boxShadow = rgba;
+                    rgba = "";
+                    }
+            }
+    for(var i = 0; i<11; i++)
+    {
+     if(i==10)
+            tree.innerHTML+= "<p>    &#11088;</p>";
+      else
+            tree.innerHTML+="<p></p>";
+ }
+    var p = document.querySelectorAll("p");
+    var w = 120;
+    var bw = 120;
+    var g = 50;
+    for(var i = 1; i<p.length; i++)
+    {            
+                p[i].style.borderWidth = bw+"px";
+                p[i].style.marginTop = "-"+(w/2+25)+"px";
+                p[i].style.borderBottomColor = "rgb(0,"+g+",2)";
+                w-=10;
+                bw-=10;
+                g+=7;
+    }
+    for(var i = 0; i<20; i++)
+    {
+                snow.innerHTML+= "<li></li>";
+    }
+    var li = document.querySelectorAll("li");
+    var left = 0;
+    for(var i = 0; i<li.length; i++)
+    {
+                li[i].style.left = left+"%";
+                left+= 5;        
+                li[i].style.animationDelay = Math.random()*20+"s";
+                if(left>99)
+                left=0;
+    }
+    var title = document.querySelector("header");
+var cap = "", quote = "Merry Christmas\n", n_name = "";
+var count = 0;
+var name = prompt("Hi! Enter your name please");
+if(name == "" || name == 'null')
+{
+    quote = "Merry Christmas";
+}
+else
+{
+    for(var i = 0; i<name.length; i++)
+{
+    if(name.charAt(i)!=' ')
+        n_name+=name.charAt(i);
+    else
+        break;
+}
+			if(n_name.toLowerCase()=="raju" || n_name.toLowerCase()=="subhadeep")
+    		 n_name = n_name+" Sir";
+    else if(n_name.toLowerCase()=="rupa" || n_name.toLowerCase()=="papia")
+    			n_name = n_name+" Miss";
+    else
+						n_name = n_name;
+		
+		 quote+=n_name
+}
+alert(n_name+" tap on the snowman ☃️");
+var counting_text = setInterval(function() 
+{         
+         cap+=quote.charAt(count);
+            title.innerHTML = cap;                                       
+         if(count==quote.length)
+            clearInterval();               
+         else
+         count++;
+},300);
+var snowman = document.querySelector(".man");
+var gifts = document.querySelector(".gifts");
+snowman.onclick = function()
+{
+			music.play();
+			snowman.style.textShadow = "0 0 20px yellow";
+			gifts.style.textShadow = "0 0 20px yellow";
+}
+music.addEventListener('ended', function()
+{
+    this.currentTime = 0;
+    this.play();
+},false);
+</script>
+</html>
