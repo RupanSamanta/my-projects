@@ -644,8 +644,8 @@ a:active{
 			}
 			.match-score div:nth-child(3)
 			{			
-						width: 25%;	
-						font-size: 30px;
+						width: 32%;	
+						font-size: 25px;
 						background: #dd0076;
 						font-weight: 800;
 			}
@@ -663,14 +663,22 @@ a:active{
 			.final-score
 			{
 						display: flex;
-						justify-content: center;		
+						justify-content: space-between;
+						text-align: center;
 			}
 			.final-score div
 			{
-						width: 33.3%;
-						background: rgba(221,0,118,1);
+						width: 45%;
+						height: 100%;
+						background: rgba(221,0,118,1);	
 			}
-			.final-score div:nth-of-type(even){background: rgba(221,0,118,1)}
+			.final-score div:nth-child(3)
+			{width: 45%}
+			.final-score div:nth-of-type(even)
+			{
+						background: rgba(221,0,118,1);
+						width: 10%;					
+			}
 			.match-event
 			{
 						margin: 10px 0;
