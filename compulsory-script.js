@@ -176,7 +176,7 @@ stats[3].onclick = function()
 	}
  var fixture_home_team_score = document.getElementsByClassName("home-team-score"), fixture_away_team_score = document.getElementsByClassName("away-team-score");
 
- var result_home_team_score = [0,3,0,0,2,'1(1)'];
+ var result_home_team_score = [0,3,0,0,2,'(1)1'];
  var result_away_team_score = [1,2,1,2,1,'1(0)'];
  
  for(var i = 0; i<result_home_team_score.length; i++)
