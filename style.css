@@ -466,10 +466,10 @@ a:active{
 			}
 		 .gallery-photo figcaption, .gallery-video figcaption	
 		 {
-		 			width: 100%;
-		 			padding: 5px 0;
+		 			width: auto;
+		 			padding: 5px;
 		 			margin: 0;
-		 			font-size: 13px;
+		 			font-size: 14px;
 		 }
 			.gallery-photo div, .gallery-video div
 		 {
