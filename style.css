@@ -454,35 +454,38 @@ a:active{
 						width: 100%;
 						padding: 5px 0;
 						background: rgba(0,0,0,0.3);
+						display: flex;
+						flex-wrap: wrap;
 			}
+		 .gallery-photo div, .gallery-video div
+		 {
+		 			width: 360px;
+		 			height: auto;
+		 		 margin: 20px auto;		
+		 }
 			.gallery-photo figure, .gallery-video figure
 			{
 						width: 100%;
 					 height: auto;
 						margin: 0;
-						padding: 0;
-						border: solid 1px;
+					 padding: 0;
+						border: solid 2px;
 						border-color: #ff00b2 yellow;
 			}
 		 .gallery-photo figcaption, .gallery-video figcaption	
 		 {
 		 			width: auto;
+		 			height: auto;
 		 			padding: 5px;
 		 			margin: 0;
 		 			font-size: 14px;
 		 }
-			.gallery-photo div, .gallery-video div
-		 {
-		 			width: 90%;
-		 		 margin: 50px auto;		 		 
-		 }
-		 .gallery-photo img, .gallery-video video
+		 .gallery-photo img, .gallery-video iframe
 			{
 						width: 100%;
-						height: auto;
+						height: 240px;
 						box-shadow: 0 0 2px aqua;						
 			}
-			
 			.series-stats-title
 			{
 						width: 100%;
@@ -576,27 +579,33 @@ a:active{
 						height: auto;
 						vertical-align: middle;
 			}
-			.goTop
+			.goTop, .music
 			{		
 						width: 40px;
+						height: 50px;
 						position: fixed;
 						bottom: 0;
 						right: 0;
 						margin: 0 20px 20px 0;
-						border: solid 1px #ff00b2;
-						background: rgba(0,0,0,.5);
-						backdrop-filter: blur(5px);
 						text-align: center;						
 						padding: 2px;
 						font-size: 30px;
 						font-weight: 1000;
-						box-shadow: 0 0 5px #ff00b2;
+						line-height: 50px;
+						color: yellow;
+						border: solid 1px yellow;
+						border-radius: 2px;
+						backdrop-filter: blur(2px);
+						background: rgba(0,0,0,.5);
+						display: none;
 			}
-			.goTop:hover
+			.music{left: 0; margin: 0 0 20px 20px; 25px; text-decoration: line-through;}
+			.goTop:hover, .music:hover
 			{
-						border-color: yellow;
-						box-shadow: 0 0 5px yellow;
+						border-color: #ff00b2;
+						color: #ff00b2;
 			}
+			
 			.match-score-container
 			{
 						width: 100%;
@@ -651,6 +660,7 @@ a:active{
 			}
 			.match-score div:nth-of-type(even)
 			{
+						width: 16%;
 						font-size: 18px;
 						font-weight: 600;
 						background: rgba(255,255,255,0.1);
