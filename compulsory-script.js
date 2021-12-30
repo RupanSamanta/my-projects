@@ -359,20 +359,49 @@ red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card<
 
 /* 						Statistics									 */
 
+var music = document.querySelector(".music");
+var ms = 0;
+var play_music = new Audio('https://ia601506.us.archive.org/2/items/fifa-tots-music/FIFA%20TOTS%20MUSIC.mp3');
+music.onclick = function()
+{		
+			if(ms%2==0)
+			{
+						music.style.textDecoration = "none";
+						play_music.play();
+			}		
+			else
+			{
+						music.style.textDecoration = "line-through";
+						play_music.pause();
+			}
+			ms++;
+}/*Play music*/
+music.addEventListener('ended', function()
+{
+    this.currentTime = 0;
+    this.play();
+},false);
+
 var goTop = document.querySelector(".goTop");
+goTop.innerHTML = '&#8896;';
 goTop.style.display = "none";
 window.onscroll = function() 
  {
-  		if(document.documentElement.scrollTop > 200)
-    			goTop.style.display = "block";
-    else 
-  				 goTop.style.display = "none";  
+ 	 		if(document.documentElement.scrollTop >= 200)
+   				goTop.style.display = "block";			
+    else
+  				 goTop.style.display = "none";
+  		if(document.documentElement.scrollTop > 7150)
+  					music.style.display = "block";
+  		else
+						music.style.display = "none";
 }
 goTop.onclick = function()
 {
 			document.documentElement.scrollTop = 0;
 }
-/* got to the top of page */
+/* got to the top of page & music */
+
 
 /* Navigator */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -387,7 +416,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* powered by script  */
 
-document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title" style="background:black">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --></div><div class="copyright">&copy;rupan 2021</div><div class="last-update">Last Updated on 12/24/2021 at 11:03 IST </div>';
+document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title" style="background:black">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --><div><img src="https://i.imgur.com/Y73ZVA1.png" alt="internet archive"></div><!-- internet archive --><div><img src="https://i.imgur.com/IweT3XQ.png" alt="youtube"></div><!-- YouTube --></div></div><div class="copyright">&copy;rupan 2021</div><div class="last-update">Last Updated on 12/30/2021 at 10:25 IST </div>';
+
+
 
 document.querySelector("body").style.color = "rgba(0,0,0,0)";
 var section = document.querySelectorAll("section");
