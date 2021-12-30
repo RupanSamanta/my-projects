@@ -391,7 +391,7 @@ window.onscroll = function()
    				goTop.style.display = "block";			
     else
   				 goTop.style.display = "none";
-  		if(document.documentElement.scrollTop > 7150)
+  		if(document.documentElement.scrollTop > 3500)
   					music.style.display = "block";
   		else
 						music.style.display = "none";
