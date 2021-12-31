@@ -294,6 +294,75 @@ var button_right = document.querySelector(".button_right");
 										
 				}								
  }
+  function time_check()
+ {
+ 			if (index==0 || index==2)
+ 			{
+ 						time.style.left = '50%';
+ 						time.style.top = '30%';
+ 			}
+ 			else if (index==1)
+ 			{
+ 						time.style.left = '70%';
+ 						time.style.top = '20%';
+ 			} 
+ 			else if (index==3) 
+ 			{
+ 						time.style.left = '70%';
+ 						time.style.top = '40%';
+ 			}
+ 			else if (index==4)
+ 			{
+ 						time.style.left = '65%';
+ 						time.style.top = '30%';
+ 			}
+ 			else if(index==5)
+ 			{
+ 						time.style.left = '30%';
+ 						time.style.top = '30%';
+ 			}
+ 			else if(index==6)
+ 			{
+ 						time.style.left = '35%';
+ 						time.style.top = '50%';
+ 			}
+ 			else if(index==7)
+ 			{
+ 						time.style.left = '50%';
+ 						time.style.top = '20%';
+ 			}
+ 			else if(index==9)
+ 			{
+ 						time.style.left = '50%';
+ 						time.style.top = '20%';
+ 			}
+ 			else if(index==8)
+ 			{
+ 						time.style.left = '30%';
+ 						time.style.top = '10%';
+ 			}
+ 			else if(index==10)
+ 			{
+ 						time.style.left = '70%';
+ 						time.style.top = '15%';
+ 			}
+ }
+var slide_show = setInterval(function ()
+{
+			if(index>=body.length-1)
+					index=0;
+		 else
+					index++;
+			for(var i = 0; i<body.length; i++)
+			{
+						if(i==index)
+									body[i].style.opacity = 1;
+						else
+									body[i].style.opacity = 0;
+			}				
+			time_check()				
+},5000);
+
 var time = document.querySelector(".time");
 var second = 1000, minute = second*60, hour = minute*60, day = hour*24;
 var d,h,m,s, new_year;
@@ -394,60 +463,9 @@ var now = new Date().getTime();
 			{  			document.getElementById('canvas').style.display = "none";
 			}
 }
-setInterval(update_time,1000); /* interval  */
- function time_check()
- {
- 			if (index==0 || index==2)
- 			{
- 						time.style.left = '50%';
- 						time.style.top = '30%';
- 			}
- 			else if (index==1)
- 			{
- 						time.style.left = '70%';
- 						time.style.top = '20%';
- 			} 
- 			else if (index==3) 
- 			{
- 						time.style.left = '70%';
- 						time.style.top = '40%';
- 			}
- 			else if (index==4)
- 			{
- 						time.style.left = '65%';
- 						time.style.top = '30%';
- 			}
- 			else if(index==5)
- 			{
- 						time.style.left = '30%';
- 						time.style.top = '30%';
- 			}
- 			else if(index==6)
- 			{
- 						time.style.left = '35%';
- 						time.style.top = '50%';
- 			}
- 			else if(index==7)
- 			{
- 						time.style.left = '50%';
- 						time.style.top = '20%';
- 			}
- 			else if(index==9)
- 			{
- 						time.style.left = '50%';
- 						time.style.top = '20%';
- 			}
- 			else if(index==8)
- 			{
- 						time.style.left = '30%';
- 						time.style.top = '10%';
- 			}
- 			else if(index==10)
- 			{
- 						time.style.left = '70%';
- 						time.style.top = '15%';
- 			}
- }
+var update_each_s = setInterval(update_time,1000); 
+/* interval  */
+
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages;    
 
@@ -783,6 +801,6 @@ document.querySelector(".close").onclick = function()
 			document.querySelector(".lightbox").style.transform = 'translate(-50%, -100%)';
 			document.querySelector(".lightbox").style.top = '0%';
 }
-alert('Tap on left or right of the screen to navigate')
+			alert('Tap on left or right of the screen to navigate')
 </script>
 </html>
