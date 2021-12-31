@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+			<meta name="theme-color" content="black">
+			<title>Happy New Year</title>
+</head>
+<style>
+			@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+			@media only screen and (orientation: landscape)
+			{
+						#body
+						{
+									left: 0;			
+									background-size: 100% auto !important;		
+									background-position: center center !important;			
+						}
+						canvas
+						{
+									width: 300px;
+									height: 100%;
+						}
+						.lightbox
+						{
+									font-size: 13px !important;
+						}
+						p:nth-child(2)
+						{font-size: 16px !important}
+			}		
+			@media only screen and (orientation: portrait)
+			{
+						#body
+						{										
+									background-size: auto 100% !important;					
+						}		
+						.alert:after
+			   {
+						font-size: 18px;
+						text-align: center;
+						position: absolute;
+						content: "Better view in landscape mode";
+		    	}	
+		    	canvas
+		    	{
+		    				width: 100%;
+		    				height: 100%;
+		    	}
+		 #body:nth-child(2)/* Rio de Janeiro */
+			{background-position-x: -200px !important}
+			#body:nth-child(1)/* Sydney */
+			{background-position-x: -100px !important}
+			#body:nth-child(3)/* Kolkata */
+			{background-position-x: 0 !important}
+			#body:nth-child(4)/* London */
+			{background-position-x: -100px !important}
+			#body:nth-child(5)/* Tokyo */
+			{background-position-x: -150px !important}
+			#body:nth-child(6)/* Dubai */
+			{background-position-x: -450px !important}
+			#body:nth-child(7)/* Paris */
+			{background-position-x: -450px !important}
+			#body:nth-child(10)/* Manhattan */
+			{background-position-x: -100px !important}
+			#body:nth-child(8)/* Johannesberg */
+			{background-position-x: 0 !important}
+			#body:nth-child(9)/* Shanghai */
+			{background-position-x: -350px !important}
+			#body:nth-child(11)/* Moscow */
+			{background-position-x: -300px !important}
+			
+			}		
+			*
+			{transition: all 0.4s !important;}
+	  body
+			{
+						background: black;
+						margin: 0;
+						color: gainsboro;
+						font-family: 'Varela Round', san-serif;
+			}
+			#body
+			{
+						width: 100%;
+						height: 100%;
+						position: absolute;	
+						background-repeat: no-repeat !important;	
+						display: flex;
+						align-items: flex-end;
+						text-shadow: 0 0 5px black;
+						font-size: 18px;
+			}
+			#body:nth-child(2)/* Rio de Janeiro */
+			{background: url('https://i.imgur.com/iCZMOSj.jpg')}
+			#body:nth-child(1)/* Sydney */
+			{background: url('https://i.imgur.com/YcShSXd.jpg')}
+			#body:nth-child(3)/* Kolkata */
+			{background: url('https://i.imgur.com/rSIo3Vd.jpg')}
+			#body:nth-child(4)/* London */
+			{background: url('https://i.imgur.com/7pPg0DC.jpg')}
+			#body:nth-child(5)/* Tokyo */
+			{background: url('https://i.imgur.com/NFELMrr.jpg')}
+			#body:nth-child(6)/* Dubai */
+			{background: url('https://i.imgur.com/DsY4U1z.jpg')}
+			#body:nth-child(7)/* Paris */
+			{background: url('https://i.imgur.com/NA9VI2i.jpg')}
+			#body:nth-child(10)/* Manhattan */
+			{background: url('https://i.imgur.com/qPcDRcZ.jpg')}
+			#body:nth-child(8)/* Johannesberg */
+			{background: url('https://i.imgur.com/2qQ2aAH.jpg')}
+			#body:nth-child(9)/* Shanghai */
+			{background: url('https://i.imgur.com/j7IlAVV.jpg')}
+			#body:nth-child(11)/* Moscow */
+			{background: url('https://i.imgur.com/WNRIiSk.jpg')}
+			
+			.button_left, .button_right
+			{
+						width: 40%;
+						height: 100%;
+						position: absolute;
+						background: transparent;
+			}
+			.button_left
+			{
+						left: 0;
+			}
+			.button_right
+			{
+						right: 0;
+			}
+			.time
+			{
+						position: absolute;
+						transform: translate(-50%, -50%);
+						left: 50%;
+						top: 30%;
+						width: auto;
+						height: auto;
+						font-size: 35px;
+						white-space: nowrap;
+						font-family: 'Righteous', cursive;
+						text-align: center;
+						text-shadow: 0 0 5px magenta;
+						color: rgba(255,255,255,0.5);
+						animation: text 10s infinite linear;
+			}
+			@keyframes text
+			{
+						10%{text-shadow: 0 0 5px purple}
+						20%{text-shadow: 0 0 5px blue}
+						30%{text-shadow: 0 0 5px skyblue}
+						40%{text-shadow: 0 0 5px green}
+						50%{text-shadow: 0 0 5px lime}						
+						60%{text-shadow: 0 0 5px yellow}
+						70%{text-shadow: 0 0 5px orange}
+						80%{text-shadow: 0 0 5px orangered}
+						90%{text-shadow: 0 0 5px red}
+						100%{text-shadow: 0 0 5px magenta}
+			}
+			canvas
+			{
+				cursor: crosshair;
+				display: none;
+				position: absolute;
+				transform: translateX(-50%);
+				left: 50%;
+				}
+				button
+			{
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						width: auto;
+						height: auto;
+						border: none;
+						background: transparent;
+						font-size: 30px;
+						color: gainsboro;
+			}
+			.lightbox
+			{
+						position: absolute;
+						top: 0%;
+						left: 50%;
+						transform: translate(-50%, -100%);
+						width: 320px;
+						height: auto;
+						padding: 5px;
+						font-size: 18px;
+						background: linear-gradient(to bottom right, rgba(15, 250, 203, 0.4), rgba(0,0,0,0.5), rgba(164, 15, 250, 0.4));
+						border: solid 2px;
+						border-color: rgba(164, 15, 250, 0.7) rgba(15, 250, 203, 0.7) rgba(15, 250, 203, 0.7) rgba(164, 15, 250, 0.7);
+						backdrop-filter: blur(5px);
+			}
+			a:visited,a:link,a:active
+			{
+						text-decoration: none;
+						color: gainsboro;
+			}
+			p:nth-child(2)
+			{
+						background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(255,255,255,0.5));
+						font-size: 25px;
+						font-weight: 800;
+						text-align: center;
+						margin: 5px 0;
+			}
+			.lightbox .close
+			{
+						height: auto;
+						width: 30px;
+						padding: 0 2px;
+						font-size: 30px;
+						text-align: center;
+						transform: translateY(-42px);
+						margin: 0 0 -30px 0;
+						background: rgba(164, 15, 250, 0.8);
+			}
+</style>
+<body>
+			<div id="body" class="lazy">Sydney, Australia</div>
+    <div id="body" class="lazy">Rio de Janeiro, Brazil</div>
+    <div id="body" class="lazy">Kolkata, India</div>
+    <div id="body" class="lazy">London, United Kingdom</div>
+    <div id="body" class="lazy">Tokyo, Japan</div>
+    <div id="body" class="lazy">Dubai, United Arab Emirates</div>
+    <div id="body" class="lazy">Paris, France</div>    
+    <div id="body" class="lazy">Johannesburg, South Africa</div>
+    <div id="body" class="lazy">Shanghai, China</div>
+    <div id="body" class="lazy">Manhattan, United States</div>
+    <div id="body" class="lazy">Moscow, Russia</div>
+    <div class="time"></div>
+    <canvas id="canvas"></canvas>
+    <div class="button_left" onclick="left(); time_check()"></div>
+    <div class="button_right" onclick="right(); time_check()"></div>
+    <div class="alert"></div>
+    <div class="lightbox">
+    		<div class="close">X</div>
+      <p>Happy New Year</p>
+      <p>I wish this year you will meet all your expectations and enjoy your life with your near and dear ones</p>      
+      <p>Site Credit : Rupan Samanta</p>
+      <p>
+      			Image Credit : <ul>
+      			<li><a href="https://allpapercave.com">wallpapercave.com</a></li>
+      			<li><a href="https://alphacoders.com">alphacoders.com</a></li>
+      			<li><a href="https://wallpaperflare.com">wallpaperflare.com</a></li>
+      			<li><a href="https://wallpapersafari.com">wallpapersafari.com</a></li>
+      			<li><a href="https://unsplash.com">unsplash.com</a></li>
+      			</ul>
+      		</p>
+      			<p>Crackers 
+       Credit : <a href="https://codepen.io/whqet/pen/Auzch">haiqing wang &#8599;</a></p>
+    </div>
+    <button>©</button>    
+</body>
+<script>	
+var button_left = document.querySelector(".button_left");	
+var button_right = document.querySelector(".button_right");
+	var body = document.querySelectorAll("#body");
+	for(var i = 0; i<body.length; i++)
+	{
+				if(i == 2)	
+							body[i].style.opacity = 1;
+				else
+							body[i].style.opacity = 0;
+	}
+	var index = 2;
+	function right()
+	{
+				if(index>=body.length-1)
+							index=0;
+				else
+						 index++;
+				for(var i = 0; i<body.length; i++)
+				{
+							if(i == index)	
+										body[i].style.opacity = 1;
+							else
+										body[i].style.opacity = 0;
+				}			
+	}
+	function left()
+	{
+				if(index<=0)
+							index=body.length-1;
+				else
+						 index--;				
+				for(var i = 0; i<body.length; i++)
+				{
+							if(i == index)			
+										body[i].style.opacity = 1;
+							else
+										body[i].style.opacity = 0;
+										
+				}								
+ }
+var time = document.querySelector(".time");
+var second = 1000, minute = second*60, hour = minute*60, day = hour*24;
+var d,h,m,s, new_year;
+function update_time()/*  fiction to update countdown */
+{
+var now = new Date().getTime();
+    if (index==0)
+    {
+    			new_year = new Date('December 31, 2021 18:30:00').getTime();
+    }
+    else if (index==1)
+    {
+    			new_year = new Date('January 1,2022 08:30:00').getTime();
+    } 
+    else if (index==3)
+    {
+    			new_year = new Date('January 1,2022 05:30:00').getTime();
+    } 
+    else if (index==4)
+    {
+    			new_year = new Date('December 31, 2021 20:30:00').getTime();
+    } 
+    else if (index==5)
+    {
+    			new_year = new Date('January 1,2022 01:30:00').getTime();
+    }
+    else if (index==6)
+    {
+    			new_year = new Date('January 1,2022 04:30:00').getTime();
+    }
+    else if (index==7)
+    {
+    		 new_year = new Date('January 1,2022 03:30:00').getTime();
+    } 
+    else if (index==8)
+    {
+    			new_year = new Date('December 31, 2021 21:30:00').getTime();
+    } 
+    else if (index==9)
+    {
+    			new_year = new Date('January 1,2022 10:30:00').getTime();
+    }
+    else if (index==10)
+    {
+    			new_year = new Date('January 1,2022 02:30:00').getTime();
+    }
+    else
+			{
+					 new_year = new Date('January 1,2022 00:00:00').getTime();
+			}
+  var distance = new_year - now;
+    d = 	Math.floor(distance / day);		
+    h = Math.floor((distance % day) / hour);
+    m = Math.floor((distance % hour) / minute);    
+    s = Math.floor((distance % minute) / second);
+   if(d<=0)
+ 		{	
+     if(h<=0 && m>0)
+   				 time.innerHTML = m+'m '+s+'s';	
+     else if(h<=0 && m<=0)
+ 							time.innerHTML = s+'s';	
+   		else
+   	 			time.innerHTML = h+'h '+m+'m '+s+'s';	
+   }
+   else if(h<=0)
+   {
+   		if(d<=0 && m>0)
+   					time.innerHTML = m+'m '+s+'s';
+     else if(d>0 && m<=0)
+ 						 time.innerHTML = d+'d '+h+'h '+m+'m '+s+'s';
+   		else if(d<=0 && m<=0)
+   					time.innerHTML = s+'s';
+   		else if(d>0 && m>0)
+   					time.innerHTML = d+'d '+h+'h '+m+'m '+s+'s';   		 
+			}
+			else if(m<=0)
+ 			{			
+  			if(d<=0 && h>0)
+   					time.innerHTML = h+'h '+m+'m '+s+'s';
+     else if(d>0 && h<=0)
+ 							time.innerHTML = d+'d '+h+'h '+m+'m '+s+'s';
+   		else if(d<=0 && h<=0)
+   					time.innerHTML = s+'s';
+   		else if(d>0 && h>0)
+   					time.innerHTML = d+'d '+h+'h '+m+'m '+s+'s';
+   	}
+   else
+			   time.innerHTML = d+'d '+h+'h '+m+'m '+s+'s';
+			   
+   if (distance <= 0)
+   {
+   			time.innerHTML = 'Happy New Year<br><span style="font-size: 120px">2022</span>';
+   			time.style.left = '50%';
+   			time.style.top = '50%';
+   			 document.getElementById('canvas').style.display = "block";
+   }
+   else
+			{  			document.getElementById('canvas').style.display = "none";
+			}
+}
+setInterval(update_time,1000); /* interval  */
+ function time_check()
+ {
+ 			if (index==0 || index==2)
+ 			{
+ 						time.style.left = '50%';
+ 						time.style.top = '30%';
+ 			}
+ 			else if (index==1)
+ 			{
+ 						time.style.left = '70%';
+ 						time.style.top = '20%';
+ 			} 
+ 			else if (index==3) 
+ 			{
+ 						time.style.left = '70%';
+ 						time.style.top = '40%';
+ 			}
+ 			else if (index==4)
+ 			{
+ 						time.style.left = '65%';
+ 						time.style.top = '30%';
+ 			}
+ 			else if(index==5)
+ 			{
+ 						time.style.left = '30%';
+ 						time.style.top = '30%';
+ 			}
+ 			else if(index==6)
+ 			{
+ 						time.style.left = '35%';
+ 						time.style.top = '50%';
+ 			}
+ 			else if(index==7)
+ 			{
+ 						time.style.left = '50%';
+ 						time.style.top = '20%';
+ 			}
+ 			else if(index==9)
+ 			{
+ 						time.style.left = '50%';
+ 						time.style.top = '20%';
+ 			}
+ 			else if(index==8)
+ 			{
+ 						time.style.left = '30%';
+ 						time.style.top = '10%';
+ 			}
+ 			else if(index==10)
+ 			{
+ 						time.style.left = '70%';
+ 						time.style.top = '15%';
+ 			}
+ }
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;    
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+/*  Canvas drawing */
+		// when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
+// not supported in all browsers though and sometimes needs a prefix, so we need a shim
+window.requestAnimFrame = ( function() {
+	return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function( callback ) {
+					window.setTimeout( callback, 1000 / 60 );
+				};
+})();
+
+// now we will setup our basic variables for the demo
+var canvas = document.getElementById( 'canvas' ),
+		ctx = canvas.getContext( '2d' ),
+		// full screen dimensions
+		cw = window.innerWidth,
+		ch = window.innerHeight,
+		// firework collection
+		fireworks = [],
+		// particle collection
+		particles = [],
+		// starting hue
+		hue = 120,
+		// when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
+		limiterTotal = 5,
+		limiterTick = 0,
+		// this will time the auto launches of fireworks, one launch per 10 loop ticks
+		timerTotal = 10,
+		timerTick = 0,
+		mousedown = false,
+		// mouse x coordinate,
+		mx,
+		// mouse y coordinate
+		my;
+		
+// set canvas dimensions
+canvas.width = cw;
+canvas.height = ch;
+
+// now we are going to setup our function placeholders for the entire demo
+
+// get a random number within a range
+function random( min, max ) {
+	return Math.random() * ( max - min ) + min;
+}
+
+// calculate the distance between two points
+function calculateDistance( p1x, p1y, p2x, p2y ) {
+	var xDistance = p1x - p2x,
+			yDistance = p1y - p2y;
+	return Math.sqrt( Math.pow( xDistance, 2 ) + Math.pow( yDistance, 2 ) );
+}
+
+// create firework
+function Firework( sx, sy, tx, ty ) {
+	// actual coordinates
+	this.x = sx;
+	this.y = sy;
+	// starting coordinates
+	this.sx = sx;
+	this.sy = sy;
+	// target coordinates
+	this.tx = tx;
+	this.ty = ty;
+	// distance from starting point to target
+	this.distanceToTarget = calculateDistance( sx, sy, tx, ty );
+	this.distanceTraveled = 0;
+	// track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
+	this.coordinates = [];
+	this.coordinateCount = 3;
+	// populate initial coordinate collection with the current coordinates
+	while( this.coordinateCount-- ) {
+		this.coordinates.push( [ this.x, this.y ] );
+	}
+	this.angle = Math.atan2( ty - sy, tx - sx );
+	this.speed = 2;
+	this.acceleration = 1.05;
+	this.brightness = random( 50, 70 );
+	// circle target indicator radius
+	this.targetRadius = 1;
+}
+
+// update firework
+Firework.prototype.update = function( index ) {
+	// remove last item in coordinates array
+	this.coordinates.pop();
+	// add current coordinates to the start of the array
+	this.coordinates.unshift( [ this.x, this.y ] );
+	
+	// cycle the circle target indicator radius
+	if( this.targetRadius < 8 ) {
+		this.targetRadius += 0.3;
+	} else {
+		this.targetRadius = 1;
+	}
+	
+	// speed up the firework
+	this.speed *= this.acceleration;
+	
+	// get the current velocities based on angle and speed
+	var vx = Math.cos( this.angle ) * this.speed,
+			vy = Math.sin( this.angle ) * this.speed;
+	// how far will the firework have traveled with velocities applied?
+	this.distanceTraveled = calculateDistance( this.sx, this.sy, this.x + vx, this.y + vy );
+	
+	// if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
+	if( this.distanceTraveled >= this.distanceToTarget ) {
+		createParticles( this.tx, this.ty );
+		// remove the firework, use the index passed into the update function to determine which to remove
+		fireworks.splice( index, 1 );
+	} else {
+		// target not reached, keep traveling
+		this.x += vx;
+		this.y += vy;
+	}
+}
+
+// draw firework
+Firework.prototype.draw = function() {
+	ctx.beginPath();
+	// move to the last tracked coordinate in the set, then draw a line to the current x and y
+	ctx.moveTo( this.coordinates[ this.coordinates.length - 1][ 0 ], this.coordinates[ this.coordinates.length - 1][ 1 ] );
+	ctx.lineTo( this.x, this.y );
+	ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
+	ctx.stroke();
+	
+	ctx.beginPath();
+	// draw the target for this firework with a pulsing circle
+	ctx.arc( this.tx, this.ty, this.targetRadius, 0, Math.PI * 2 );
+	ctx.stroke();
+}
+
+// create particle
+function Particle( x, y ) {
+	this.x = x;
+	this.y = y;
+	// track the past coordinates of each particle to create a trail effect, increase the coordinate count to create more prominent trails
+	this.coordinates = [];
+	this.coordinateCount = 5;
+	while( this.coordinateCount-- ) {
+		this.coordinates.push( [ this.x, this.y ] );
+	}
+	// set a random angle in all possible directions, in radians
+	this.angle = random( 0, Math.PI * 2 );
+	this.speed = random( 1, 10 );
+	// friction will slow the particle down
+	this.friction = 0.95;
+	// gravity will be applied and pull the particle down
+	this.gravity = 1;
+	// set the hue to a random number +-50 of the overall hue variable
+	this.hue = random( hue - 50, hue + 50 );
+	this.brightness = random( 50, 80 );
+	this.alpha = 1;
+	// set how fast the particle fades out
+	this.decay = random( 0.015, 0.03 );
+}
+
+// update particle
+Particle.prototype.update = function( index ) {
+	// remove last item in coordinates array
+	this.coordinates.pop();
+	// add current coordinates to the start of the array
+	this.coordinates.unshift( [ this.x, this.y ] );
+	// slow down the particle
+	this.speed *= this.friction;
+	// apply velocity
+	this.x += Math.cos( this.angle ) * this.speed;
+	this.y += Math.sin( this.angle ) * this.speed + this.gravity;
+	// fade out the particle
+	this.alpha -= this.decay;
+	
+	// remove the particle once the alpha is low enough, based on the passed in index
+	if( this.alpha <= this.decay ) {
+		particles.splice( index, 1 );
+	}
+}
+
+// draw particle
+Particle.prototype.draw = function() {
+	ctx. beginPath();
+	// move to the last tracked coordinates in the set, then draw a line to the current x and y
+	ctx.moveTo( this.coordinates[ this.coordinates.length - 1 ][ 0 ], this.coordinates[ this.coordinates.length - 1 ][ 1 ] );
+	ctx.lineTo( this.x, this.y );
+	ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
+	ctx.stroke();
+}
+
+// create particle group/explosion
+function createParticles( x, y ) {
+	// increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
+	var particleCount = 30;
+	while( particleCount-- ) {
+		particles.push( new Particle( x, y ) );
+	}
+}
+
+// main demo loop
+function loop() {
+	// this function will run endlessly with requestAnimationFrame
+	requestAnimFrame( loop );
+	
+	// increase the hue to get different colored fireworks over time
+	//hue += 0.5;
+  
+  // create random color
+  hue= random(0, 360 );
+	
+	// normally, clearRect() would be used to clear the canvas
+	// we want to create a trailing effect though
+	// setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+	ctx.globalCompositeOperation = 'destination-out';
+	// decrease the alpha property to create more prominent trails
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+	ctx.fillRect( 0, 0, cw, ch );
+	// change the composite operation back to our main mode
+	// lighter creates bright highlight points as the fireworks and particles overlap each other
+	ctx.globalCompositeOperation = 'lighter';
+	
+	// loop over each firework, draw it, update it
+	var i = fireworks.length;
+	while( i-- ) {
+		fireworks[ i ].draw();
+		fireworks[ i ].update( i );
+	}
+	
+	// loop over each particle, draw it, update it
+	var i = particles.length;
+	while( i-- ) {
+		particles[ i ].draw();
+		particles[ i ].update( i );
+	}
+	
+	// launch fireworks automatically to random coordinates, when the mouse isn't down
+	if( timerTick >= timerTotal ) {
+		if( !mousedown ) {
+			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+			timerTick = 0;
+		}
+	} else {
+		timerTick++;
+	}
+	
+	// limit the rate at which fireworks get launched when mouse is down
+	if( limiterTick >= limiterTotal ) {
+		if( mousedown ) {
+			// start the firework at the bottom middle of the screen, then set the current mouse coordinates as the target
+			fireworks.push( new Firework( cw / 2, ch, mx, my ) );
+			limiterTick = 0;
+		}
+	} else {
+		limiterTick++;
+	}
+}
+
+// mouse event bindings
+// update the mouse coordinates on mousemove
+canvas.addEventListener( 'mousemove', function( e ) {
+	mx = e.pageX - canvas.offsetLeft;
+	my = e.pageY - canvas.offsetTop;
+});
+
+// toggle mousedown state and prevent canvas from being selected
+canvas.addEventListener( 'mousedown', function( e ) {
+	e.preventDefault();
+	mousedown = true;
+});
+
+canvas.addEventListener( 'mouseup', function( e ) {
+	e.preventDefault();
+	mousedown = false;
+});
+
+// once the window loads, we are ready for some fireworks!
+window.onload = loop;
+
+document.querySelector("button").onclick = function()
+{
+			document.querySelector(".lightbox").style.transform = 'translate(-50%, -50%)';
+			document.querySelector(".lightbox").style.top = '50%';
+}
+document.querySelector(".close").onclick = function()
+{			
+			document.querySelector(".lightbox").style.transform = 'translate(-50%, -100%)';
+			document.querySelector(".lightbox").style.top = '0%';
+}
+//alert('Tap on left or right of the screen to navigate')
+</script>
+</html>
