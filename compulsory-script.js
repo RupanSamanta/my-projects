@@ -156,7 +156,7 @@ stats[3].onclick = function()
  /*												 Fixtures & Results 									*/
 
 	var match_date = document.querySelectorAll("div.match-date");
-	var match_dates = ['Thurday, 23rd December, 2021'];
+	var match_dates = ['Thurday, 23rd December, 2021', 'Saturday, 1st January, 2022'];
 	for(var i = 0; i<6; i++)
 	{match_date[i].innerHTML = match_dates[0]};
  var match_centre_box = document.querySelectorAll("div.match-centre-box");
