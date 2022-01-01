@@ -341,18 +341,18 @@ goals.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Goals</td></
 <tr><td>3</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>3</td></tr>\
 <tr><td>4</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>2</td></tr>\
 <tr><td>4</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>2</td></tr>\
-<tr><td>4</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>';
+<tr><td>4</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
 <tr><td>5</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
 <tr><td>5</td><td>'+rfc_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
 <tr><td>5</td><td>'+amb_logo+'</td><td>Paul Pogba</td><td>1</td></tr>\
 <tr><td>5</td><td>'+amb_logo+'</td><td>Erling Haaland</td><td>1</td></tr>\
-<tr><td>5</td><td>'+amb_logo+'</td><td>Mahammad Salah</td><td>1</td></tr>\
+<tr><td>5</td><td>'+amb_logo+'</td><td>Mahammad Salah</td><td>1</td></tr>';
 
 assists.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Assists</td></tr>\
 <tr><td>1</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>6</td></tr>\
 <tr><td>2</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>4</td></tr>\
 <tr><td>3</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>3</td></tr>\
-<tr><td>4</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>';
+<tr><td>4</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
 <tr><td>4</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>2</td></tr>\
 <tr><td>4</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
 <tr><td>5</td><td>'+rfc_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
@@ -361,8 +361,8 @@ assists.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Assists</t
 
 yellow_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Yellow Card</td></tr>\
 <tr><td>1</td><td>'+rfc_logo+'</td><td>Joáo Cancelo</td><td>1</td></tr>\
-<tr><td>1</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>1</td></tr>';
-<tr><td>1</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>1</td></tr>';
+<tr><td>1</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>1</td></tr>\
+<tr><td>1</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>1</td></tr>\
 <tr><td>1</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>1</td></tr>\
 <tr><td>1</td><td>'+rfc_logo+'</td><td>Jordi Alba</td><td>1</td></tr>';
 
