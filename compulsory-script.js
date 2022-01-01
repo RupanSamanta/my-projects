@@ -176,8 +176,8 @@ stats[3].onclick = function()
 	}
  var fixture_home_team_score = document.getElementsByClassName("home-team-score"), fixture_away_team_score = document.getElementsByClassName("away-team-score");
 
- var result_home_team_score = [0,3,0,0,2,'(1)1'];
- var result_away_team_score = [1,2,1,2,1,'1(0)'];
+ var result_home_team_score = [0,3,0,0,2,'(1)1',0,1,1,3,2,3];
+ var result_away_team_score = [1,2,1,2,1,'1(0)',1,2,2,0,1,1];
  
  for(var i = 0; i<result_home_team_score.length; i++)
  {
@@ -279,10 +279,10 @@ stats[3].onclick = function()
 
 
 /* 						head to head 						*/
-var rfc_pos = [54,53,49,68,60,55];
-var amb_pos = [46,47,51,32,40,45];
-var rfc_pass = [85,81,80,92,87,87];
-var amb_pass = [69,76,64,72,72,66];
+var rfc_pos = [54,53,49,68,60,55,53,51,56,64,46,56];
+var amb_pos = [46,47,51,32,40,45,47,49,44,36,54,44];
+var rfc_pass = [85,81,80,92,87,87,78,91,82,87,78,77];
+var amb_pass = [69,76,64,72,72,66,72,77,71,65,74,71];
 var rfc_pos_avg = 0, rfc_pass_avg = 0, amb_pos_avg = 0, amb_pass_avg = 0;
 for(var i = 0; i<rfc_pos.length; i++)
 {
@@ -296,34 +296,34 @@ rfc_pass_avg = ((rfc_pass_avg/rfc_pass.length).toString()).substring(0,2)+'%';
 amb_pos_avg = ((amb_pos_avg/amb_pos.length).toString()).substring(0,2)+'%';
 amb_pass_avg = ((amb_pass_avg/amb_pass.length).toString()).substring(0,2)+'%';
 
-document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 6</div></div>\
-<div class="details"><div>2</div><div>Won</div><div>4</div></div>\
-<div class="details"><div>4</div><div>Lost</div><div>2</div></div>\
+document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 12</div></div>\
+<div class="details"><div>6</div><div>Won</div><div>6</div></div>\
+<div class="details"><div>6</div><div>Lost</div><div>6</div></div>\
 <div class="details"><div>'+rfc_pos_avg+'</div><div>Average Possession</div><div>'+amb_pos_avg+'</div></div>\
-<div class="details"><div>38</div><div>Total Shots</div><div>22</div></div>\
-<div class="details"><div>7</div><div>Goal Scored</div><div>8</div></div>\
-<div class="details"><div>8</div><div>Goal Conceded</div><div>7</div></div>\
-<div class="details"><div>1</div><div>Cleansheet</div><div>2</div></div>\
+<div class="details"><div>76</div><div>Total Shots</div><div>44</div></div>\
+<div class="details"><div>18</div><div>Goal Scored</div><div>14</div></div>\
+<div class="details"><div>14</div><div>Goal Conceded</div><div>18</div></div>\
+<div class="details"><div>3</div><div>Cleansheet</div><div>2</div></div>\
 <div class="details"><div>'+rfc_pass_avg+'</div><div>Pass Completion</div><div>'+amb_pass_avg+'</div></div>\
-<div class="details"><div>6</div><div>Fouls</div><div>4</div></div>\
-<div class="details"><div>Recent Result 1(0) - 1(1)</div></div>';
+<div class="details"><div>12</div><div>Fouls</div><div>9</div></div>\
+<div class="details"><div>Recent Result 3 - 1</div></div>';
 /* 						head to head						 */
 
 
  /* Series in Number */
-document.querySelector("#series-in-number").innerHTML = '<div class="box"><div><div class="title">SERIES IN NUMBERS</div></div><div class="container"><div class="series-stats-title"><div>Series 1</div><div>Series 2</div><div>Series 3</div></div><div class="series-stats-details"><div class="series-stats-box"><img src="https://www.pngkit.com/png/full/292-2928062_football-icon-png-white.png" alt="football"><br><li>Goals</li><li id="goal"></li></div><!-- goals --><div class="series-stats-box"><img src="https://i.imgur.com/0OdGHXd.png" alt="football"><br><li>Shots Taken</li><li id="shots-taken"></li></div><!-- shots taken --><div class="series-stats-box"><img src="https://i.imgur.com/6AirFua.png" alt=""><br><li>Average Goals</li><li id="average-goal"></li></div><!-- average goals --><div class="series-stats-box"><img src="https://i.imgur.com/4eLBh27.png" alt="watch"><br><li>Minutes Per Goal</li><li id="minutes-per-goal"></li></div><!-- minutes per goal --><div class="series-stats-box"><img src="https://i.imgur.com/E6wTRRh.png" alt="football"><br><li>Fouls</li><li id="fouls"></li></div><!-- fouls --><div class="series-stats-box"><img src="https://i.imgur.com/1mIMCnp.png" alt="football"><br><li>Yellow Cards</li><li id="yellow-card"></li></div><!-- yellow card--><div class="series-stats-box"><img src="https://i.imgur.com/RP44wPx.png" alt="football"><br><li>Red Cards</li><li id="red-card"></li></div><!-- red card --><div class="series-stats-box"><img src="https://i.imgur.com/O140xYL.png" alt="gloves"><br><li>Clean Sheets</li><li id="cleansheet"></li></div><!-- clean sheet --></div>	<!-- series-stats-details --></div><!-- container --></div>'
+document.querySelector("#series-in-number").innerHTML = '<div class="box"><div><div class="title">SEASON IN NUMBERS</div></div><div class="container"><div class="series-stats-details"><div class="series-stats-box"><img src="https://www.pngkit.com/png/full/292-2928062_football-icon-png-white.png" alt="football"><br><li>Goals</li><li id="goal"></li></div><!-- goals --><div class="series-stats-box"><img src="https://i.imgur.com/0OdGHXd.png" alt="football"><br><li>Shots Taken</li><li id="shots-taken"></li></div><!-- shots taken --><div class="series-stats-box"><img src="https://i.imgur.com/6AirFua.png" alt=""><br><li>Average Goals</li><li id="average-goal"></li></div><!-- average goals --><div class="series-stats-box"><img src="https://i.imgur.com/4eLBh27.png" alt="watch"><br><li>Minutes Per Goal</li><li id="minutes-per-goal"></li></div><!-- minutes per goal --><div class="series-stats-box"><img src="https://i.imgur.com/E6wTRRh.png" alt="football"><br><li>Fouls</li><li id="fouls"></li></div><!-- fouls --><div class="series-stats-box"><img src="https://i.imgur.com/1mIMCnp.png" alt="football"><br><li>Yellow Cards</li><li id="yellow-card"></li></div><!-- yellow card--><div class="series-stats-box"><img src="https://i.imgur.com/RP44wPx.png" alt="football"><br><li>Red Cards</li><li id="red-card"></li></div><!-- red card --><div class="series-stats-box"><img src="https://i.imgur.com/O140xYL.png" alt="gloves"><br><li>Clean Sheets</li><li id="cleansheet"></li></div><!-- clean sheet --></div>	<!-- series-stats-details --></div><!-- container --></div>'
 				
-var goals = 14, match = 6;
+var goals = 32, match = 12;
 var average_goal = (goals/match).toString();
 var minutes_per_goal = ((match*90)/goals).toString();
 document.querySelector("#goal").innerHTML = goals;
-document.querySelector("#shots-taken").innerHTML = 60;
+document.querySelector("#shots-taken").innerHTML = 120;
 document.querySelector("#minutes-per-goal").innerHTML = minutes_per_goal.substring(0,5);
 document.querySelector("#average-goal").innerHTML = average_goal.substring(0,4);
-document.querySelector("#fouls").innerHTML = 10;
-document.querySelector("#yellow-card").innerHTML = 2;
-document.querySelector("#red-card").innerHTML = 0;
-document.querySelector("#cleansheet").innerHTML = 3;
+document.querySelector("#fouls").innerHTML = 21;
+document.querySelector("#yellow-card").innerHTML = 5;
+document.querySelector("#red-card").innerHTML = 1;
+document.querySelector("#cleansheet").innerHTML = 5;
 
 /* Series in Numbers */
 
@@ -335,25 +335,39 @@ var goals = stats_table[0], assists = stats_table[1], yellow_card = stats_table[
 var rfc_logo = '<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">', amb_logo = '<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">';
 
 goals.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Goals</td></tr>\
-<tr><td>1</td><td>'+amb_logo+'</td><td>Christiano Ronaldo</td><td>4</td></tr>\
-<tr><td>2</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>4</td></tr>\
-<tr><td>3</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>2</td></tr>\
-<tr><td>4</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
-<tr><td>5</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>1</td></tr>\
-<tr><td>6</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>1</td></tr>\
-<tr><td>7</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>1</td></tr>';
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>7</td></tr>\
+<tr><td>2</td><td>'+amb_logo+'</td><td>Cristiano Ronaldo</td><td>5</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>5</td></tr>\
+<tr><td>3</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>3</td></tr>\
+<tr><td>4</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>';
+<tr><td>5</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
+<tr><td>5</td><td>'+amb_logo+'</td><td>Paul Pogba</td><td>1</td></tr>\
+<tr><td>5</td><td>'+amb_logo+'</td><td>Erling Haaland</td><td>1</td></tr>\
+<tr><td>5</td><td>'+amb_logo+'</td><td>Mahammad Salah</td><td>1</td></tr>\
 
 assists.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Assists</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>3</td></tr>\
-<tr><td>2</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>2</td></tr>\
-<tr><td>3</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
-<tr><td>4</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>';
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>6</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>4</td></tr>\
+<tr><td>3</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>3</td></tr>\
+<tr><td>4</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>';
+<tr><td>4</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
+<tr><td>5</td><td>'+amb_logo+'</td><td>Paul Pogba</td><td>1</td></tr>\
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>1</td></tr>';
 
 yellow_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Yellow Card</td></tr>\
 <tr><td>1</td><td>'+rfc_logo+'</td><td>Joáo Cancelo</td><td>1</td></tr>\
-<tr><td>2</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>1</td></tr>';
+<tr><td>1</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>1</td></tr>';
+<tr><td>1</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>1</td></tr>';
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>1</td></tr>\
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Jordi Alba</td><td>1</td></tr>';
 
-red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card</td></tr>												<tr><td>0</td><td>N/A</td><td>N/A</td><td>0</td></tr>';
+red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card</td></tr>\
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Aymeric Laporte</td><td>1</td></tr>\												<tr><td>0</td><td>N/A</td><td>N/A</td><td>0</td></tr>';
 
 
 
