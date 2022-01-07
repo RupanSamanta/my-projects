@@ -157,8 +157,15 @@ stats[3].onclick = function()
 
 	var match_date = document.querySelectorAll("div.match-date");
 	var match_dates = ['Thurday, 23rd December, 2021', 'Saturday, 1st January, 2022'];
-	for(var i = 0; i<6; i++)
-	{match_date[i].innerHTML = match_dates[0]};
+	for(var i = 0; i<18; i++)
+	{
+           if(i<6)
+              match_date[i].innerHTML = match_dates[0];
+           else if(i>5 && i<12)
+              match_date[i].innerHTML = match_dates[1];       
+           else
+              match_date[i].innerHTML = '';
+        }
  var match_centre_box = document.querySelectorAll("div.match-centre-box");
  
  var match_link = ['https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%201.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%202.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%203.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%204.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%205.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%206.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%201.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%202.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%203.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%204.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%205.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%206.html'];
