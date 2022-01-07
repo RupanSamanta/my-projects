@@ -190,11 +190,11 @@ stats[3].onclick = function()
  
  var i = 0; 
  var fixture = document.querySelectorAll("div.series-table div");
- fixture[0].style.background = "transparent";
- fixture[0].style.borderColor = "#ff00b2";
- fixture[0].style.borderBottomColor = "transparent";
+ fixture[1].style.background = "transparent";
+ fixture[1].style.borderColor = "#ff00b2";
+ fixture[1].style.borderBottomColor = "transparent";
  var fixture_list = document.getElementsByClassName("fixture-container");
- while(i<6) 
+ while(i>6 && i<=12) 
  {
  			fixture_list[i].style.display = "block";
  			i++;
