@@ -315,7 +315,7 @@ document.querySelector("#series-in-number").innerHTML = '<div class="box"><div><
 				
 var goals = 32, match = 12;
 var average_goal = (goals/match).toString();
-var minutes_per_goal = ((match*90)/goals).toString();
+var minutes_per_goal = ((match*90+30*3)/goals).toString();
 document.querySelector("#goal").innerHTML = goals;
 document.querySelector("#shots-taken").innerHTML = 120;
 document.querySelector("#minutes-per-goal").innerHTML = minutes_per_goal.substring(0,5);
