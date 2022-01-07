@@ -194,7 +194,7 @@ stats[3].onclick = function()
  fixture[1].style.borderColor = "#ff00b2";
  fixture[1].style.borderBottomColor = "transparent";
  var fixture_list = document.getElementsByClassName("fixture-container");
- while(i>6 && i<=12) 
+ while(i>5 && i<12) 
  {
  			fixture_list[i].style.display = "block";
  			i++;
