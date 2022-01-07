@@ -188,7 +188,7 @@ stats[3].onclick = function()
 		}
  
  
- var i = 0; 
+ var i = 6; 
  var fixture = document.querySelectorAll("div.series-table div");
  fixture[1].style.background = "transparent";
  fixture[1].style.borderColor = "#ff00b2";
