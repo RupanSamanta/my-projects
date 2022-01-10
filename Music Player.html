@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+                        <meta name="author" content="Rupan Samanta">			
+                        <meta name="theme-color" content="black">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<title>Music Player</title>
+</head>
+<style>
+			body
+			{
+						background: linear-gradient(to bottom right, rgba(255,0,170,0.5), rgba(255,221,0,0.5), rgb(0,136,255,0.5), rgb(255,0,200,0.5), rgba(255,255,43,0.5), rgba(43,255,50,0.5), rgba(255,20,20,0.5), rgba(52,20,255,0.5), rgba(255,0,170,0.5), rgba(255,221,0,0.5));
+						background-repeat: no-repeat !important;
+						background-size: 500% 500% !important;
+						background-attachment: fixed !important;
+						animation: body 60s infinite ease !important;
+			}
+			@keyframes body
+			{
+						0%{background-position: 0 50%}
+						20%{background-position: 100% 50%}
+						50%{background-position: 100% 100%}
+						80%{background-position: 100% 50%}
+						100%{background-position: 0 50%}
+			}
+			.frame-box
+			{
+						width: 290px;
+						height: 440px;
+						background: rgba(255,255,255,0.2);
+						border: double 10px rgba(0,0,0,0.5);
+						border-radius: 20px;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						backdrop-filter: blur(5px);
+						box-shadow: 0 30px 50px 5px rgba(0,0,0,0.5);
+						font-family: Arial;
+			}
+			.music-banner
+			{
+						width: 180px;
+						height: 180px;
+						background: url("https://sgdccdnems03.cdnsrv.jio.com/c.saavncdn.com/643/Taare-Zameen-Par-Hindi-2007-500x500.jpg");
+						background-size: 100% 100%;
+						margin: 20px auto 10px auto;
+			}
+			.music-details
+			{
+						padding: 0 20px;
+						margin: 10px auto;
+			}
+		 .music-name
+			{
+						width: 250px;
+						font-size: 23px;
+						font-weight: 500;
+						font-family: Arial;
+						overflow-x: scroll;
+			}
+			.music-singer
+			{
+						width: 250px;
+						font-size: 16px;
+						overflow-x: scroll;
+			}
+			.music-length
+			{
+						padding: 0 20px;
+						margin: 15px auto 0 auto;
+			}
+			.length
+			{
+						width: 250px;
+						height: auto;
+						display: flex;
+						justify-content: center;
+						margin: 5px auto;
+			}
+			input
+			{
+						-webkit-appearance: none;
+  						height: 4px;
+  						border-radius: 5px;
+  						background: #000;
+  						outline: none;
+  						opacity: 0.7;
+  						width: 100%;
+			}
+			input::-webkit-slider-thumb
+			{
+  					-webkit-appearance: none;
+  						appearance: none;
+  						width: 12px;
+  						height: 12px;
+  						border-radius: 50%;
+  						background: #000;
+  						cursor: pointer;
+			}
+			.time
+ 			{
+						width: 250px;
+					 	display: flex;
+			 			justify-content: space-between;
+			 			align-items: center;
+			}
+ 			.time div
+	  	{
+						font-size: 14px;
+			}
+			.music-controls
+			{
+						padding: 0 20px;
+						margin: 0 auto;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+			}
+			.play-pause i:nth-child(2)
+			{
+						display: none;
+			}
+			.play-pause i
+			{
+						font-weight: lighter;
+						font-size: 50px;
+						text-align: center;
+					 color: black;
+					 border-radius: 50%;
+			}
+			#previous, #next
+			{
+						font-size: 20px;
+						font-weight: lighter;
+		 }
+		 .music-bars
+			{
+						height: 25px;
+						width: 160px;
+						padding: 8px 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: black;
+					 margin: 15px auto 0 auto;
+					 border-radius: 30px;
+			}
+			.music-bars div
+			{
+				  height: 2px;
+					 width: 3px;
+					 background: white;
+					 margin: 0 1.5px;
+					 border-radius: 5px;
+					 animation: 2s infinite linear;
+					 display: none;
+			}
+			@keyframes bar
+			{
+						0%{height: 2px}
+						20%{height: 50%}
+						50%{height: 90%}
+						80%{height: 50%}
+						100%{height: 2px}
+			}
+</style>
+<body>
+			<main class="frame-box">
+						<section class="music-banner"></section>
+						<section class="music-details">
+									<div class="music-name">Maa</div>
+									<div class="music-singer">Shankar Mahadevan</div>
+						</section>
+						<section class="music-length">
+									<div class="length">
+												<input type="range" min="0" value="0">
+									</div>
+									<div class="time">
+												<div class="time-went">--:--</div>
+												<div class="time-left">--:--</div>
+									</div>
+						</section>
+						<section class="music-controls">
+									<div class="fa fa-random" id="shuffle"></div>
+									<div class="fa fa-step-backward" id="previous"></div>
+									<div class="play-pause">
+												<i class="fa fa-play-circle"></i>
+												<i class="fa fa-pause-circle"></i>
+									</div>
+									<div class="fa fa-step-forward" id="next"></div>
+									<div class="fa fa-repeat" id="repeat"></div>
+						</section>
+						<section class="music-bars"></section>
+			</main>
+</body>
+<script>
+			var bars_box = document.querySelector(".music-bars");
+			for(var i=0; i<20; i++)
+						bars_box.innerHTML+="<div></div>";
+			var bars = document.querySelectorAll(".music-bars div");
+						
+			/*						 Music Controls 						*/
+						
+			var time_left = document.querySelector(".time-left");
+		 var current_time = document.querySelector(".time-went");
+			var repeat = document.getElementById("repeat");
+			var music_list = ['/storage/emulated/0/Download/Meri-Maa.mp3'];
+			var music = new Audio(music_list[0]);
+		 var play_pause = document.querySelector(".play-pause");
+		 var range = document.querySelector("input");
+		 var index = 0, interval = '', current = 0;
+		 var dur = '--:--';
+			range.max = dur;
+		 
+		 var p=0;
+			repeat.onclick = function()
+			{
+						if(p%2==0)
+						{
+								 repeat.style.color = "#fff";
+									music.loop = true;
+						}
+						else
+						{
+									repeat.style.color = "#000";
+									music.loop = false;
+						}
+						console.log(p)
+						p++;
+			}
+		 play_pause.onclick = function()
+			{			
+			   if(index==0)			
+					 for(var i=0; i<bars.length; i++)
+			   {
+			   			bars[i].style.display = "block";
+			   			bars[i].style.animationName = "bar";
+							 bars[i].style.animationDelay = Math.random()*0.3+Math.random()+'s';
+			   }
+					 dur = Math.floor(music.duration);
+						range.max = dur;					 
+						if(dur/60<10 && dur%60<10)
+					 										dur='0'+Math.round(dur/60)+':0'+Math.round(dur%60);
+					 				else if(dur/60<10 && dur%60>10)
+					 										dur='0'+Math.round(dur/60)+':'+Math.round(dur%60);
+						time_left.innerHTML = dur;						
+						range.onchange = function()
+						{
+									music.currentTime = range.value;
+						}
+						function time_control()
+					 {								 			
+					 			 current = Math.floor(music.currentTime);
+					 			 range.value = current;
+					 			 if(current/60<10 && current%60<10)
+					 							current='0'+Math.floor(current/60)+':0'+Math.floor(current%60);
+					 				else if(current/60<10 && current%60>9)
+					 							current='0'+Math.floor(current/60)+':'+Math.floor(current%60);
+									current_time.innerHTML = current;
+								 if(Math.floor(music.currentTime)==Math.floor(music.duration))
+						{
+							 if(music.loop!=true)
+								{
+									console.log('false')
+									document.querySelectorAll("i")[1].style.display ="none";
+								 document.querySelectorAll("i")[0].style.display ="block";
+									index=0;
+									for(var i=0; i<bars.length; i++)
+			   						bars[i].style.display = "none";
+			   				clearInterval(interval);
+								}
+						}
+					}
+					interval = setInterval(time_control,1000);
+					 
+						if(index%2==0)
+			    {
+			    			document.querySelectorAll("i")[1].style.display ="block";
+			    			document.querySelectorAll("i")[0].style.display ="none";
+			    		  music.play();
+			    			interval = setInterval(time_control,1000);
+			    			for(var i=0; i<bars.length; i++)
+			   			 			bars[i].style.display = "block";
+			    }
+			    else
+						{
+								 document.querySelectorAll("i")[1].style.display ="none";
+								 document.querySelectorAll("i")[0].style.display ="block";
+								 music.pause();
+								 clearInterval(interval);
+								 for(var i=0; i<bars.length; i++)
+			   						bars[i].style.display = "none";
+			   			}
+						index++;
+			}
+			
+			/*						 Music Controls 						*/
+</script>
+</html>
+ 
