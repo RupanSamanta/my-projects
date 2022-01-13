@@ -275,7 +275,10 @@
 						<section class="music-bars"></section>
 						<section class="footer">RS</section>
 			</main>
-			<header>
+			<header class="loading">
+						<p>Loading Audio.....</p>
+			</header>
+			<header class="no-connection">
 						<p>No Internet Connection</p>
 						Audio may not load or play<br>
 						Please refresh the page
@@ -303,11 +306,12 @@
 			 previous = document.getElementById("previous"),
 			 next = document.getElementById("next"),
 		  play_pause = document.querySelector(".play-pause"),
+		  loading = document.querySelector('.loading'),
 		  heart = document.getElementById("heart"),
 		  heart_class = [],
 		  range = document.querySelector("input"),
 		  index = 0, interval = '', current = 0, music_index = 0, 						
-		  dur = 0,
+		  dur = 0, duri = '';
 		  music = new Audio(music_list[0]);
 		  name_box.innerHTML = music_name[0];
 			 singer_box.innerHTML = singer[0];
@@ -351,11 +355,18 @@
 			}
 		function duration_load()
 		{
-					 var duri = setInterval(function()
+					 duri = setInterval(function()
 					 	{
 									dur = Math.floor(music.duration);
 														if(dur>-1)
-									clearInterval(duri);
+														{
+																	clearInterval(duri);
+																	loading.style.top = '-100%';
+														}
+														else
+														{
+																	loading.style.top = '6%';
+														}
 						},1000);	
 						if(dur>0)
 					 			range.max = dur;
@@ -487,7 +498,7 @@
 			/*						 Music Controls 						*/
 			var foot = document.querySelector(".footer"),
 			frame = document.querySelector('.frame-box'),
-			net_alert = document.querySelector('header'),
+			net_alert = document.querySelector('.no-connection'),
 		 internet = setInterval(function()
 			{
 						if(navigator.onLine == false)
@@ -495,14 +506,29 @@
 									foot.style.animationName = 'alert';
 									frame.style.borderColor = 'red';
 									net_alert.style.top = '6%';
+									loading.style.top = '-100%';
+									clearInterval(duri);
 						}
 						else
 						{
 									foot.style.animationName = 'no';
 									frame.style.borderColor = 'rgba(0,0,0,0.5)';
 									net_alert.style.top = '-100%';
+									if(index>0)
+									duri = setInterval(function()
+					 				{
+												dur = Math.floor(music.duration);
+													 if(dur>-1)
+														{
+																	clearInterval(duri);
+																	loading.style.top = '-100%';
+														}
+														else
+														{
+																	loading.style.top = '6%';
+														}
+								},1000);
 						}
 			},500);
 </script>
 </html>
- 
