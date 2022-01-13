@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
-                        <meta name="author" content="Rupan Samanta">			
-                        <meta name="theme-color" content="black">
+			<meta name="theme-color" content="black">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<title>Music Player</title>
 </head>
 <style>
+			@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 			body
 			{
 						background: linear-gradient(to bottom right, rgba(255,0,170,0.5), rgba(255,221,0,0.5), rgb(0,136,255,0.5), rgb(255,0,200,0.5), rgba(255,255,43,0.5), rgba(43,255,50,0.5), rgba(255,20,20,0.5), rgba(52,20,255,0.5), rgba(255,0,170,0.5), rgba(255,221,0,0.5));
 						background-repeat: no-repeat !important;
 						background-size: 500% 500% !important;
 						background-attachment: fixed !important;
-						animation: body 60s infinite ease !important;
+						animation: body 40s infinite ease !important;
+						font-family: 'Josefin Sans', sans-serif;						
 			}
 			@keyframes body
 			{
@@ -24,47 +27,50 @@
 						80%{background-position: 100% 50%}
 						100%{background-position: 0 50%}
 			}
+			*{transition-duration: 0.2s}
 			.frame-box
 			{
-						width: 290px;
-						height: 440px;
+						width: 320px;
+						height: 500px;
 						background: rgba(255,255,255,0.2);
 						border: double 10px rgba(0,0,0,0.5);
 						border-radius: 20px;
-						position: absolute;
-						left: 50%;
-						top: 50%;
-						transform: translate(-50%, -50%);
+						margin: 80px auto 0 auto;
 						backdrop-filter: blur(5px);
-						box-shadow: 0 30px 50px 5px rgba(0,0,0,0.5);
-						font-family: Arial;
+						box-shadow: 0 30px 40px 5px rgba(0,0,0,0.5);
 			}
 			.music-banner
 			{
 						width: 180px;
 						height: 180px;
-						background: url("https://sgdccdnems03.cdnsrv.jio.com/c.saavncdn.com/643/Taare-Zameen-Par-Hindi-2007-500x500.jpg");
-						background-size: 100% 100%;
+						background-size: 180px 180px !important;
 						margin: 20px auto 10px auto;
+						border-radius: 10px;
+						box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
 			}
 			.music-details
 			{
 						padding: 0 20px;
-						margin: 10px auto;
+						margin: 15px auto 5px auto;
 			}
 		 .music-name
 			{
-						width: 250px;
-						font-size: 23px;
-						font-weight: 500;
-						font-family: Arial;
+						width: auto;
+						padding: 2px 0 0 0;
+						font-size: 25px;
+						font-weight: 900;
 						overflow-x: scroll;
+						font-family: 'Josefin Sans', sans-serif;
 			}
 			.music-singer
 			{
-						width: 250px;
-						font-size: 16px;
-						overflow-x: scroll;
+						width: auto;
+						height: auto;
+						font-size: 18px;
+						font-weight: 500;
+						white-space: nowrap;
+						overflow-x: scroll !important;
+					 font-family: 'Quicksand', sans-serif;
 			}
 			.music-length
 			{
@@ -73,7 +79,7 @@
 			}
 			.length
 			{
-						width: 250px;
+						width: auto;
 						height: auto;
 						display: flex;
 						justify-content: center;
@@ -82,41 +88,52 @@
 			input
 			{
 						-webkit-appearance: none;
-  						height: 4px;
+  						height: 6px;
   						border-radius: 5px;
-  						background: #000;
+  						background: rgba(0,0,0,0.5);
   						outline: none;
   						opacity: 0.7;
   						width: 100%;
+  						overflow: hidden;
 			}
 			input::-webkit-slider-thumb
 			{
   					-webkit-appearance: none;
   						appearance: none;
-  						width: 12px;
-  						height: 12px;
+  						width: 0;
+  						height: 0;
   						border-radius: 50%;
-  						background: #000;
   						cursor: pointer;
+  						box-shadow: -250px 0 0 250px black;
 			}
 			.time
  			{
-						width: 250px;
+						width: auto;
 					 	display: flex;
 			 			justify-content: space-between;
 			 			align-items: center;
 			}
  			.time div
 	  	{
-						font-size: 14px;
+						font-size: 15px;
+						font-family: 'Quicksand', sans-serif;
+						font-weight: 500;
 			}
 			.music-controls
 			{
-						padding: 0 20px;
+						padding: 0 25px;
 						margin: 0 auto;
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
+						margin: 0 auto;
+			}
+			.music-controls div
+			{						
+						opacity: 0.8; 
+						transition-duration: 0.1s;
+						padding: 5px;
+						font-size: 18px;
 			}
 			.play-pause i:nth-child(2)
 			{
@@ -124,27 +141,47 @@
 			}
 			.play-pause i
 			{
-						font-weight: lighter;
-						font-size: 50px;
+						font-size: 65px;
 						text-align: center;
 					 color: black;
 					 border-radius: 50%;
 			}
 			#previous, #next
 			{
-						font-size: 20px;
-						font-weight: lighter;
+						font-size: 25px;
+						transition-duration: 0.1s;
 		 }
+		 #previous:hover, #next:hover
+			{
+						color: white;
+			}
+			#heart
+			{			
+						transition-duration: 0.1s;
+						animation: 2s 1 ease;
+		 }
+		 @keyframes like
+			{
+		 			0%{transform: scale(1)}
+		 			25%{transform: scale(1.2)}
+		 			50%{transform: scale(1)}
+		 			75%{transform: scale(1.2)}
+		 			100%{transform: scale(1)}
+		 }
+		 .music-controls div:hover
+			{
+						opacity: 1;
+			}
 		 .music-bars
 			{
 						height: 25px;
-						width: 160px;
+						width: 180px;
 						padding: 8px 0;
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						background: black;
-					 margin: 15px auto 0 auto;
+					 margin: 10px auto 0 auto;
 					 border-radius: 30px;
 			}
 			.music-bars div
@@ -154,24 +191,67 @@
 					 background: white;
 					 margin: 0 1.5px;
 					 border-radius: 5px;
-					 animation: 2s infinite linear;
+					 animation: 1.3s infinite linear;
 					 display: none;
 			}
 			@keyframes bar
 			{
 						0%{height: 2px}
 						20%{height: 50%}
-						50%{height: 90%}
+						50%{height: 95%}
 						80%{height: 50%}
 						100%{height: 2px}
+			}
+			.footer
+			{
+						width: auto;
+						margin: 10px auto 0 auto;
+						font-size: 15px;
+						font-family: 'Lobster', cursive;
+						font-weight: 1000;
+						color: rgba(0,0,0,0.5);
+						text-align: center;
+						animation: 1.3s infinite ease;
+						transition-duration: 0.2s;
+			}
+			@keyframes alert
+			{
+						0%{transform: scale(1); color: red;}
+		 			25%{transform: scale(1.2); color: red;}
+		 			50%{transform: scale(1); color: red;}
+		 			75%{transform: scale(1.2); color: red;}
+		 			100%{transform: scale(1); color: red;}
+			}
+			header
+			{
+						position: absolute;
+						left: 50%;
+						top: -100%;
+						transform: translate(-50%, -50%);
+						width: auto;
+						padding: 5px 10px;
+						border: solid 1px brown;
+						border-radius: 5px;
+						background: rgba(255,255,255,0.3);
+						backdrop-filter: blur(2px);
+						text-align: center;
+						white-space: nowrap;
+						font-size: 12px;
+			}
+			header p
+			{
+						font-weight: 700;
+						font-size: 13px;
+						padding: 5px 0;
+						margin: 0;
 			}
 </style>
 <body>
 			<main class="frame-box">
 						<section class="music-banner"></section>
 						<section class="music-details">
-									<div class="music-name">Maa</div>
-									<div class="music-singer">Shankar Mahadevan</div>
+									<div class="music-name"></div>
+									<div class="music-singer"></div>
 						</section>
 						<section class="music-length">
 									<div class="length">
@@ -183,7 +263,7 @@
 									</div>
 						</section>
 						<section class="music-controls">
-									<div class="fa fa-random" id="shuffle"></div>
+									<div class="fa fa-heart-o" id="heart"></div>
 									<div class="fa fa-step-backward" id="previous"></div>
 									<div class="play-pause">
 												<i class="fa fa-play-circle"></i>
@@ -193,29 +273,50 @@
 									<div class="fa fa-repeat" id="repeat"></div>
 						</section>
 						<section class="music-bars"></section>
+						<section class="footer">RS</section>
 			</main>
+			<header>
+						<p>No Internet Connection</p>
+						Audio may not load or play<br>
+						Please refresh the page
+			</header>
 </body>
 <script>
+
 			var bars_box = document.querySelector(".music-bars");
-			for(var i=0; i<20; i++)
+			for(var i=0; i<23; i++)
 						bars_box.innerHTML+="<div></div>";
 			var bars = document.querySelectorAll(".music-bars div");
 						
 			/*						 Music Controls 						*/
 						
-			var time_left = document.querySelector(".time-left");
-		 var current_time = document.querySelector(".time-went");
-			var repeat = document.getElementById("repeat");
-			var music_list = ['/storage/emulated/0/Download/Meri-Maa.mp3'];
-			var music = new Audio(music_list[0]);
-		 var play_pause = document.querySelector(".play-pause");
-		 var range = document.querySelector("input");
-		 var index = 0, interval = '', current = 0;
-		 var dur = '--:--';
-			range.max = dur;
-		 
-		 var p=0;
-			repeat.onclick = function()
+			var time_left = document.querySelector(".time-left"),
+		    current_time = document.querySelector(".time-went"),
+					repeat = document.getElementById("repeat"),
+			 		music_list = ['https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3', 'https://ia801909.us.archive.org/8/items/soundcloud-317696584/317696584.mp3', 'https://ia801905.us.archive.org/19/items/soundcloud-622634994/622634994.mp3', 'https://ia601406.us.archive.org/24/items/y-2mate.com-vicetone-tony-igy-astronomia/y2mate.com%20-%20Vicetone%20%20Tony%20Igy%20%20Astronomia.mp3', 'https://ia801506.us.archive.org/5/items/y-2mate.com-martin-felix-kaczmarski-julia-rodrigues-just-the-same/y2mate.com%20-%20Martin%20Felix%20Kaczmarski%20%20Julia%20Rodrigues%20%20Just%20The%20Same.mp3'],
+			 music_name = ['Skylike', 'Firefly', 'Hope', 'Astronomia', 'Just The Same'],
+			 singer = ['Dawn', 'Jim Yosef', 'Tobu', 'Vicetone, Tony Igy', 'Julia Rodriguez, Martin Felix Kaczmarksi'],
+			 banner = ['https://i1.sndcdn.com/artworks-000274953974-hvbid7-t500x500.jpg', 'https://i1.sndcdn.com/artworks-000140970007-bh6qvb-t500x500.jpg', 'https://i1.sndcdn.com/artworks-000075145091-45j2ds-t500x500.jpg', 'https://i1.sndcdn.com/artworks-000084701476-j62fpy-t500x500.jpg', 'https://i.imgur.com/m89Tl1r.png'],
+			 name_box = document.querySelector(".music-name"),
+			 singer_box = document.querySelector(".music-singer"),
+			 banner_box = document.querySelector(".music-banner"),
+			 previous = document.getElementById("previous"),
+			 next = document.getElementById("next"),
+		  play_pause = document.querySelector(".play-pause"),
+		  heart = document.getElementById("heart"),
+		  heart_class = [],
+		  range = document.querySelector("input"),
+		  index = 0, interval = '', current = 0, music_index = 0, 						
+		  dur = 0,
+		  music = new Audio(music_list[0]);
+		  name_box.innerHTML = music_name[0];
+			 singer_box.innerHTML = singer[0];
+			 banner_box.style.background = 'url('+banner[0]+')';
+			 range.max = music.duration;
+			 for(var i=0; i<music_list.length; i++)
+			 			heart_class[i] = 'fa fa-heart-o';
+		  var p=0;
+		 function loop()
 			{
 						if(p%2==0)
 						{
@@ -227,31 +328,119 @@
 									repeat.style.color = "#000";
 									music.loop = false;
 						}
-						console.log(p)
 						p++;
 			}
+			var s = 0;
+		 function like()
+			{
+						if(s%2==0)
+					 {
+					 			 heart.style.color = '#fff';
+					 			 heart_class[music_index] = 'fa fa-heart';
+									heart.className = heart_class[music_index];
+									heart.style.animationName = 'like';
+						}
+						else 
+						{
+									heart.style.color = '#000';
+									heart_class[music_index] = 'fa fa-heart-o';
+									heart.className = heart_class[music_index];
+									heart.style.animationName = 'not';
+						}
+						s++;
+			}
+		function duration_load()
+		{
+					 var duri = setInterval(function()
+					 	{
+									dur = Math.floor(music.duration);
+														if(dur>-1)
+									clearInterval(duri);
+						},1000);	
+						if(dur>0)
+					 			range.max = dur;
+						if(dur/60<10 && dur%60<10)
+					 										dur='0'+Math.floor(dur/60)+':0'+Math.floor(dur%60);
+					 				else if(dur/60<10 && dur%60>10)
+					 										dur='0'+Math.floor(dur/60)+':'+Math.floor(dur%60);
+									time_left.innerHTML = dur;
+			}
+			
+			function prev()
+			{
+						
+						p = 0;
+						repeat.style.color = "#000";
+						current = 0;
+						range.value = 0;
+						music.pause();
+						music.currentTime = 0;
+						if(music_index<=0)
+									music_index==0;
+						else 
+									music_index--;
+						music = new Audio(music_list[music_index]);						
+						music.load();
+						if(index%2!=0)
+									music.play();
+						banner_box.style.background = 'url('+banner[music_index]+')';
+						name_box.innerHTML = music_name[music_index];
+						singer_box.innerHTML = singer[music_index];
+						duration_load();
+						range.max = music.duration;
+						heart.className = heart_class[music_index];
+						if(heart.className == 'fa fa-heart')
+									heart.style.color = '#fff';
+						else 
+									heart.style.color = '#000';
+			}
+			function after()
+			{
+						p = 0; 
+						repeat.style.color = "#000";
+						current = 0;
+						range.value = 0;
+						music.pause();
+						music.currentTime = 0;
+					 if(music_index>=music_list.length-1)
+									music_index=music_list.length-1;
+						else 
+									music_index++;
+						music = new Audio(music_list[music_index]);
+						music.load();
+						if(index%2!=0)
+									music.play();
+						banner_box.style.background = 'url('+banner[music_index]+')';
+						name_box.innerHTML = music_name[music_index];
+						singer_box.innerHTML = singer[music_index];
+						duration_load();
+						range.max = music.duration;
+						heart.className = heart_class[music_index];
+						if(heart.className == 'fa fa-heart')
+									heart.style.color = '#fff';
+						else 
+									heart.style.color = '#000';
+			}
+			repeat.onclick = loop;
+			previous.onclick = prev;
+			next.onclick = after;
+			heart.onclick = like;
 		 play_pause.onclick = function()
-			{			
+			{		
 			   if(index==0)			
 					 for(var i=0; i<bars.length; i++)
 			   {
 			   			bars[i].style.display = "block";
 			   			bars[i].style.animationName = "bar";
 							 bars[i].style.animationDelay = Math.random()*0.3+Math.random()+'s';
-			   }
-					 dur = Math.floor(music.duration);
-						range.max = dur;					 
-						if(dur/60<10 && dur%60<10)
-					 										dur='0'+Math.round(dur/60)+':0'+Math.round(dur%60);
-					 				else if(dur/60<10 && dur%60>10)
-					 										dur='0'+Math.round(dur/60)+':'+Math.round(dur%60);
-						time_left.innerHTML = dur;						
+			   }   
 						range.onchange = function()
 						{
 									music.currentTime = range.value;
 						}
 						function time_control()
-					 {								 			
+					 {			
+					 			duration_load();						 						 
 					 			 current = Math.floor(music.currentTime);
 					 			 range.value = current;
 					 			 if(current/60<10 && current%60<10)
@@ -263,7 +452,6 @@
 						{
 							 if(music.loop!=true)
 								{
-									console.log('false')
 									document.querySelectorAll("i")[1].style.display ="none";
 								 document.querySelectorAll("i")[0].style.display ="block";
 									index=0;
@@ -272,14 +460,14 @@
 			   				clearInterval(interval);
 								}
 						}
-					}
-					interval = setInterval(time_control,1000);
-					 
+						
+					}//time control function ends
+					interval = setInterval(time_control, 1000);
 						if(index%2==0)
 			    {
 			    			document.querySelectorAll("i")[1].style.display ="block";
 			    			document.querySelectorAll("i")[0].style.display ="none";
-			    		  music.play();
+			    		 music.onload =	music.play();
 			    			interval = setInterval(time_control,1000);
 			    			for(var i=0; i<bars.length; i++)
 			   			 			bars[i].style.display = "block";
@@ -294,9 +482,27 @@
 			   						bars[i].style.display = "none";
 			   			}
 						index++;
-			}
-			
+				 }
+																 
 			/*						 Music Controls 						*/
+			var foot = document.querySelector(".footer"),
+			frame = document.querySelector('.frame-box'),
+			net_alert = document.querySelector('header'),
+		 internet = setInterval(function()
+			{
+						if(navigator.onLine == false)
+						{
+									foot.style.animationName = 'alert';
+									frame.style.borderColor = 'red';
+									net_alert.style.top = '6%';
+						}
+						else
+						{
+									foot.style.animationName = 'no';
+									frame.style.borderColor = 'rgba(0,0,0,0.5)';
+									net_alert.style.top = '-100%';
+						}
+			},500);
 </script>
 </html>
  
