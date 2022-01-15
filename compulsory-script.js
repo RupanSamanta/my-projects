@@ -201,7 +201,7 @@ stats[3].onclick = function()
  fixture[2].style.borderColor = "#ff00b2";
  fixture[2].style.borderBottomColor = "transparent";
  var fixture_list = document.getElementsByClassName("fixture-container");
- while(i>11) 
+ while(i>11 && i<18) 
  {
  			fixture_list[i].style.display = "block";
  			i++;
@@ -381,7 +381,7 @@ yellow_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Yellow
 <tr><td>1</td><td>'+amb_logo+'</td><td>Kostas Manolas</td><td>1</td></tr>';
 
 red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Aymeric Laporte</td><td>1</td></tr><tr><td>1</td><td>Kalidou Koulibaly</td><td>'+amb_logo+'</td><td>1</td></tr>';
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Aymeric Laporte</td><td>1</td></tr><tr><td>1</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>1</td></tr>';
 
 
 
@@ -436,10 +436,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-/* navigator */
+/* navigators */
 
 /* powered by script  */
-var update_time = '1/15/2022 at 21:26 IST';
+var update_time = '1/15/2022 at 21:45 IST';
 document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title" style="background:black">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --><div><img src="https://i.imgur.com/Y73ZVA1.png" alt="internet archive"></div><!-- internet archive --><div><img src="https://i.imgur.com/IweT3XQ.png" alt="youtube"></div><!-- YouTube --></div></div><div class="copyright">&copy;dls2022friendlyseries</div><div class="last-update">Last Updated on '+update_time+'</div>';
 
 
