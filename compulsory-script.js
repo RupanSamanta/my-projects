@@ -168,7 +168,7 @@ stats[3].onclick = function()
         }
  var match_centre_box = document.querySelectorAll("div.match-centre-box");
  
- var match_link = ['https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%201.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%202.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%203.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%204.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%205.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%206.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%201.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%202.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%203.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%204.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%205.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%206.html'];
+ var match_link = ['https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%201.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%202.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%203.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%204.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%205.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%201%20match%206.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%201.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%202.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%203.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%204.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%205.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%202%20match%206.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%203%20match%201.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%203%20match%202.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%203%20match%203.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%203%20match%204.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%203%20match%205.html', 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/series%203%20match%206.html'];
  
  var span = document.querySelectorAll("span");
  for(var i = 0; i < span.length; i++)
@@ -183,8 +183,8 @@ stats[3].onclick = function()
 	}
  var fixture_home_team_score = document.getElementsByClassName("home-team-score"), fixture_away_team_score = document.getElementsByClassName("away-team-score");
 
- var result_home_team_score = [0,3,0,0,2,'(1)1',0,1,1,3,2,3];
- var result_away_team_score = [1,2,1,2,1,'1(0)',1,2,2,0,1,1];
+ var result_home_team_score = [0,3,0,0,2,'(1)1',0,1,1,3,2,3,4,3,1,1,0,2];
+ var result_away_team_score = [1,2,1,2,1,'1(0)',1,2,2,0,1,1,1,4,2,2,1,1];
  
  for(var i = 0; i<result_home_team_score.length; i++)
  {
@@ -195,13 +195,13 @@ stats[3].onclick = function()
 		}
  
  
- var i = 6; 
+ var i = 12; 
  var fixture = document.querySelectorAll("div.series-table div");
- fixture[1].style.background = "transparent";
- fixture[1].style.borderColor = "#ff00b2";
- fixture[1].style.borderBottomColor = "transparent";
+ fixture[2].style.background = "transparent";
+ fixture[2].style.borderColor = "#ff00b2";
+ fixture[2].style.borderBottomColor = "transparent";
  var fixture_list = document.getElementsByClassName("fixture-container");
- while(i>5 && i<12) 
+ while(i>11) 
  {
  			fixture_list[i].style.display = "block";
  			i++;
@@ -286,11 +286,11 @@ stats[3].onclick = function()
 
 
 /* 						head to head 						*/
-var rfc_pos = [54,53,49,68,60,55,53,51,56,64,46,56];
-var amb_pos = [46,47,51,32,40,45,47,49,44,36,54,44];
-var rfc_pass = [85,81,80,92,87,87,78,91,82,87,78,77];
-var amb_pass = [69,76,64,72,72,66,72,77,71,65,74,71];
-var rfc_pos_avg = 0, rfc_pass_avg = 0, amb_pos_avg = 0, amb_pass_avg = 0;
+var rfc_pos = [54,53,49,68,60,55,53,51,56,64,46,56,71,65,59,75,70,66],
+    amb_pos = [46,47,51,32,40,45,47,49,44,36,54,44,29,35,41,25,30,34],
+    rfc_pass = [85,81,80,92,87,87,78,91,82,87,78,77,86,89,86,85,90,84],
+    amb_pass = [69,76,64,72,72,66,72,77,71,65,74,71,85,71,70,65,78,80],
+    rfc_pos_avg = 0, rfc_pass_avg = 0, amb_pos_avg = 0, amb_pass_avg = 0;
 for(var i = 0; i<rfc_pos.length; i++)
 {
 			rfc_pos_avg+= rfc_pos[i];
@@ -303,34 +303,34 @@ rfc_pass_avg = ((rfc_pass_avg/rfc_pass.length).toString()).substring(0,2)+'%';
 amb_pos_avg = ((amb_pos_avg/amb_pos.length).toString()).substring(0,2)+'%';
 amb_pass_avg = ((amb_pass_avg/amb_pass.length).toString()).substring(0,2)+'%';
 
-document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 12</div></div>\
-<div class="details"><div>6</div><div>Won</div><div>6</div></div>\
-<div class="details"><div>6</div><div>Lost</div><div>6</div></div>\
+document.querySelector(".details-container").innerHTML = '<div class="details"><div>Played 18</div></div>\
+<div class="details"><div>9</div><div>Won</div><div>9</div></div>\
+<div class="details"><div>9</div><div>Lost</div><div>9</div></div>\
 <div class="details"><div>'+rfc_pos_avg+'</div><div>Average Possession</div><div>'+amb_pos_avg+'</div></div>\
-<div class="details"><div>76</div><div>Total Shots</div><div>44</div></div>\
-<div class="details"><div>18</div><div>Goal Scored</div><div>14</div></div>\
-<div class="details"><div>14</div><div>Goal Conceded</div><div>18</div></div>\
-<div class="details"><div>3</div><div>Cleansheet</div><div>2</div></div>\
+<div class="details"><div>104</div><div>Total Shots</div><div>70</div></div>\
+<div class="details"><div>30</div><div>Goal Scored</div><div>24</div></div>\
+<div class="details"><div>24</div><div>Goal Conceded</div><div>30</div></div>\
+<div class="details"><div>3</div><div>Cleansheet</div><div>3</div></div>\
 <div class="details"><div>'+rfc_pass_avg+'</div><div>Pass Completion</div><div>'+amb_pass_avg+'</div></div>\
-<div class="details"><div>12</div><div>Fouls</div><div>9</div></div>\
-<div class="details"><div>Recent Result 3 - 1</div></div>';
+<div class="details"><div>12</div><div>Fouls</div><div>16</div></div>\
+<div class="details"><div>Last Result 1 - 2</div></div>';
 /* 						head to head						 */
 
 
  /* Series in Number */
 document.querySelector("#series-in-number").innerHTML = '<div class="box"><div><div class="title">SEASON IN NUMBERS</div></div><div class="container"><div class="series-stats-details"><div class="series-stats-box"><img src="https://www.pngkit.com/png/full/292-2928062_football-icon-png-white.png" alt="football"><br><li>Goals</li><li id="goal"></li></div><!-- goals --><div class="series-stats-box"><img src="https://i.imgur.com/0OdGHXd.png" alt="football"><br><li>Shots Taken</li><li id="shots-taken"></li></div><!-- shots taken --><div class="series-stats-box"><img src="https://i.imgur.com/6AirFua.png" alt=""><br><li>Average Goals</li><li id="average-goal"></li></div><!-- average goals --><div class="series-stats-box"><img src="https://i.imgur.com/4eLBh27.png" alt="watch"><br><li>Minutes Per Goal</li><li id="minutes-per-goal"></li></div><!-- minutes per goal --><div class="series-stats-box"><img src="https://i.imgur.com/E6wTRRh.png" alt="football"><br><li>Fouls</li><li id="fouls"></li></div><!-- fouls --><div class="series-stats-box"><img src="https://i.imgur.com/1mIMCnp.png" alt="football"><br><li>Yellow Cards</li><li id="yellow-card"></li></div><!-- yellow card--><div class="series-stats-box"><img src="https://i.imgur.com/RP44wPx.png" alt="football"><br><li>Red Cards</li><li id="red-card"></li></div><!-- red card --><div class="series-stats-box"><img src="https://i.imgur.com/O140xYL.png" alt="gloves"><br><li>Clean Sheets</li><li id="cleansheet"></li></div><!-- clean sheet --></div>	<!-- series-stats-details --></div><!-- container --></div>'
 				
-var goals = 32, match = 12;
+var goals = 54, match = 18;
 var average_goal = (goals/match).toString();
-var minutes_per_goal = ((match*90+30*3)/goals).toString();
+var minutes_per_goal = ((match*90+30*4)/goals).toString();
 document.querySelector("#goal").innerHTML = goals;
-document.querySelector("#shots-taken").innerHTML = 120;
+document.querySelector("#shots-taken").innerHTML = 174;
 document.querySelector("#minutes-per-goal").innerHTML = minutes_per_goal.substring(0,5);
 document.querySelector("#average-goal").innerHTML = average_goal.substring(0,4);
-document.querySelector("#fouls").innerHTML = 21;
-document.querySelector("#yellow-card").innerHTML = 5;
-document.querySelector("#red-card").innerHTML = 1;
-document.querySelector("#cleansheet").innerHTML = 5;
+document.querySelector("#fouls").innerHTML = 28;
+document.querySelector("#yellow-card").innerHTML = 7;
+document.querySelector("#red-card").innerHTML = 2;
+document.querySelector("#cleansheet").innerHTML = 6;
 
 /* Series in Numbers */
 
@@ -342,39 +342,46 @@ var goals = stats_table[0], assists = stats_table[1], yellow_card = stats_table[
 var rfc_logo = '<img src="https://i.imgur.com/yy4m7p5.png" alt="rfc">', amb_logo = '<img src="https://www.indiansuperleague.com/static-resources/images/clubs/small/reverse/1874.png" alt="atkmb">';
 
 goals.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Goals</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>7</td></tr>\
-<tr><td>2</td><td>'+amb_logo+'</td><td>Cristiano Ronaldo</td><td>5</td></tr>\
-<tr><td>2</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>5</td></tr>\
-<tr><td>3</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>3</td></tr>\
-<tr><td>4</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>2</td></tr>\
-<tr><td>4</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>2</td></tr>\
-<tr><td>4</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
-<tr><td>5</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
-<tr><td>5</td><td>'+rfc_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
-<tr><td>5</td><td>'+amb_logo+'</td><td>Paul Pogba</td><td>1</td></tr>\
-<tr><td>5</td><td>'+amb_logo+'</td><td>Erling Haaland</td><td>1</td></tr>\
-<tr><td>5</td><td>'+amb_logo+'</td><td>Mahammad Salah</td><td>1</td></tr>';
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>12</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>9</td></tr>\
+<tr><td>3</td><td>'+amb_logo+'</td><td>Cristiano Ronaldo</td><td>8</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>6</td></tr>\
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>3</td></tr>\
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Kylian Mbappé</td><td>3</td></tr>\
+<tr><td>6</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
+<tr><td>6</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>2</td></tr>\
+<tr><td>6</td><td>'+amb_logo+'</td><td>Paul Pogba</td><td>2</td></tr>\
+<tr><td>6</td><td>'+amb_logo+'</td><td>Erling Haaland</td><td>a</td></tr>\
+<tr><td>7</td><td>'+amb_logo+'</td><td>Mahammad Salah</td><td>1</td></tr>\
+<tr><td>7</td><td>'+rfc_logo+'</td><td>Raheem Sterling</td><td>1</td></tr>';
 
 assists.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Assists</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>6</td></tr>\
-<tr><td>2</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>4</td></tr>\
-<tr><td>3</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>3</td></tr>\
-<tr><td>4</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Cristiano Ronaldo</td><td>9</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Lionel Messi</td><td>5</td></tr>\
+<tr><td>3</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>4</td></tr>\
+<tr><td>3</td><td>'+rfc_logo+'</td><td>Neymar Jr.</td><td>4</td></tr>\
 <tr><td>4</td><td>'+amb_logo+'</td><td>Kylian Mbappé</td><td>2</td></tr>\
 <tr><td>4</td><td>'+amb_logo+'</td><td>Neymar Jr.</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Cristiano Ronaldo</td><td>2</td></tr>\
+<tr><td>4</td><td>'+rfc_logo+'</td><td>Mahammad Salah</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Mahammad Salah</td><td>2</td></tr>\
+<tr><td>4</td><td>'+amb_logo+'</td><td>Alisson Becker</td><td>2</td></tr>\
+<tr><td>4</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>2</td></tr>\
 <tr><td>5</td><td>'+rfc_logo+'</td><td>Kylian Mbappé</td><td>1</td></tr>\
 <tr><td>5</td><td>'+amb_logo+'</td><td>Paul Pogba</td><td>1</td></tr>\
-<tr><td>5</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>1</td></tr>';
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Virgil van Djik</td><td>1</td></tr>\
+<tr><td>5</td><td>'+rfc_logo+'</td><td>Alexander Arnold</td><td>1</td></tr>';
 
 yellow_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Yellow Card</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Joáo Cancelo</td><td>1</td></tr>\
-<tr><td>1</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>1</td></tr>\
-<tr><td>1</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>1</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>1</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Jordi Alba</td><td>1</td></tr>';
+<tr><td>1</td><td>'+amb_logo+'</td><td>Kalidou Koulibaly</td><td>2</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Joáo Cancelo</td><td>1</td></tr>\
+<tr><td>2</td><td>'+amb_logo+'</td><td>Lionel Messi</td><td>1</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Antoine Griezman</td><td>1</td></tr>\
+<tr><td>2</td><td>'+rfc_logo+'</td><td>Jordi Alba</td><td>1</td></tr>\
+<tr><td>1</td><td>'+amb_logo+'</td><td>Kostas Manolas</td><td>1</td></tr>';
 
 red_card.innerHTML = '<tr><td>Pos.</td><td>Team</td><td>Player</td><td>Red Card</td></tr>\
-<tr><td>1</td><td>'+rfc_logo+'</td><td>Aymeric Laporte</td><td>1</td></tr>\												<tr><td>0</td><td>N/A</td><td>N/A</td><td>0</td></tr>';
+<tr><td>1</td><td>'+rfc_logo+'</td><td>Aymeric Laporte</td><td>1</td></tr><tr><td>1</td><td>Kalidou Koulibaly</td><td>'+amb_logo+'</td><td>1</td></tr>';
 
 
 
@@ -432,9 +439,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* navigator */
 
 /* powered by script  */
-var update_time = '1/1/2022 at 10:40 IST';
+var update_time = '1/15/2022 at 21:26 IST';
 document.querySelector("footer").innerHTML = '<div class="title">GAMING PARTNER</div><div class="game"><img src="https://i.imgur.com/I6JQIoT.png" alt="dls 2022"></div><div class="title" style="background:black">POWERED BY</div><div class="powered-by"><div><img src="https://i.imgur.com/C5eEqi9.png" alt="lenovo"></div><!-- lenovo --><div><img src="https://i.imgur.com/u5UREyB.png" alt="airtel"></div><!-- airtel --><div><img src="https://i.imgur.com/8fkK3I5.png" alt="samsung"></div><!-- samsung --><div><img src="https://i.imgur.com/LA0VAyY.png" alt="jio"></div><!-- jio --><div><img src="https://i.imgur.com/KHUnnXD.png" alt="treb edit"></div><!-- treb edit --><div><img src="https://i.imgur.com/Jl6XlUk.png" alt="google chrome"></div><!-- google chrome --><div><img src="https://i.imgur.com/1nwBAiF.png" alt="pixel lab"></div><!-- pixel lab --><div><img src="https://i.imgur.com/FtZ8gLi.png" alt="imgur"></div><!-- imgur --><div><img src="https://i.imgur.com/s2uJSAQ.png" alt="google photos"></div><!-- google photos --><div><img src="https://i.imgur.com/mRQsB9x.png" alt="github"></div><!-- git hub --><div><img src="https://i.imgur.com/A3u6KCB.png" alt="you cut"></div><!-- you cut --><div><img src="https://i.imgur.com/UkcqT23.png" alt="x recorder"></div><!-- x recorder --><div><img src="https://i.imgur.com/Y73ZVA1.png" alt="internet archive"></div><!-- internet archive --><div><img src="https://i.imgur.com/IweT3XQ.png" alt="youtube"></div><!-- YouTube --></div></div><div class="copyright">&copy;dls2022friendlyseries</div><div class="last-update">Last Updated on '+update_time+'</div>';
-
 
 
 document.querySelector("body").style.color = "rgba(0,0,0,0)";
