@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+            <title>Solar System</title>
+</head>
+<style>
+                        @import url('https://fonts.googleapis.com/css2?family=Prompt& display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Prompt&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+@media screen and (min-width: 501px) {
+                
+                body{
+                background: black;
+             animation: none;
+                }
+            .alert{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            color: aqua;
+            font-size: 30px;
+            font-family: 'Quicksand', san-serif;
+            font-weight: 1000;
+            text-align: justify;
+            }
+        
+     .screen    {
+        display: none;
+        }
+}
+@media screen and (max-width: 500px)
+{
+        
+                    body {    
+                      background: url("https://media.istockphoto.com/photos/night-sky-picture-id471858583?k=20&m=471858583&s=612x612&w=0&h=gYrMTdoGkHRzsjuIxxqHb4CxYSOkAqlVZg3VkjZqV6I=");
+                        left:50%;
+                        top: 50%;
+                        animation: body_background 200s infinite linear;
+                        overflow: hidden;
+                        }
+            @keyframes body_background{
+                        0%{background-position-x: 0;}
+                        100%{background-position-x: 1000px;}
+            }
+                        
+        .alert{display: none;}
+            #neptune,#uranus,#saturn,#jupiter,#asteroid,#mars,#earth,#venus, #mercury,#sun
+    {
+            background: transparent;
+            border-radius: 50%;
+            border: solid 0.5px white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 8px;
+            color: #ececd8;
+            font-family: 'Cairo', sans-serif;
+            font-family: 'Prompt', sans-serif;
+            font-family: 'Zen Kaku Gothic Antique', sans-serif;
+   -webkit-user-select: none;
+    }
+              #sun{
+            width: 30px;
+            height: 30px;
+            background: #f0a800;
+            border: none;
+            box-shadow: 0 0 10px #ff9d00, 0 0 12px #ffc700, 0 0 14px #ffc700, 0 0 16px #fff12b, 0 0 18px #fffc6a, 0 0 20px #f8ff80, 0 0 24px #eeff6a, 0 0 30px #f0e6a0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+            
+            #neptune{
+            width: 400px;
+            height: 400px;            
+            }
+            #neptune img{width:15px;height:15px;border-radius:50%;margin: 12.5% 0 0 12.5%;}
+            #neptune span{display: inline-block}
+            
+            #uranus{
+            width: 330px;
+            height: 330px;            
+            }
+            #uranus img{width:15px;height:15px;border-radius:50%;margin: 12% 0 0 12.5%;}
+            #uranus span{display: inline-block}
+            
+            #saturn{
+            width: 270px;
+            height: 270px;    
+            }
+            #saturn img{width:28px;height:28px;border-radius: 50%;margin: 8% 0 0 10%;}
+            #saturn span{display: inline-block}
+            
+            #jupiter{
+            width: 220px;
+            height: 220px;    
+            }
+            #jupiter img{width:21px;height:21px;border-radius:50%;margin:9% 0 0 9%}
+            #jupiter span{display: inline-block}
+            
+        #asteroid{
+            width: 190px;
+            height: 190px;    
+            border: none;
+            }        
+            #asteroid img{ margin: 0 auto;width:100%;height:100%;border-radius:50%;}
+         #asteroid span{display: inline-block;position: absolute;white-space: nowrap; left: 50%; }
+            
+            #mars{
+            width: 140px;
+            height: 140px;
+            }
+            #mars img{width:10px;height:10px;border-radius:50%;margin: 10.5% 0 0 10.5%}
+            #mars span{display: inline-block}
+            #earth{
+            width: 115px;
+            height: 115px;    
+            }
+            #earth img{width:12px;height:12px;border-radius:50%;margin: 9.5% 0 0 9.5%}
+            #earth span{display: inline-block}
+            
+            #venus{
+            width: 90px;
+            height: 90px;
+            }
+            #venus img{width:11px;height:11px;border-radius:50%;margin: 8% 0 0 8%}
+            #venus span{display: inline-block}
+            
+            #mercury{
+            width: 70px;
+            height: 70px;
+            }
+            #mercury img{width:8px;height:8px; border-radius: 50%;margin: 9% 0 0 9%;}
+            #mercury span{display: inline-block}
+    
+         #comet{
+            width: 80px;
+            height: 230px;
+            border-radius: 50%;
+             position: absolute;
+             top: 65%;
+             left: 55%;
+             transform: translate(-50%,-50%);
+             transform-origin: left center;
+          font-size: 8px;
+          color: #ececd8;
+          font-family: 'Cairo', sans-serif;
+            font-family: 'Prompt', sans-serif;
+            font-family: 'Zen Kaku Gothic Antique', sans-serif;            
+         -webkit-user-select: none;
+             }
+            #comet img{width:10px;height:10px; border-radius: 50%;} 
+        #comet span{display: inline-block}
+    
+    
+            #planet_name{
+            width: 98%;
+            height: 50px;
+            position: absolute;
+            top: 5%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            line-height: 50px;
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Prompt',san-serif;
+            color: #55ffd5;
+            -webkit-user-select: none;
+            }        
+            #body{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            }
+        
+   input
+   {
+       transform: scale(1.2);
+   }        
+    .inputs
+            {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            font-family: 'Cairo', sans-serif;
+            font-family: 'Prompt', sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            }
+            
+        .inputs #select,#display,#details,#others{
+            width: 25%;
+            height: auto;
+            border: solid 0.5px aqua;
+            border-radius: 9px;
+            background: rgba(150, 235, 213, 0.15);
+            backdrop-filter: blur(2px);
+         margin: 4px 5px;
+         font-size: 15px;
+         font-weight: 600;
+         text-align: center;
+         color: #55ffd5;
+         padding: 1px 0;
+          -webkit-user-select: none;
+            }            
+#select span,#display span,#details span,#others span
+{margin: 0 5px 0 -5px; font-size: 20px;}
+            
+    #select_list,#display_list,#details_list,#others_list                         
+        { 
+            width: 150px;
+            height: 180px;
+            overflow-x: scroll;
+            border: solid 0.5px aqua;
+            border-radius: 10px;
+            background: rgba(150, 235, 200, 0.2);
+            backdrop-filter: blur(2px);
+            color: #55ffd5;    
+            font-size: 15px;
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            padding: 5px;
+            margin-bottom: 42px;
+            visibility: hidden;
+            -webkit-user-select: none;
+        }
+        
+ #details_list button,#display_list button,#select_list button,#others_list button
+ {
+         width: 100%;
+         height: 35px;
+         transition: height 0.4s ,width 0.4s;
+         padding: 3px;
+            border-radius: 5px;
+            border: solid 0.5px aquamarine;
+            font-size: 14px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter:blur(2px);
+            margin: 2px 0;    
+            color: #55ffd5;
+            font-family: 'Prompt', sans-serif;                        
+            white-space: nowrap;
+            display: inline-block;
+     }
+     #select_list
+     { margin-left: 1%; left: 0;}
+     #select_list button {text-align: left}
+
+        #display_list
+      {height: 80px; margin-left: 28%;left: 0;}
+     #display_list button{text-align: left}
+    
+     #details_list
+ {margin-left: 51%; text-align: center; left: 0;}
+
+ #others_list
+      {height: 80px;right:0 ;margin-right: 1%;}
+     #others_list button{text-align: center}
+     
+      #details_list button img{
+      width: 25px;
+      height: 25px;
+      margin: 0 0 0 5px;
+      vertical-align: middle;
+      filter: drop-shadow(0 0 1px white);
+      float: left;
+    }
+
+#select:hover{ background: rgba(150,235,200,0.2)}
+ #select:hover + #select_list
+{ visibility: visible;}
+ #select_list:hover{visibility: visible}
+
+#display:hover{ background: rgba(150,235,200,0.2)}
+ #display:hover + #display_list
+ { visibility: visible  } 
+ #display_list:hover{visibility: visible;}
+
+ #select_list button:hover,#display_list button:hover,#details_list button:hover,#others_list button:hover
+     {color: aqua; border-color: aqua; background: rgba(0,0,0,0.7)}
+
+
+        }</style>
+<body>
+            <div class="alert">This page is currently made to run on only mobile browsers. I am working on the dekstop version. Thanks for visiting.</div>
+        <div class="screen">
+            <div id="body"></div>
+            <div id="planet_name">
+                        Solar System
+            </div>
+            
+<div class="solar_bodies">
+            <div id="comet">
+                        <img src="https://i.imgur.com/3m7SDQe.png" alt="Halley Comet"> <span  class="p_name">Halley's Comet</span>
+            </div>
+         <div id="neptune">
+                     <img src="https://i.imgur.com/lJEwaxy.png" alt="Neptune"> <span class="p_name">Neptune</span>
+             </div>
+         <div id="uranus">
+                     <img src="https://i.imgur.com/Pgriunb.png" alt="Uranus" loading="lazy"> <span class="p_name">Uranus</span>
+             </div>
+            <div id="saturn">
+                    <img src="https://i.imgur.com/zKjJEuy.png" alt="Saturn" style="width: 30px;height: 30px;"> <span class="p_name">Saturn</span>
+            </div>        
+            <div id="jupiter">
+                 <img src="https://i.imgur.com/NZlKnkz.png" alt="Jupiter"> <span class="p_name">Jupiter</span>
+            </div>
+            <div id="asteroid">
+                 <img src="https://i.imgur.com/lmqNmWO.png" alt="asteroid"> <span class="p_name">Asteroid Belt</span>
+            </div>                    
+          <div id="mars">
+               <img src="https://i.imgur.com/odw6Lvg.png" alt="Mars"> <span class="p_name">Mars</span>
+          </div>                                    
+         <div id="earth">
+                  <img src="https://i.imgur.com/w31js7c.png" alt="Earth"> <span class="p_name">Earth</span>
+             </div>                             
+             <div id="venus">
+                     <img src="https://i.imgur.com/2FXAjVf.png" alt="Venus"> <span class="p_name">Venus</span>
+             </div>        
+             <div id="mercury">
+                     <img src="https://i.imgur.com/wQ8WjOu.png" alt="Mercury"> <span class="p_name">Mercury</span>
+         </div>    
+            <div id="sun"> <span class="p_name">Sun</span>
+            </div>
+</div>
+
+<div class="inputs">
+            
+        <div id="select"><span>&#11021;</span>Select</div>
+        <div id="select_list">
+            <button>    
+                    <input type="checkbox" name="select" checked>
+                    <label>Sun</label>
+         </button>
+        <br>
+         <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Mercury</label>
+    </button>
+        <br>
+        <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Venus</label>
+        </button>
+        <br>
+        <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Earth</label>
+        </button>
+        <br>
+        <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Mars</label>
+      </button>
+      <br>
+      <button>
+                  <input type="checkbox" name="select" checked>
+                    <label>Asteroid Belt</label>
+     </button>
+        <br>
+        <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Jupiter</label>
+        </button>
+        <br>
+        <button>
+                 <input type="checkbox" name="select" checked>
+                    <label>Saturn</label>
+        </button>
+        <br>
+        <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Uranus</label>
+        </button>
+        <br>
+        <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Neptune</label>
+     </button>
+        <br>
+        <button>
+                    <input type="checkbox" name="select" checked>
+                    <label>Halley's Comet</label>
+        </button>
+        </div>
+        
+        <div id="display"><span>&#11021;</span>View</div>
+            <div id="display_list">
+         <button>
+             <input type="checkbox" name="display" checked>
+             <label>Orbit</label>
+             </button>
+       <br>
+       <button>
+       <input type="checkbox" name="display" checked>
+             <label>Names</label>
+             </button>
+          </div>          
+          
+ </div>
+
+    </div>
+</div>
+<script>
+
+    var img = document.querySelectorAll("img");
+ var bodies = document.querySelectorAll("div.solar_bodies div");
+    var p_span=document.getElementsByClassName("p_name");
+ var r = 0;
+
+ var normal_revolve = setInterval(function(){
+   r++;
+    bodies[0].style.transform="translate(-50%,-50%) rotate("+r*0.144+"deg)";
+     img[0].style.transform="rotate(45deg)";     
+        p_span[0].style.transform="rotate("+r*-0.144+"deg)";
+        p_span[0].style.margin="-20px";
+        
+        bodies[1].style.transform=" translate(-50%,-50%) rotate("+(-r*0.045)+"deg)";
+        img[1].style.transform="rotate("+(r*0.045)+"deg";
+        p_span[1].style.transform="rotate("+(r*0.045)+"deg";
+        p_span[1].style.margin="-4px";
+        
+        bodies[2].style.transform=" translate(-50%,-50%) rotate("+(-(r*0.072+200))+"deg)";
+        img[2].style.transform="rotate("+(r*0.072+200)+"deg)";
+        p_span[2].style.transform="rotate("+(r*0.072+200)+"deg)";
+        p_span[2].style.margin="-5px";
+        
+    bodies[3].style.transform=" translate(-50%,-50%) rotate("+(-(r*0.10+90))+"deg)";
+     img[3].style.transform="rotateZ("+(r*0.10+90)+"deg)";
+     p_span[3].style.transform="rotateZ("+(r*0.10+90)+"deg)";
+     p_span[3].style.margin="-15px";
+     
+        bodies[4].style.transform=" translate(-50%,-50%) rotate("+(-(r*0.15+270))+"deg)";
+        img[4].style.transform="rotate("+(r*0.15+270)+"deg)";
+     p_span[4].style.transform="rotate("+(r*0.15+270)+"deg)";
+     p_span[4].style.margin="-5px";
+     
+     bodies[5].style.transform=" translate(-50%,-50%) rotate("+r*-0.09+"deg)";
+    p_span[5].style.transform="translateX(-50%) rotate("+(r*0.09)+"deg)";
+    p_span[5].style.margin="0px";
+    
+        bodies[6].style.transform=" translate(-50%,-50%) rotate("+(-(r*0.3+20))+"deg)";
+        img[6].style.transform="rotate("+(r*0.3+20)+"deg)";
+     p_span[6].style.transform="rotate("+(r*0.3+20)+"deg)";
+    p_span[6].style.margin="-5px";
+    
+        bodies[7].style.transform=" translate(-50%,-50%) rotate("+(-(r*0.4+180))+"deg)";
+        img[7].style.transform="rotate("+(r*0.4+180)+"deg)";
+        p_span[7].style.transform="rotate("+(r*0.4+180)+"deg)";
+        p_span[7].style.margin="-3px";
+        
+     bodies[8].style.transform=" translate(-50%,-50%) rotate("+(-r*0.65)+"deg)";
+        img[8].style.transform="rotate("+(r*0.65)+"deg)";
+      p_span[8].style.transform="rotate("+(r*0.65)+"deg)";
+     p_span[8].style.margin="-5px";
+    
+        bodies[9].style.transform=" translate(-50%,-50%) rotate("+(-r*0.9)+"deg)";
+        img[9].style.transform="rotate("+(r*0.9)+"deg)";
+        p_span[9].style.transform="rotate("+(r*0.9)+"deg)";
+        p_span[9].style.margin="-5px";
+        
+    },10);
+    
+    var panel = document.getElementById("planet_name");
+    var open1 = 1,open2 = 1,open3 = 1,open4 = 1,r = 0, t_img=10;
+    var color = ["#00ffc0","#ececd8","white"];
+ var span = document.querySelectorAll("div.inputs span");    
+ var select_list = document.getElementById("select_list");
+ var display_list = /*rupan*/ document.getElementById("display_list");
+ var details = document.getElementsByClassName("details");
+
+    bodies[1].onclick=function(){
+      panel.innerHTML="Neptune";
+    for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==1){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+          
+      for(var i=0;i<t_img;i++)
+      {
+      if(i==1){
+      img[i].style.border="solid 1px "+color[0];
+       }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+       }
+      }     
+    }
+    
+    bodies[2].onclick=function(){
+            panel.innerHTML="Uranus";
+    for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==2){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+            for(var i=0;i<t_img;i++)
+      {
+      if(i==2){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+     bodies[3].onclick=function(){
+      panel.innerHTML="Saturn";
+ for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==3){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+      for(var i=0;i<t_img;i++)
+      {
+      if(i==3){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+ bodies[4].onclick=function(){
+            panel.innerHTML="Jupiter";
+    for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==4){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1]; 
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1]; 
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+     for(var i=0;i<t_img;i++)
+      {
+      if(i==4){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+ bodies[5].onclick=function(){
+            panel.innerHTML="Asteroid Belt";
+    for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==5){
+     bodies[i].style.border="none";
+     p_span[i].style.color= color[0];     
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==10){
+     bodies[i].style.border="none";
+         p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1]; 
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+            for(var i=0;i<t_img;i++)
+      {
+      if(i==5){
+      img[i].style.filter="drop-shadow(0 0 1px "+color[0]+")";
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+    bodies[6].onclick=function(){
+      panel.innerHTML="Mars";
+ for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==6){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];     
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10)
+     {
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+      for(var i=0;i<t_img;i++)
+      {
+      if(i==6){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+ bodies[7].onclick=function(){
+            panel.innerHTML="Earth";
+    for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==7){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10){
+     bodies[i].style.border="none";
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ } 
+            for(var i=0;i<t_img;i++)
+      {
+      if(i==7){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+ bodies[8].onclick=function(){
+      panel.innerHTML="Venus";
+    for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==8){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0]; 
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }   
+      for(var i=0;i<t_img;i++)
+      {
+      if(i==8){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+    bodies[9].onclick=function(){
+        panel.innerHTML="Mercury";
+          for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==9){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5||i==10){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+            for(var i=0;i<t_img;i++)
+      {
+      if(i==9){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+    
+    bodies[10].onclick=function(){
+        panel.innerHTML="Sun";
+    for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==10){
+     bodies[i].style.border="solid 1px "+color[0];
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==0||i==5){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+            for(var i=0;i<t_img;i++)
+      {
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }    
+        }        
+        
+    bodies[0].onclick=function(){
+        panel.innerHTML="Halley's Comet";
+          for(var i = 0;i<bodies.length;i++)
+    { 
+ if(i==0){     
+     p_span[i].style.color= color[0];
+     p_span[i].style.fontWeight= "600";
+      }
+     else if(i==5||i==10){
+     bodies[i].style.border="none";    
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+     }
+     else{
+     bodies[i].style.border="solid 0.5px "+color[2];
+     p_span[i].style.color= color[1];
+     p_span[i].style.fontWeight= "normal";
+      }
+ }
+            for(var i=0;i<t_img;i++)
+      {
+      if(i==0){
+      img[i].style.border="solid 1px "+color[0];
+      }
+          else{
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+      }
+    }
+
+    document.getElementById("body").onclick=function() {
+                panel.innerHTML= "Solar System";
+        for(var i=0;i<t_img;i++)
+      {
+      img[i].style.border="none";
+      img[i].style.filter="none";
+      }
+ for(var i = 0;i<bodies.length;i++)
+    { 
+     if(i==0||i==5||i==10){
+             bodies[i].style.border="none";
+             p_span[i].style.color= color[1];
+         p_span[i].style.fontWeight= "normal";
+             }
+     else
+             bodies[i].style.border="solid 0.5px "+color[2];
+             p_span[i].style.color= color[1];
+             p_span[i].style.fontWeight= "normal";
+ }
+}
+
+var inputs_control = setInterval(function(){        
+var select = document.getElementsByName("select");
+
+if(document.getElementsByName("display")[0].checked)
+{
+var d = 10,p1=9,s=10;
+
+            for(var j = 0;j<select.length;j++)
+            { 
+                 if(select[j].checked)
+                          bodies[d].style.visibility="visible";
+ 
+                  else     
+                          bodies[d].style.visibility="hidden";                              
+                          d--;
+              }    
+                  
+              for(var j = 1;j<select.length;j++)
+                  {
+                          if(select[j].checked)
+                                  img[p1].style.visibility="visible";
+                         else
+                                img[p1].style.visibility="hidden";                  
+                              p1--;
+             }    
+             
+  if(document.getElementsByName("display")[1].checked)
+        for(var j = 0;j<select.length;j++)
+                  {
+                          if(select[j].checked)
+                                  p_span[s].style.visibility="visible";
+                         else
+                                p_span[s].style.visibility="hidden";                  
+                              s--;
+             }    
+             
+      else
+            for(var j = 0;j<select.length;j++)
+                  {
+                          if(select[j].checked)
+                                p_span[s].style.visibility="hidden";                  
+                              s--;
+             }    
+    }
+    
+else
+{
+var p2 = 9,s=10;        
+            if(select[0].checked)
+            bodies[10].style.visibility="visible";
+            else
+         bodies[10].style.visibility="hidden";
+         
+              for(var o = 1;o<select.length-1;o++)
+                              bodies[o].style.visibility="hidden";
+                         
+                    for(var j = 1;j<select.length;j++)
+                  {
+                          if(select[j].checked)
+                                  img[p2].style.visibility="visible";
+                         else
+                                img[p2].style.visibility="hidden";                  
+                              p2--;
+             }    
+     if(document.getElementsByName("display")[1].checked)
+        for(var j = 0;j<select.length;j++)
+                  {
+                          if(select[j].checked)
+                                  p_span[s].style.visibility="visible";
+                         else
+                                p_span[s].style.visibility="hidden";                  
+                              s--;
+             }    
+             
+      else
+            for(var j = 0;j<select.length;j++)
+                  {
+                          if(select[j].checked)
+                                p_span[s].style.visibility="hidden";                  
+                              s--;
+             }    
+ }
+},1000);
+console.log("Too many animations together may result in lags!! Thanks for visiting.");
+    </script>
+</body>
+</html>
