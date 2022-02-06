@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">
+			<meta name="description" content="Maths Quiz - Test Your Speed made by Rupan Samanta. Try it now">
+			<script src="https://kit.fontawesome.com/82872eeccd.js" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="https://rupansamanta.github.io/www.dls2022friendlyseries.com/mathQuiz-style.css"></link>
+			<link rel="shortcut icon" href="https://i.pinimg.com/736x/e9/1f/32/e91f32bd56fc1b09eb2234e0565e046e.jpg" type="image/x-icon">
+			<title>Math Quiz - Test Your Speed</title>
+</head>
+<body>
+			<header>
+						Math Quiz - Test Your Speed
+			</header>
+			<main>
+						<section>
+									<div class="levels">
+												<label>															
+															<input type="radio" id="levels" name="level" checked>Easy
+												</label>			
+												<label>															
+															<input type="radio" id="levels" name="level">Medium
+												</label>	
+												<label>
+															<input type="radio" id="levels" name="level">Hard
+												</label>
+									</div>
+						</section>
+						<section>
+									<button class="start-button">
+												Start
+									</button>
+						</section>
+			</main>
+			<main style="display: none">
+						<section class="score-time">
+									<div>
+												<i class="fas fa-stopwatch"></i>
+												Time <span class="time"></span>
+									</div>
+									<div>
+												<i class="fas fa-trophy"></i>
+												Score <span class="score"></span>															
+									</div>									
+						</section>
+						<section class="question-body">
+									<div>
+												Question
+												<span class="question"></span>
+									</div>
+						</section>
+						<section class="expression-body">
+									<div class="first-num">&nbsp;</div>
+									<div class="operators"></div>
+									<div class="last-num"></div>
+						</section>
+						<section class="answer-body">
+									<input type="number" placeholder="Type Your Answer Here" id="answer" autocomplete="off" autofocus>
+									<input type="button" value="Submit" id="button" disabled class="button">
+						</section>
+						<section class="correct-wrong"></section>
+			</main>
+			<main style="display: none">
+						<section class="results">
+									<table id="result-table">
+												<caption>Result</caption>
+												<tr>
+															<td>Q. No.</td>
+															<td>Question</td>
+															<td>Your Ans.</td>
+															<td>Correct Ans.</td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>	
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+												<tr>
+															<td id="QNo"></td><td id="Q"></td>
+												   <td id="Ans"></td><td id="CAns"></td>
+												</tr>
+									</table>
+						</section>
+						<section class="stats">
+									<table id="result-table">
+												<caption>Statistics</caption>
+												<tr>
+															<td>Correct</td>
+															<td>Incorrect</td>
+															<td>Time Taken</td>
+															<td>Score</td>
+												</tr>
+												<tr>
+															<td id="correct"></td>
+															<td id="incorrect"></td>
+															<td id="timeTaken"></td>
+															<td id="score"></td>
+												</tr>
+									</table>
+						</section>
+						<section class="replay">
+									<button id="replay">Replay</button>
+						</section>
+			</main>
+</body>
+<script src="https://rupansamanta.github.io/www.dls2022friendlyseries.com/mathQuiz-script.js"></script>
+</html>
