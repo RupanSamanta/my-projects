@@ -211,7 +211,7 @@
 					 font-family: 'Outfit', sans-serif;
 					 font-size: 18px;
 					 text-align: center;
-					 margin: 150px auto 50px auto;
+					 margin: 5px auto 50px auto;
 					 padding: 10px 20px;
 			}
 			.levels input
@@ -229,3 +229,9 @@
 			{
 						background: rgba(52,152,219,0.7);
 			}
+.level-head
+{
+  font-family: 'Outfit', sans-serif;
+  font-size: 25px;
+  margin: 110px auto 5px auto;
+}
