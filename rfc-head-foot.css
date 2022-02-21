@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+:root
+{
+			--violent-violet: #370e48; --purple: #9c2889; 
+			--curious-blue: #28a0ee; --red-violet: #e100b0; 
+			--mariner: #2596be; --governor-bay: #2944b1; 
+			--snuff: #e7d4e9; --pigment-indigo: #60057e; 
+			--torea-bay: #0e449a; --white: #ebebeb;
+			--font: 'Outfit', sans-serif;
+}
+*
+{
+			box-sizing: border-box;
+			transition-duration: 0.15s !important;
+}
+::selection
+{
+			background: var(--torea-bay);
+			color: var(--white);
+}
+body
+{
+			margin: 0;
+			background: var(--white);
+			background-size: 100% 100%, cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			font-family: var(--font);
+			height: 100%;
+}
+header
+{
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 60px;
+			background: var(--violent-violet);
+			box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+			user-select: none;			
+			overflow: hidden;
+}
+header #head1
+{
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 5px 10px;
+			position: relative;
+}
+header #head1 div
+{
+			width: 50px;
+			height: 50px;
+			background: url("https://i.imgur.com/wF2RLEk.png");
+			background-size: cover;
+			opacity: 0.9;
+}
+header #head1 i
+{
+			width: auto;
+			height: 100%;
+			color: var(--snuff);
+			font-size: 30px;
+			margin: 2px;
+}
+header nav
+{
+			position: relative;
+			height: auto;
+			background: var(--pigment-indigo);
+			background-repeat:  no-repeat;
+			padding: 0 0 5px 0;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			border-style: solid;
+   border-image-slice: 1;
+   border-width: 8px;
+   border-image-source: linear-gradient(to right, var(--red-violet), var(--mariner) );
+			border-bottom: none;
+			border-left: none;
+			border-right: none;
+			margin: 0 auto;
+}
+nav div a
+{
+			text-decoration: none;
+}
+nav div
+{
+			height: 80px;
+			padding: 10px 20px;			
+			font-size: 20px;
+			color: var(--snuff);
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			position: relative;
+}
+nav span
+{
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+			width: 40px;
+			height: 40px;
+			margin: 5px;
+			padding: 5px;
+			background: transparent;
+			transition-duration: 0s !important;
+}
+nav div:hover
+{
+			background: var(--curious-blue);
+			transform: scale(1.1);
+			font-weight: 800;
+}
+footer
+{
+			background: url("https://i.imgur.com/QR1ffbU.png");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			padding: 20px 0;
+			border-style: solid;
+   border-image-slice: 1;
+   border-width: 5px;
+   border-image-source: linear-gradient(to right, var(--red-violet), var(--mariner) );
+			border-bottom: none;
+			border-left: none;
+			border-right: none;
+			padding: 0 10px;
+			outline: none;
+}
+footer div
+{
+			width: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 10px 0;
+			margin: 0 auto;
+			border-top: solid 1px var(--white);
+}
+footer figure
+{
+			width: fit-content;
+			font-size: 15px;
+			text-align: center;
+			font-weight: normal;
+			background: transparent;
+			color: var(--white);
+			padding: 0 10px;
+			margin: 15px;
+}
+footer figure img
+{
+			width: 110px;
+			height: auto;
+			margin: 5px auto;
+			border-radius: 5px;
+}
+footer div:nth-child(2) img
+{
+			border-radius: 2px;
+			outline: solid 8px black;
+			border-top: 0;
+			border-bottom: 0;
+}
+footer div:nth-child(1)
+{
+			border: none;
+}
+footer div:nth-child(2)
+{
+			justify-content: space-around;
+}
+footer p
+{
+			color: var(--white);
+			font-size: 18px;
+			padding: 0;
+}
