@@ -1,6 +1,6 @@
 var head = document.querySelector('header'),
 			foot = document.querySelector('footer'),
-			nav , 	I = 0, 	icons, div, head1, figure,
+			nav , 	I = 0, 	icons, div, head1, figure, tiger = document.querySelector('.tiger'),
 			navList = ['Home', 'Squad', 'Stadium & Facilities', 'Records', 'Trophies'],
 			navIcon = ['fa-solid fa-house', 'fa-solid fa-users', 'fa-solid fa-building', 'fa-solid fa-medal', 'fa-solid fa-trophy'],
 			footerLogo = ['https://i.imgur.com/C5eEqi9.png', 'https://i.imgur.com/u5UREyB.png', 'https://i.imgur.com/Bp3si52.png', 'https://i.imgur.com/Jl6XlUk.png', 'https://i.imgur.com/KHUnnXD.png', 'https://i.imgur.com/mRQsB9x.png', 'https://i.imgur.com/FtZ8gLi.png', 'https://i.imgur.com/1nwBAiF.png', 'https://i.imgur.com/UkcqT23.png', 'https://i.imgur.com/A3u6KCB.png'],
@@ -49,3 +49,10 @@ foot.appendChild(footDiv);
 footDiv = document.createElement('div');
 footDiv.innerHTML = '<p>&copy;RS Football Club 2022</p>';
 foot.appendChild(footDiv);
+
+var roar = new Audio('https://ia601503.us.archive.org/5/items/y-2mate.com-tiger-roar-sound-effect/y2mate.com%20-%20Tiger%20Roar%20Sound%20Effect.mp3');
+tiger.onclick = function ()
+{
+ roar.currentTime = 0;
+ roar.play();
+}
