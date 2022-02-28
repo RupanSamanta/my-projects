@@ -193,3 +193,44 @@ footer p
 			font-size: 18px;
 			padding: 0;
 }
+.stadium-logo
+{
+			height: 180px;
+			background: url("https://i.imgur.com/jsDnAHz.png");
+			background-size: 100% 180%;
+			background-repeat: no-repeat;
+			margin: 60px auto 200px auto;
+			border: none;
+			padding: 0;
+}
+.stadium-logo div:nth-child(1)
+{
+			width: 160px;
+			height: 160px;
+			background: url("https://i.imgur.com/wF2RLEk.png");
+			background-size: 100% 100%;
+			border: solid 15px white;
+			border-radius: 50%;
+			box-shadow: 0 0 3px black;
+			backdrop-filter: drop-shadow(0 0 5px white);
+			margin: 0 auto;
+			transform: translateY(100px);
+}
+.stadium-logo p
+{
+			transform: translateY(100px);
+			margin: 5px auto;
+			color: black;
+			font-size: var(--font-size);
+			font-family: var(--font);
+			text-align: center;
+			font-weight: 500;
+}
+.stadium-logo p:nth-child(1)
+{
+			font-size: 30px;
+}
+.stadium-logo p:last-child
+{
+			margin: 0 auto 100px auto;
+}
