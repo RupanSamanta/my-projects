@@ -1,12 +1,12 @@
 var head = document.querySelector('header'),
-			foot = document.querySelector('footer'),
+			foot = document.querySelector('footer'), stadium_logo = document.querySelector('.stadium-logo'),
 			nav , 	I = 0, 	icons, div, head1, figure, tiger = document.querySelector('.tiger'),
 			navList = ['Home', 'Squad', 'Stadium & Facilities', 'Records', 'Trophies'],
 			navIcon = ['fa-solid fa-house', 'fa-solid fa-users', 'fa-solid fa-building', 'fa-solid fa-medal', 'fa-solid fa-trophy'],
 			footerLogo = ['https://i.imgur.com/C5eEqi9.png', 'https://i.imgur.com/u5UREyB.png', 'https://i.imgur.com/Bp3si52.png', 'https://i.imgur.com/Jl6XlUk.png', 'https://i.imgur.com/KHUnnXD.png', 'https://i.imgur.com/mRQsB9x.png', 'https://i.imgur.com/FtZ8gLi.png', 'https://i.imgur.com/1nwBAiF.png', 'https://i.imgur.com/UkcqT23.png', 'https://i.imgur.com/A3u6KCB.png'],
 			footerTitle = ['Official Device', 'Official Network', 'Search Engine', 'Official Browser', 'Official Editor', 'Web Host', 'Gallery Host', 'Photo Editor', 'Video Recorder', 'Video Editor'],
 			footerAlt = ['Lenovo', 'Airtel', 'Google', 'Chrome', 'Treb Edit', 'Git Hub', 'Imgur', 'Pixel Lab', 'X Recorder', 'You Cut'];
-			
+		 stadium_logo.innerHTML = '<div class="tiger"></div><div><p>RS Football Club</p><p>R’s City Stadium</p></div>';	
 		 head.innerHTML = '<div id="head1"><a href="https://rupansamanta.github.io/www.dls2022friendlyseries.com/rfc-home-page.html"><div></div></a><i class="fa-solid fa-bars-staggered" id="i"></i></div><nav></nav>';
 		 nav = document.querySelector('nav');
 			icons = document.getElementById('i');
