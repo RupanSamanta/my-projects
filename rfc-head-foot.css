@@ -61,7 +61,7 @@ header #head1 div
 			height: 50px;
 			background: url("https://i.imgur.com/wF2RLEk.png");
 			background-size: cover;
-			opacity: 0.9;
+			opacity: 0.9; margin: 0;
 }
 header #head1 i
 {
