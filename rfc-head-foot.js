@@ -7,7 +7,7 @@ var head = document.querySelector('header'),
 			footerTitle = ['Official Device', 'Official Network', 'Search Engine', 'Official Browser', 'Official Editor', 'Web Host', 'Gallery Host', 'Photo Editor', 'Video Recorder', 'Video Editor'],
 			footerAlt = ['Lenovo', 'Airtel', 'Google', 'Chrome', 'Treb Edit', 'Git Hub', 'Imgur', 'Pixel Lab', 'X Recorder', 'You Cut'];
 			
-		 head.innerHTML = '<div id="head1"><div></div><i class="fa-solid fa-bars-staggered" id="i"></i></div><nav></nav>';
+		 head.innerHTML = '<div id="head1"><a href="https://rupansamanta.github.io/www.dls2022friendlyseries.com/rfc-home-page.html"><div></div></a><i class="fa-solid fa-bars-staggered" id="i"></i></div><nav></nav>';
 		 nav = document.querySelector('nav');
 			icons = document.getElementById('i');
 			head1 = document.getElementById('head1');
