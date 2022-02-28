@@ -18,7 +18,7 @@ a, a:active, a:hover, a:link
      text-decoration: none;
      color: #000;
      padding: 0;
-     width: fit-content;
+     margin: auto;
 }
 ::selection
 {
@@ -54,6 +54,10 @@ header #head1
 			justify-content: space-between !important;
 			align-items: center;
 			padding: 5px 10px;
+}
+#head1 a
+{
+   margin: 0;
 }
 header #head1 div
 {
