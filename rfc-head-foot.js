@@ -1,4 +1,4 @@
-var head = document.querySelector('header'),
+var head = document.querySelector('header'), 
 			foot = document.querySelector('footer'), stadium_logo = document.querySelector('.stadium-logo'),
 			nav , 	I = 0, 	icons, div, head1, figure,
 			navList = ['Home', 'Squad', 'Stadium & Facilities', 'Records', 'Trophies'],
