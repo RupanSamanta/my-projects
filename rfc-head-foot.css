@@ -13,7 +13,7 @@
 			box-sizing: border-box;
 			transition-duration: 0.15s !important;
 }
-a
+a, a:active, a:hover, a:link
 {
      text-decoration: none;
      padding: none;
