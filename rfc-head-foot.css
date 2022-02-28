@@ -55,7 +55,7 @@ header #head1
 			align-items: center;
 			padding: 5px 10px;
 }
-header #head1 a
+header #head1 a,header #head1 a:active,header #head1 a:hover,header #head1 a:link
 {
    margin: 0;
 }
