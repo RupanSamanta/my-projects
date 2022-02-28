@@ -55,9 +55,9 @@ header #head1
 			align-items: center;
 			padding: 5px 10px;
 }
-#head1 a
+header #head1 a
 {
-   margin: 0;
+   margin: 0 auto;
 }
 header #head1 div
 {
@@ -65,7 +65,7 @@ header #head1 div
 			height: 50px;
 			background: url("https://i.imgur.com/wF2RLEk.png");
 			background-size: cover;
-			opacity: 0.9; margin: 0;
+			opacity: 0.9; margin: auto;
 }
 header #head1 i
 {
