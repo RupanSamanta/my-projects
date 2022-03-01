@@ -221,7 +221,7 @@ footer p
 			transform: translateY(100px);
 			margin: 5px auto;
 			color: black;
-			font-size: var(--font-size);
+			font-size: 18px;
 			font-family: var(--font);
 			text-align: center;
 			font-weight: 500;
