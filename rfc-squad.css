@@ -1,0 +1,251 @@
+:root
+{
+			--violent-violet: #370e48; --purple: #a1289f; 
+			--curious-blue: #28a0ee; --red-violet: #ff009d; 
+			--mariner: #15cbff; --governor-bay: #2944b1; 
+			--snuff: #e7d4e9; --pigment-indigo: #610a7e; 
+			--torea-bay: #0e449a; --white: #ebebeb;
+			--f-size: 13px; --background: rgba(0,0,0,0.08); --article-width: 380px;
+}
+*
+{
+			box-sizing: border-box;
+			transition-duration: 0.15s !important;
+}
+article
+{
+			background: transparent;
+}
+.player-box
+{
+			width: var(--article-width);
+			height: 240px;
+			padding: 10px;
+			margin: 0 auto;
+			background: linear-gradient(to bottom right, var(--curious-blue), var(--pigment-indigo));
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+}
+.player-pic-name, .player-origin, .player-info-stats
+{
+			width: 10%;
+			height: 100% !important;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: auto;
+			text-align: center;
+			color: var(--white);
+			border: solid 1px var(--snuff);
+			border-left: none;
+			border-right: none;			
+}
+.player-pic-name
+{
+			width: 45%;
+			border: solid 1px var(--snuff);
+			border-right: none;
+}
+.player-info-stats
+{
+			width: 45%;
+			border: solid 1px var(--snuff);
+			border-left: none;
+}
+.player-pic-name figure
+{
+			width: 100%;
+			text-align: center;
+}
+.player-pic-name figure img
+{
+			width: 90%;
+			height: auto;
+			margin: 0 auto;
+}
+.player-pic-name figure figcaption
+{
+			width: 100%;
+			white-space: nowrap;
+			font-size: var(--font-size);
+			margin: 2px 0 0 0;
+}
+.player-origin
+{
+			justify-content: flex-start;
+}
+.player-origin p
+{
+			width: 100%;
+			height: auto;
+			margin: 2px auto;
+			padding: 2px 0;
+			transform: translate(-15px, 9px);
+			/*transform: translate(-15px, 4px);*/
+			font-size: var(--font-size);
+}
+.player-origin #player-rating
+{		
+			width: 100%;	
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0;
+			font-size: 28px;
+			margin: 0 auto;
+}
+.player-origin #player-pos
+{
+			border: solid 0.6px var(--snuff);
+			border-left: none;
+			border-right: none;
+}
+.player-origin img
+{
+			width: 100%;
+			height: auto;
+}
+.player-info-stats
+{
+			justify-content: space-evenly;
+}
+.player-info-stats .player-info, .player-info-stats .player-stats
+{
+			width: 90%;
+}
+.player-info
+{
+			height: 20%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			font-size: var(--font-size);
+			border-bottom: solid 0.6px var(--snuff);
+}
+.player-info i
+{
+			margin: 0 5px 0 0;
+			font-size: 14px;
+}
+.player-stats
+{
+			height: 70%;
+			font-size: 15px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+}
+.player-stats .column1, .player-stats .column2
+{
+			width: 45%;
+			height: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		 flex-direction: column;
+}
+.player-stats .column
+{
+			height: 85%;
+			border-right: solid 0.6px var(--snuff);
+}
+.player-stats p
+{
+			margin: 0;
+			padding: 0;
+}
+.player-stats #stat
+{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: var(--font-size);
+}
+.player-stats #stat p
+{
+			width: 60%;
+			text-align: left;
+}
+.player-stats #stat p:nth-child(2)
+{
+			width: 40%;
+			text-align: center;
+}
+
+.button
+{
+			width: 400px;
+			background: transparent;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+}
+.button button, .button #download
+{
+			width: 30%;
+			height: auto;
+			border: none;
+			background: var(--torea-bay);
+			font-size: 28px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--white);
+			padding: 10px 0;
+			border-radius: 5px;
+}
+.button button:hover
+{
+			background: var(--pigment-indigo);
+}
+.button button:nth-of-type(odd):hover i
+{
+			animation: iLeft 1.8s infinite ease;
+}
+.button button:nth-of-type(even):hover i
+{
+			margin: 0 0 0 -5px;
+			animation: iRight 1.8s infinite ease;
+}
+@keyframes iRight
+{
+			0%{transform: 0;opacity: 1;}
+			40%{transform: translateX(10px)}
+			90%{transform: translateX(10px);opacity: 0}
+			100%{transform: translateX(0); opacity: 0}
+}
+@keyframes iLeft
+{
+			0%{transform: 0;opacity: 1;}
+			40%{transform: translateX(-10px)}
+			90%{transform: translateX(-10px);opacity: 0}
+			100%{transform: translateX(0); opacity: 0}
+}
+.button a
+{
+			width: 30%;
+}
+.button #download
+{
+			background: var(--curious-blue);
+			width: 100%;
+}
+#download:hover i
+{
+			animation: iDown 1.5s infinite ease;
+}
+#download:hover
+{
+			background: var(--purple);
+}
+@keyframes iDown
+{
+			50%{transform: translateY(4px)}
+			100%{transform: translateY(0)}
+}
