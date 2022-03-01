@@ -12,18 +12,6 @@
 			box-sizing: border-box;
 			transition-duration: 0.15s !important;
 }
-section
-{
-		 border: 10px solid;
-   border-image-slice: 1;
-   border-width: 5px;
-   border-image-source: linear-gradient(to right, var(--red-violet), var(--mariner) );
-			border-bottom: none;
-			border-left: none;
-			border-right: none;
-			margin: 40px auto;
-			padding: 10px 0;
-}
 .stadium-logo
 {
 			height: 180px;
@@ -64,28 +52,6 @@ section
 .stadium-logo p:last-child
 {
 			margin: 0 auto 100px auto;
-}
-.title
-{
-			width: 100%;
-			font-family: var(--font);
-			font-size: 25px;
-			padding: 0 0 10px 10px;
-			margin: 0 auto 10px auto;
-			border-bottom: solid 3px rgba(0,0,0,0.1);
-			font-weight: 500;
-}
-article
-{
-			width: auto;
-			height: auto;
-			padding: 10px;
-			background: var(--background);
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			flex-wrap: wrap;
-			margin: 20px auto 0 auto;
 }
 .news article
 {
