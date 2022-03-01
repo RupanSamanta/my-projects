@@ -11,7 +11,7 @@
 *
 {
 			box-sizing: border-box;
-			transition-duration: 0.15s !important;
+		       transition-duration: 0.15s !important;
 }
 a, a:active, a:hover, a:link
 {
