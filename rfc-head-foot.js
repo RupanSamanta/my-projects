@@ -47,7 +47,7 @@ for (var i = 0; i < footerLogo.length; i++)
 }
 foot.appendChild(footDiv);
 footDiv = document.createElement('div');
-footDiv.innerHTML = '<p style="font-size: 18px">&copy;RS Football Club 2022</p><p style="font-size: 13px">Player images are property of EA Sports</p>';
+footDiv.innerHTML = '<p style="font-size: 18px">&copy;RS Football Club 2022</p><p style="font-size: 13px; padding: 0; margin: 2px auto">Player images are property of EA Sports</p>';
 foot.appendChild(footDiv);
 
 var roar = new Audio('https://ia601503.us.archive.org/5/items/y-2mate.com-tiger-roar-sound-effect/y2mate.com%20-%20Tiger%20Roar%20Sound%20Effect.mp3');
