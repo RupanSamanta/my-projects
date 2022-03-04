@@ -69,9 +69,10 @@ article
 .player-pic-name figure figcaption
 {
 			width: 100%;
-			white-space: nowrap;
+			white-space: wrap;
 			font-size: var(--font-size);
 			margin: 2px 0 0 0;
+text-align: center;
 }
 .player-origin
 {
