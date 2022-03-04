@@ -69,6 +69,27 @@
 			mTac = [69,62,49,87,50,55,38,85,62,95,70,78,52,85],
 			mPas = [100,91,79,100,100,84,88,100,81,92,76,88,80,82],
 			mSho = [99,95,77,100,99,89,90,100,77,94,73,78,81,82],
+                        gCardSrc = [
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Sandro.jpg',
+			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Alba.jpg',    
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Zinchenko.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Virgil.jpg',
+			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Koulibaly.jpg',    
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Chiellini.jpg', 
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Laporte.jpg',
+			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Manolas.jpg',    
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Varane.jpg', 
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Ruben.jpg',
+			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Bounucci.jpg',    
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Arnold.jpg', 
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Cancelo.jpg',
+			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Hakimi.jpg'
+                        ],
+                        gCardDownload = [
+                        'Alex Sandro 91 Card', 'Jordi Alba 91 Card', 'Olexandre Zinchenko 75 Card',
+                        'Virgil van Djik 93 Card', 'Kalidou Koulibaly 92 Card', 'Giorgio Chiellini 92 Card', 'Aymeric Laporte 91 Card', 'Kostas Manolas 90 Card', 'Raphael Varane 84 Card', 'Ruben Dias 83', 'Leonardo Bounucci 82 Card',
+                        'Alexander-Arnold 91 Card', 'João Cancelo 90 Card', 'Ashraf Hakimi 87 Card'
+                        ],
 			Sandro = 
 			{
 						name: 'Alex Sandro',
@@ -223,7 +244,15 @@
 						spe: 98, acc: 97, sta: 82, con: 79,
 						str: 86, tac: 69, pas: 75, sho: 73,
 			},
-			Alisson = 
+                        gCardSrc = [
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Alisson.jpg',
+			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Ederson.jpg',    
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Courtois.jpg'
+                        ],
+                        gCardDownload = [
+                        'Alisson 96 Card', 'Ederson 95 Card', 'Thibaut Courtois 94 Card'
+                        ],
+                        Alisson = 
 			{
 						name: 'Alisson Becker',
 						img: 'https://www.futwiz.com/assets/img/fifa22/faces/212831.png',
@@ -283,8 +312,8 @@
 					 tac[ind].innerHTML = aTac[a];
 					 pas[ind].innerHTML = aPas[a];
 					 sho[ind].innerHTML = aSho[a];
-					 anchor[0].setAttribute('href', aCardSrc[0]);
-					 anchor[0].setAttribute('download', 'Lionel Messi 99 Card');
+					 anchor[0].setAttribute('href', aCardSrc[a]);
+					 anchor[0].setAttribute('download', aCardDownload[a]);
 					 navigator.vibrate(40);
 			}
 			function midfield()
@@ -306,8 +335,10 @@
 					 str[ind].innerHTML = mStr[m];
 					 tac[ind].innerHTML = mTac[m];
 					 pas[ind].innerHTML = mPas[m];
-					 sho[ind].innerHTML = mSho[m];
-					 navigator.vibrate(40);
+					 sho[ind].innerHTML = mSho[m];                                        
+                                         anchor[1].setAttribute('href', mCardSrc[m]);
+					 anchor[1].setAttribute('download', mCardDownload[m]);					
+                        	         navigator.vibrate(40);
 			}
 			function defense()
 			{
@@ -329,6 +360,8 @@
 					 tac[ind].innerHTML = defender[d].tac;
 					 pas[ind].innerHTML = defender[d].pas;
 					 sho[ind].innerHTML = defender[d].sho;
+                                         anchor[2].setAttribute('href', dCardSrc[d]);
+					 anchor[2].setAttribute('download', dCardDownload[d]);					 					 
 					 navigator.vibrate(40);
 			}
 			function goalkeeper()
@@ -351,6 +384,8 @@
 					 pas[ind].innerHTML = keeper[g].pas;
 					 hand[0].innerHTML = keeper[g].gkh;
 					 react[0].innerHTML = keeper[g].gkr;
+                                         anchor[3].setAttribute('href', gCardSrc[g]);
+					 anchor[3].setAttribute('download', gCardDownload[g]);					 
 					 navigator.vibrate(40);
 			}
 			forward();
