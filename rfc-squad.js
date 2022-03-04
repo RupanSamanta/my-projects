@@ -35,7 +35,8 @@
 			England = 'https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/1280px-Flag_of_England.svg.png',
 			Portugal = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png',
 			France = 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1280px-Flag_of_France.svg.png',
-			aCardSrc = ['https://i.imgur.com/3VXKwlm.png'],
+			
+                        //aCardSrc = ['https://i.imgur.com/3VXKwlm.png'],
 			aName = ['Lionel Messi', 'Cristiano Ronaldo', 'Kylian Mbappé', 'Harry Kane', 'Erling Haaland', 'Neymar Jr.', 'Mahammad Salah', 'Antoine Griezman'],
 			aPos = ['CF', 'CF', 'CF', 'CF', 'CF', 'WF', 'WF', 'WF'],
    aImg = [ 'https://www.futwiz.com/assets/img/fifa22/faces/158023.png', 'https://www.futwiz.com/assets/img/fifa22/faces/20801.png', 'https://www.futwiz.com/assets/img/fifa22/faces/231747.png', 'https://www.futwiz.com/assets/img/fifa22/faces/202126.png', 'https://www.futwiz.com/assets/img/fifa22/faces/239085.png', 'https://www.futwiz.com/assets/img/fifa22/faces/190871.png', 'https://www.futwiz.com/assets/img/fifa22/faces/209331.png', 'https://www.futwiz.com/assets/img/fifa22/faces/194765.png'],
@@ -312,8 +313,8 @@
 					 tac[ind].innerHTML = aTac[a];
 					 pas[ind].innerHTML = aPas[a];
 					 sho[ind].innerHTML = aSho[a];
-					 anchor[0].setAttribute('href', aCardSrc[a]);
-					 anchor[0].setAttribute('download', aCardDownload[a]);
+					 //anchor[0].setAttribute('href', aCardSrc[a]);
+					 //anchor[0].setAttribute('download', aCardDownload[a]);
 					 navigator.vibrate(40);
 			}
 			function midfield()
@@ -336,8 +337,8 @@
 					 tac[ind].innerHTML = mTac[m];
 					 pas[ind].innerHTML = mPas[m];
 					 sho[ind].innerHTML = mSho[m];                                        
-                                         anchor[1].setAttribute('href', mCardSrc[m]);
-					 anchor[1].setAttribute('download', mCardDownload[m]);					
+                                         //anchor[1].setAttribute('href', mCardSrc[m]);
+					 //anchor[1].setAttribute('download', mCardDownload[m]);					
                         	         navigator.vibrate(40);
 			}
 			function defense()
@@ -390,7 +391,7 @@
 			}
 			forward();
 			midfield();
-		 defense();
+		        defense();
 			goalkeeper();
 			aButLeft.onclick = function()
 			{						
