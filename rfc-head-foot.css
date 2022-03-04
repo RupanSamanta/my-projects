@@ -187,6 +187,11 @@ footer div:nth-child(2)
 {
 			justify-content: space-around;
 }
+footer div:last-child
+{
+  flex-direction: column;
+  justify-content: center;
+}
 footer p
 {
 			color: var(--white);
