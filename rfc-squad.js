@@ -70,7 +70,7 @@
 			mTac = [69,62,49,87,50,55,38,85,62,95,70,78,52,85],
 			mPas = [100,91,79,100,100,84,88,100,81,92,76,88,80,82],
 			mSho = [99,95,77,100,99,89,90,100,77,94,73,78,81,82],
-                        gCardSrc = [
+                        dCardSrc = [
                         'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Sandro.jpg',
 			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Alba.jpg',    
                         'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Zinchenko.jpg',
@@ -86,7 +86,7 @@
                         'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Cancelo.jpg',
 			'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Hakimi.jpg'
                         ],
-                        gCardDownload = [
+                        dCardDownload = [
                         'Alex Sandro 91 Card', 'Jordi Alba 91 Card', 'Olexandre Zinchenko 75 Card',
                         'Virgil van Djik 93 Card', 'Kalidou Koulibaly 92 Card', 'Giorgio Chiellini 92 Card', 'Aymeric Laporte 91 Card', 'Kostas Manolas 90 Card', 'Raphael Varane 84 Card', 'Ruben Dias 83', 'Leonardo Bounucci 82 Card',
                         'Alexander-Arnold 91 Card', 'João Cancelo 90 Card', 'Ashraf Hakimi 87 Card'
