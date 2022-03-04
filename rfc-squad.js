@@ -89,7 +89,7 @@
                         dCardDownload = [
                         'Alex Sandro 91 Card', 'Jordi Alba 91 Card', 'Olexandre Zinchenko 75 Card',
                         'Virgil van Djik 93 Card', 'Kalidou Koulibaly 92 Card', 'Giorgio Chiellini 92 Card', 'Aymeric Laporte 91 Card', 'Kostas Manolas 90 Card', 'Raphael Varane 84 Card', 'Ruben Dias 83', 'Leonardo Bounucci 82 Card',
-                        'Alexander-Arnold 91 Card', 'João Cancelo 90 Card', 'Ashraf Hakimi 87 Card'
+                        'Alexander-Arnold 91 Card', 'João Cancelo 90 Card', 'Achraf Hakimi 87 Card'
                         ],
 			Sandro = 
 			{
@@ -236,7 +236,7 @@
 			},
 			Hakimi = 
 			{
-						name: 'Ashraf Hakimi',
+						name: 'Achraf Hakimi',
 						img: 'https://www.futwiz.com/assets/img/fifa22/faces/235212.png',
 						rating: 87, position: 'RB',
 						countrySrc: Morocco,
