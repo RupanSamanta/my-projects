@@ -36,7 +36,20 @@
 			Portugal = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1280px-Flag_of_Portugal.svg.png',
 			France = 'https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1280px-Flag_of_France.svg.png',
 			
-                        //aCardSrc = ['https://i.imgur.com/3VXKwlm.png'],
+                        aCardSrc = [
+                             'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Messi.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Ronaldo.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Mbappé.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Kane.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Haaland.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Neymar.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Salah.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Griezman.jpg'
+                        ],
+                        aCardDownload = [
+                              'Lionel Messi 99', 'Cristiano Ronaldo 98', 'Kylian Mbappé 95', 'Harry Kane 93', 'Erling Haaland 92', 
+                              'Neymar Jr. 96', 'Mahammad Salah 96', 'Antoine Griezman 96'
+                        ],
 			aName = ['Lionel Messi', 'Cristiano Ronaldo', 'Kylian Mbappé', 'Harry Kane', 'Erling Haaland', 'Neymar Jr.', 'Mahammad Salah', 'Antoine Griezman'],
 			aPos = ['CF', 'CF', 'CF', 'CF', 'CF', 'WF', 'WF', 'WF'],
    aImg = [ 'https://www.futwiz.com/assets/img/fifa22/faces/158023.png', 'https://www.futwiz.com/assets/img/fifa22/faces/20801.png', 'https://www.futwiz.com/assets/img/fifa22/faces/231747.png', 'https://www.futwiz.com/assets/img/fifa22/faces/202126.png', 'https://www.futwiz.com/assets/img/fifa22/faces/239085.png', 'https://www.futwiz.com/assets/img/fifa22/faces/190871.png', 'https://www.futwiz.com/assets/img/fifa22/faces/209331.png', 'https://www.futwiz.com/assets/img/fifa22/faces/194765.png'],
@@ -54,6 +67,23 @@
 			aPas = [100,95,100,91,85,98,92,94],
 			aSho = [100,98,100,98,92,100,95,98],
 			
+                        mCardSrc = [
+                             ,
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Hazard.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Sterling.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Son.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Kevin.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Coutinho.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Erkisen.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Isco.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Modric.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Gundogan.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Casemiro.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Llorente.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Arnold.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Cancelo.jpg',
+                        'https://rupansamanta.github.io/www.dls2022friendlyseries.com/2022Hakimi.jpg'
+                        ],
 			mName = ['Eden Hazard','Raheem Sterling','Heung-Min Son', 'Kevin De Bruyne','Philippe Coutinho','Christian Eriksen','Isco','Luka Modric','Ilkay Gundogan','Casemiro','Marcos Llorente','Bernardo Silva', 'Riyard Mahrez', 'Jadon Sancho'],
 			mImg = ['https://www.futwiz.com/assets/img/fifa22/faces/183277.png','https://www.futwiz.com/assets/img/fifa22/faces/202652.png','https://www.futwiz.com/assets/img/fifa22/faces/200104.png','https://www.futwiz.com/assets/img/fifa22/faces/192985.png','https://www.futwiz.com/assets/img/fifa22/faces/189242.png','https://www.futwiz.com/assets/img/fifa22/faces/190460.png','https://www.futwiz.com/assets/img/fifa22/faces/197781.png','https://www.futwiz.com/assets/img/fifa22/faces/177003.png','https://www.futwiz.com/assets/img/fifa22/faces/186942.png','https://www.futwiz.com/assets/img/fifa22/faces/200145.png','https://www.futwiz.com/assets/img/fifa22/faces/226161.png','https://www.futwiz.com/assets/img/fifa22/faces/218667.png','https://www.futwiz.com/assets/img/fifa22/faces/204485.png','https://www.futwiz.com/assets/img/fifa22/faces/233049.png'],
 			mRat = [95,94,86,95,93,91,90,94,91,92,89,92,91,91],
@@ -313,8 +343,8 @@
 					 tac[ind].innerHTML = aTac[a];
 					 pas[ind].innerHTML = aPas[a];
 					 sho[ind].innerHTML = aSho[a];
-					 //anchor[0].setAttribute('href', aCardSrc[a]);
-					 //anchor[0].setAttribute('download', aCardDownload[a]);
+					 anchor[0].setAttribute('href', aCardSrc[a]);
+					 anchor[0].setAttribute('download', aCardDownload[a]+' Card');
 					 navigator.vibrate(40);
 			}
 			function midfield()
@@ -337,8 +367,8 @@
 					 tac[ind].innerHTML = mTac[m];
 					 pas[ind].innerHTML = mPas[m];
 					 sho[ind].innerHTML = mSho[m];                                        
-                                         //anchor[1].setAttribute('href', mCardSrc[m]);
-					 //anchor[1].setAttribute('download', mCardDownload[m]);					
+                                         anchor[1].setAttribute('href', mCardSrc[m]);
+					 anchor[1].setAttribute('download', mName[m]+' '+mRat[m]+' Card');					
                         	         navigator.vibrate(40);
 			}
 			function defense()
