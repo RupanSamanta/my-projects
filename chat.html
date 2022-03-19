@@ -12,6 +12,10 @@
 </head>
 <style>
 			@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+			:root
+			{
+						--font: 'Fredoka', sans-serif;
+			}
 			*{
 						transition-duration: 0.3s !important;
 						box-sizing: border-box;
@@ -24,9 +28,9 @@
 			body
 			{
 						margin: 0;
-						font-family: 'Fredoka', sans-serif;
+						font-family: var(--font);						
 			}
-			main
+			.chat-section
 			{
 						position: absolute;
 						width: 100%;
@@ -38,8 +42,9 @@
 						justify-content: space-between;
 						align-items: flex-start;
 						flex-direction: column;
+						display: none;
 			}
-			main .top
+			.chat-section .top
 			{
 						width: 100%;
 						height: auto;
@@ -225,14 +230,155 @@
 						transform: translateX(15px);							
 						visibility: hidden;	
 			}
+		 .register-box
+			{
+						width: 100%;
+						padding: 20px 0;
+						background: transparent;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background: linear-gradient( to bottom,  #ffdfd5, #d5f4ff);
+			}
+			input
+			{
+						box-sizing: border-box;
+			}
+			.register
+			{
+						width: auto;
+						height: auto;
+						padding: 10px 20px;
+						background: rgba(255, 255, 255, 0.4);
+						backdrop-filter: blur(20px);
+						box-shadow: 0 0 10px 1px rgba(0,0,0,0.1);
+						border-radius: 5px;
+			}
+			.register label
+			{
+						width: 300px;
+						display: flex;
+						justify-content: space-evenly;
+						align-items: center;
+						flex-direction: row;
+						font-size: 16px;
+						color: rgba(0,0,0,0.3);
+						padding: 0 5px;
+						margin: 20px auto;
+						background: rgba(0,0,0,0.05);
+						border-bottom: solid 2px rgba(0,0,0,0.2);
+						transition-duration: 0.3s;
+			}
+			.register label:hover
+			{  			 
+						border-image-slice: 1;
+   			border-image-source: linear-gradient(to right, blueviolet, fuchsia);
+			}
+			.register div:nth-child(1) label, .register div:last-child label
+			{
+						border: none;
+						border-radius: 0;
+						background: transparent;
+						flex-direction: column;
+						padding: 0;
+			}
+			.register #sign-in
+			{
+						background: rgba(0,0,0,0.2);
+						color: ghostwhite;
+						width: 100%;
+						font-weight: 600;
+			}
+			.register input
+			{
+						width: 90%;
+						background: transparent;
+						font-family: var(--font);
+						font-size: 16px;
+						border: none;
+						outline: none;
+						padding: 10px;
+					 color:	rgba(0,0,0,0.3);
+			}
+		 .register input:focus
+			{
+						color: black;
+			}
+			.register #profile-photo
+			{
+						width: 80px;
+						height: 80px;
+						border-radius: 50%;
+						outline: none;
+						border: none;
+						background: black;
+						box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+			}
+			.register input::placeholder
+			{
+						color: rgba(0,0,0,0.3);
+			}
+			#profile-photo
+			{
+						width: 40px;
+						height: 40px;
+			}
 </style>
-<body>
+<body> 
 			<input type="file" name="image" id="image">
-			<main>
+			<main class="register-box">
+						<form class="register" autocomplete="on">		
+									<div>												
+												<label for="upload-photo">
+															<img src="https://png.pngitem.com/pimgs/s/150-1503945_transparent-user-png-default-user-image-png-png.png" id="profile-photo" for="upload-photo">
+															<span id="photo-remove">
+																		Upload Picture
+															</span>
+												</label>
+												<input type="file" name="Profile-Photo" id="upload-photo" style="display: none" accept="image/*">
+									</div>
+									<div>
+												<label>
+															<i class="fa-solid fa-user"></i>
+															<input type="text" name="User Name" id="user-name" placeholder="Name" required>
+												</label>
+									</div>
+									<div>
+												<label>
+															<i class="fa-solid fa-phone"></i>
+															<input type="tel" name="Mobile Number" id="mobile-number" placeholder="Mobile Number" required>
+												</label>
+									</div>
+									<div>
+												<label>
+															<i class="fa-solid fa-envelope"></i>
+															<input type="email" name="E-mail" id="email" placeholder="E-mail Address" required>
+												</label>
+									</div>
+									<div>
+												<label>
+															<i class="fa-solid fa-calendar-days"></i>
+															<input type="date" name="Date of Birth" id="dob" placeholder="Date of Birth" pattern="dd-mm-yyyy" required>
+												</label>
+									</div>
+									<div>
+												<label>
+															<i class="fa-solid fa-lock"></i>
+															<input type="text" name="Password" id="password" placeholder="Password(Minimum 6-digits)" min="0" required>
+												</label>
+									</div>
+									<div>
+												<label>
+															<input type="button" value="Sign In" id="sign-in" disabled>
+												</label>
+									</div>
+						</form>
+			</main>
+			<main class="chat-section">
 						<section class="top">			
 									<div class="pic-name">
-												<img src="https://image.freepik.com/free-vector/abstract-colorful-technology-dotted-wave-background_1035-17450.jpg" alt="Display Picture">
-												<span class="user-name">Rupan</span>
+												<img src="" alt="Display Picture" class="user-image">
+												<span class="user-name"></span>
 									</div>
 									<div class="menu">
 												<i class="fa-solid fa-ellipsis-vertical"></i>
@@ -248,6 +394,120 @@
 						</section>
 			</main>
 </body>
+<script>
+			var register_box = document.querySelector('.register-box'),
+			form = document.querySelector('.register'),
+			profile_photo = document.querySelector('#profile-photo'),
+			upload_photo = document.querySelector('#upload-photo'),
+			removePhoto = document.querySelector('#photo-remove'),
+			userName = document.querySelector('#user-name'),
+			mobile_number = document.querySelector('#mobile-number'),
+			email = document.querySelector('#email'),
+			dob = document.querySelector('#dob'),
+			password = document.querySelector('#password'),
+			signIn = document.querySelector('#sign-in'), iP = 0,
+			uName = document.querySelector('.user-name'),
+			uPhoto = document.querySelector('.user-image'),
+			chatSec = document.querySelector('.chat-section');		
+			
+			function regBox()
+			{
+						register_box.style.width = '100%';
+						register_box.style.minHeight = screen.height+'px';
+			}
+			function addPPhoto()
+			{
+  				var reader = new FileReader();   
+  			reader.onload = function(e)
+     {
+    					profile_photo.src = e.target.result;
+     }
+     reader.readAsDataURL(upload_photo.files[0]);
+     removePhoto.innerHTML = 'Remove&nbsp;<i class="fa-solid fa-circle-xmark"></i>';
+     upload_photo.disabled = true;
+   }
+   function removePPhoto()
+   {
+   		 if(iP%2 != 0)
+   			{
+   						profile_photo.src = 'https://png.pngitem.com/pimgs/s/150-1503945_transparent-user-png-default-user-image-png-png.png';  						
+   						removePhoto.innerHTML = 'Upload Picture';
+   						setTimeout(()=>
+   									{upload_photo.disabled = false;}
+   									,1000);
+   			}
+   			else
+									iP++;
+   }
+			function today()
+			{
+						var date = new Date();
+						dob.value = date.toISOString().substring(0,10);
+			}
+			function formCheck()
+			{
+						if(userName.value.length != 0 &&
+									 mobile_number.value.length != 0 &&
+									  email.value.length != 0 &&
+									   dob.value.length != 0 &&
+									    password.value.length != 0)
+						{
+									if(password.value.length >= 6)
+									{	
+												signIn.disabled = false;
+												signIn.style.background = '#3498db';
+								 }
+						}
+						else
+						{
+									signIn.disabled = true;
+									signIn.style.background = 'rgba(0,0,0,0.2)';
+						}
+			}
+			function loadFormData()
+			{
+						signIn.style.background = 'linear-gradient(to right, blueviolet, fuchsia)';
+						clearInterval(fc);
+						var userDetails = 
+						{
+									Name: userName.value,
+									Number: mobile_number.value,
+									Email: email.value,
+									DOB: dob.value,
+									Password: password.value,
+									Profile_Photo: profile_photo.src
+						}
+						localStorage.setItem('userDetails', JSON.stringify(userDetails));
+						uName.innerHTML = userDetails.Name;
+						uPhoto.src = userDetails.Profile_Photo;
+						setTimeout(()=>
+						{
+									register_box.style.opacity = 0;
+									chatSec.style.opacity = 0;
+									chatSec.style.display = 'flex';			
+						},500);			
+						setTimeout(()=>
+						{
+									chatSec.style.opacity = 1;
+									register_box.style.display = 'none';
+						},1500);
+			}
+			if(localStorage.getItem('userDetails') != null)
+			{
+						register_box.style.display = 'none';
+						chatSec.style.display = 'flex';
+						var	userId = JSON.parse(localStorage.getItem('userDetails'));
+						uName.innerHTML = userId.Name;
+						uPhoto.src = userId.Profile_Photo;
+			}
+			upload_photo.onchange = addPPhoto;
+			removePhoto.onclick = removePPhoto;
+			signIn.onclick = loadFormData;
+			today();
+			var rg = setInterval(regBox, 1000),
+			fc = setInterval(formCheck, 1000);
+			
+</script>
 <script>
 		 var textarea = document.querySelector("#text"), 
 		 attach = document.querySelector('#attach'),
@@ -516,9 +776,9 @@
    }
    function removeAll()
    {   			   			
-   			localStorage.clear('index');
-   			localStorage.clear('INDSTR');
-   			localStorage.clear('HIDE');
+   			localStorage.removeItem('index');
+   			localStorage.removeItem('INDSTR');
+   			localStorage.removeItem('HIDE');
    			indStr = '';
    			operate();
    			const elements = document.querySelectorAll('div');
@@ -535,13 +795,5 @@
    						send_box.innerHTML = '';
    			},1500);
    }
-   /*textarea.onblur = function(event)
-   { 
-   			this.focus();
-   }
-   send_box.onclick = function(event)
-   {
-   			textarea.blur();
-   }*/
 </script>
 </html>
