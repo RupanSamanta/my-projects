@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" charset="UTF-8">			<link rel="shortcut icon" href="https://pngimg.com/uploads/dna/dna_PNG100732.png" type="image/x-icon">
+
+			<title>DNA</title>
+
+</head>
+
+<style>
+
+			
+
+			body
+
+			{
+
+						background: #000;
+
+						overflow-x: hidden;
+
+			}
+
+			main
+
+			{
+
+						width: 220px;
+
+						display: flex;
+
+						justify-content: space-evenly;
+
+						align-items: stretch;
+
+						flex-direction: column;
+
+						margin: 0 auto;
+
+						transform: rotate(25deg);
+
+			}
+
+			section
+
+			{
+
+						width: 100%;
+
+						height: 6px;
+
+						display: flex;
+
+						justify-content: space-between;
+
+						align-items: center;
+
+						background:  linear-gradient(to right, cornflowerblue 50%, orangered 50%);
+
+						margin: 8px auto;
+
+						animation: wind 1.8s infinite ease-out;
+
+			}
+
+			.g-c
+
+			{
+
+						background: linear-gradient(to right, lime 50%, gold 50%);
+
+			}
+
+			.bond
+
+			{
+
+						width: 13px;
+
+						height: 13px;
+
+						border-radius: 50%;
+
+						border: solid 5px black;
+
+						background: beige;
+
+						transform: scale(1.1);
+
+			}
+
+			bond:nth-child(2)
+
+			{
+
+						z-index: -1;
+
+			}
+
+			@keyframes wind
+
+		 {
+
+						50%{transform: rotateY(180deg)}
+
+			}
+
+</style>
+
+<body>
+
+			<main></main>
+
+</body>
+
+<script>
+
+			var main = document.querySelectorAll('main')[0],
+
+			sect, div, d = 0,
+
+			v = 30;
+
+			function apnd()
+
+			{
+
+			for(var i=1; i<=v; i++)
+
+			{
+
+						sect = document.createElement('section');
+
+						div = document.createElement('div');
+
+						div.className = 'bond';					
+
+						sect.appendChild(div);
+
+						div = document.createElement('div');
+
+						div.className = 'bond';
+
+						sect.appendChild(div);
+
+						if(i%2==0)
+
+									sect.className = 'a-t';
+
+						else
+
+									sect.className = 'g-c';
+
+						sect.style.animationDelay = d+'s';
+
+				  d+=0.07;
+
+				 	main.appendChild(sect);
+
+			}
+
+			}
+
+			apnd();
+
+</script>
+
+</html>
