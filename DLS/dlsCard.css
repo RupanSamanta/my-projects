@@ -1,0 +1,232 @@
+:root
+{
+			--yellow: #ffe732;
+}
+@font-face
+{
+			font-family: Reno;
+			src: url('https://theshinramen.github.io/DLS-Card-Creator/Renogare-Regular.woff');
+}
+*{
+			transition-duration: 0.1s;
+	  text-transform: none;
+	  border: solid 0px blue;
+}
+body
+{
+	 	background: url("file:///storage/emulated/0/Movies/XRecorder0/XRecorder_02052022_192515_exported_8629~2.jpg");
+			background-size: 100% 100%;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			margin: 0;
+			font-family: Reno;
+}
+header
+{
+			padding: 3vw 0;
+			text-align: left;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 8vw;
+			font-weight: 600;
+			font-family: Reno;
+			background: rgba(0,0,0,0.4);
+			color: rgba(0,0,0,0.9);
+			text-shadow: 0 0 1vw var(--yellow);
+			backdrop-filter: blur(2px);
+			border-bottom: solid 0.5vw var(--yellow);
+		 box-shadow: 0 0 20px 0.5px var(--yellow);
+}
+.dls-logo
+{
+			width: 40vw;
+			height: 10vw;
+			padding: 0 1px;
+			background: url("https://www.ftgames.com/images/logos/DLS_Logo.png");
+			background-size: 100% 100%;
+}
+.head-logo
+{
+			height: 10vw;
+			padding: 0 5px;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-direction: column;
+}
+.head-logo div:nth-child(1)
+{
+			font-size: 3.5vw;
+}
+.head-logo div:nth-child(2)
+{
+			font-size: 6vw;
+}
+main
+{
+			display: flex;
+			justify-content: center !important;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 10vw 6vw;
+}
+main section
+{
+			width: 280px;
+			background: rgba(0,0,0,0.2);
+			backdrop-filter: blur(2px);
+			margin: 0 auto 10vw auto;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			flex-direction: column;
+			border-radius: 10px;
+			padding: 5px 20px;
+			box-shadow: 0 0 10px 0.5px var(--yellow);
+}
+main section:first-child
+{
+			width: 90%;
+			min-width: 280px;
+}
+form
+{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			color: ghostwhite;
+}
+label, .stats label, .download
+{
+			width: 40%;
+			height: auto;
+			min-height: 30px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: rgba(0,0,0,0.3);
+			border-radius: 5px;
+			margin: 15px 0;
+			padding: 10px;
+			font-size: 13px;
+			outline: solid 5px transparent;
+}
+.image-edit{padding: 5px 20px}
+.image-edit label input{width: 90%}
+.image-edit label{width: 100%}
+label span, .stats label span
+{
+			width: 45%;
+			color: ghostwhite;
+}
+input, select, button
+{
+			width: 40%;
+			height: auto;
+			border: none;
+			outline: none;
+			padding: 0;
+			background: transparent;
+			font-family: Reno;
+			font-weight: 500;
+			color: ghostwhite;
+			font-size: 13px;
+}
+#height, #rating{text-align: center}
+select
+{
+			appearance: none;
+			-webkit-appearence: none;
+			text-align: right;
+}
+.boot-col{width: auto}
+.stats span, .stats input
+{
+			text-align: center;
+}
+.image-edit input{text-align: center}
+.player-info input::placeholder
+{
+			color: ghostwhite;
+}
+.player-info label:nth-child(1) input, .player-info label:nth-child(2) input 
+{
+			padding: 0;
+			width: 100%;
+}
+#image{display: none}
+#color
+{
+			all: unset;
+			width: 40%;
+			height: 30px;
+			outline: none;
+			border: none;
+			padding: 0;
+			margin: 0;
+			background: transparent;
+}
+.upload-image
+{
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			outline: none;
+			color: ghostwhite;
+			border: none;
+			text-transform: uppercase;
+}
+.card-type label
+{
+			width: 100%;
+			justify-content: space-between;
+}
+.card-type input
+{
+			width: auto;
+			text-align: right;
+}
+.card-type input:focus
+{
+			box-shadow: none;
+			outline: none;
+}
+input:focus
+{
+			border-bottom: solid 1px var(--yellow);
+			box-shadow: 0 5px 2px 0.1px rgba(255, 231, 50, 0.1);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+     transition: background-color 100000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+select:focus
+{
+			outline: none;
+			background: transparent;
+}
+.download
+{
+			width: 320px;
+			display: block;
+			text-align: center !important;
+			backdrop-filter: blur(5px);
+			padding: 10px 0;
+			margin: 0 auto 15px auto;
+}
+.download:hover
+{
+			background: rgba(255, 231, 50, 0.6);
+}
+canvas
+{
+			width: 320px;
+			height: 222.5px;
+			margin: 15px auto;
+}
