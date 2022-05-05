@@ -140,7 +140,7 @@ function drawCard()
 		    ctx.fillText(height.value, 908, 159);
 		    
 		    var bt = new Image();
-		    bt.src = '/storage/emulated/0/DLS_BOOT/'+boot.value+'.png';		    
+		    bt.src = 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/DLS/dls-boot/'+boot.value+'.png';		    
 		    bt.onload = function ()
 		    {		
 		    			ctx.drawImage(bt, 1020, 84, 110, 110);
