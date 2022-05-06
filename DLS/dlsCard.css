@@ -117,6 +117,11 @@ label, .stats label, .download
 .image-edit{padding: 5px 20px}
 .image-edit label input{width: 90%}
 .image-edit label{width: 100%}
+.image-edit label:nth-child(2), .image-edit label:nth-child(3)
+{
+			width: 40%;
+}
+#img-height, #img-width{width: 40%; text-align: center;}
 label span, .stats label span
 {
 			width: 45%;
