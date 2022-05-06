@@ -68,7 +68,7 @@ uploadImg.onclick = function ()
 			size.oninput = drawCard;
 			down.onclick = function ()
 			{
-				download ();
+			      if(confirm('Confirm Download')) download ();
 			}
 			for (let i = 0; i < attr.length; i++)
 			{
@@ -224,11 +224,10 @@ function download()
 {
         var a = document.createElement('a');
         a.href = canvas.toDataURL('image/png;base64');
-	a.download = firstName.value+'.png';
+	a.download = firstName.value+lastName.value+'.png';
 	document.body.appendChild(a)
 	a.click();
 	document.body.removeChild(a);
-	alert('down')
 }
 
 /* download */
