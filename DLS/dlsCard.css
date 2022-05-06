@@ -147,6 +147,10 @@ select
 			-webkit-appearence: none;
 			text-align: right;
 }
+.country
+{
+			width: 28%;
+}
 .boot-col{width: auto}
 .stats span, .stats input
 {
