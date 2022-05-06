@@ -65,7 +65,7 @@ uploadImg.onclick = function ()
 			horiBar.onchange = drawCard;
 			vertBar.onchange = drawCard;
 			imgWidth.oninput = drawCard;
-			imgHeight.oninput = drawCard;
+			imgHeight.oninput = drawCard; country.onchange = drawCard;
 			down.onclick = function ()
 			{
 			      if(confirm('Confirm Download')) download ();
@@ -118,7 +118,13 @@ function drawCard()
 		    
 		    ctx.fillStyle = posColor();
 		    ctx.fillRect(552, 250, 144, 86);
-		    
+		    var cnt = new Image();
+		    cnt.src = 'https://flagcdn.com/w320/'+country.value+'.png';
+		    cnt.crossOrigin = 'anonymous';
+		    cnt.onload = function ()
+		    {
+		    			ctx.drawImage(cnt,552,360,144,90);
+		    }
 		    ctx.textAlign = 'center';
 		    ctx.font = '66px Reno';
 		    ctx.fillStyle = black;
