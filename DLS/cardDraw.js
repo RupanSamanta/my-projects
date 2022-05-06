@@ -24,7 +24,8 @@ image = document.getElementById('image'),
 horiBar = document.getElementById('hori-pos'),
 vertBar = document.getElementById('vert-pos'),
 down = document.getElementsByClassName('download')[0],
-size = document.getElementById('size'),
+imgWidth = document.getElementById('img-width'),
+imgHeight = document.getElementById('img-height'),
 canvas = document.getElementsByTagName('canvas')[0],
 ctx = canvas.getContext('2d'),
 cardURL = 'https://rupansamanta.github.io/www.dls2022friendlyseries.com/DLS/dls-card/',
@@ -35,10 +36,8 @@ sblue = '#19dab2', rblue = '#4d8af2',
 grey = '#777a85', white = '#ffffff',
 black = '#000', font = '58px Reno',
 statsCoord = [[936,292], [936,427], [936,562], [936,697], [1220,292], [1220,427], [1220,562], [1220,697]],
-sizeVal = [1.6,1.5,1.4,1.3,1.2,1,1.2,1.3,1.4,1.5,1.6],
-horiPos, vertPos, sz,
-img = new Image(), uplImg = new Image(), 
-uplSrc = 'https://www.futwiz.com/assets/img/fifa22/faces/67129665.png';
+horiPos, vertPos, img = new Image(), uplImg = new Image(), 
+uplSrc = 'https://www.futwiz.com/assets/img/fifa21/faces/20801.png';
 
 /* selecting all necessary elements */
 
@@ -96,19 +95,8 @@ function drawCard()
 					 {
 					 			horiPos = horiBar.value;
 					 			vertPos = vertBar.value;
-					 			var wid, hei; sz = size.value;
-					 			if(sz>=sizeVal.length/2)
-					 			{
-					 						wid = uplImg.width*sizeVal[sz];
-					 						hei = uplImg.height*sizeVal[sz];
-					 			}
-					 			else
-									{
-												wid = uplImg.width/sizeVal[sz];
-					 						hei = uplImg.height/sizeVal[sz];
-									}
-					 			ctx.drawImage(uplImg, horiPos, vertPos, wid, hei);				 			
-				 }
+					 			ctx.drawImage(uplImg, horiPos, vertPos, imgWidth.value, imgHeight.value);				 			
+				         }
 				  ctx.textAlign = 'center';		    
 		    ctx.font = '50px Reno';
 		    ctx.fillStyle = grey;
