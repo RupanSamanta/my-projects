@@ -64,7 +64,8 @@ uploadImg.onclick = function ()
 			height.oninput = drawCard;
 			horiBar.onchange = drawCard;
 			vertBar.onchange = drawCard;
-			size.oninput = drawCard;
+			imgWidth.oninput = drawCard;
+			imgHeight.oninput = drawCard;
 			down.onclick = function ()
 			{
 			      if(confirm('Confirm Download')) download ();
