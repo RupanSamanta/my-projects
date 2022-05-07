@@ -74,4 +74,4 @@ window.onscroll = function ()
 			}
 }
 
-document.querySelector('max').onclick = ()=>{alert('Max Card will be added soon please have patience');}
+document.getElementById('max').onclick = ()=>{alert('Max Card will be added soon please have patience');}
