@@ -12,18 +12,20 @@
 	  text-transform: none;
 	  border: solid 0px blue;
 }
+html{scroll-behavior: smooth}
 body
 {
 	 	background: url("https://rupansamanta.github.io/www.dls2022friendlyseries.com/DLS/bg.jpg");
-			background-size: 100% 100%;
+	 	background: rgba(0,0,0,0.8);
+			/*background-size: 100% 100%;
 			background-attachment: fixed;
 			background-repeat: no-repeat;
-			margin: 0;
+		*/	margin: 0;
 			font-family: Reno;
 }
 header
 {
-			padding: 3vw 0;
+			padding: 4vw 0;
 			text-align: left;
 			display: flex;
 			justify-content: center;
@@ -31,7 +33,7 @@ header
 			font-size: 8vw;
 			font-weight: 600;
 			font-family: Reno;
-			background: rgba(0,0,0,0.4);
+			background: rgba(0,0,0,0.8);
 			color: rgba(0,0,0,0.9);
 			text-shadow: 0 0 1vw var(--yellow);
 			backdrop-filter: blur(2px);
@@ -83,7 +85,7 @@ main section
 			flex-direction: column;
 			border-radius: 10px;
 			padding: 5px 20px;
-			box-shadow: 0 0 10px 0.5px var(--yellow);
+			box-shadow: 0 0 15px 0.5px rgba(255, 231, 50, 0.4);
 }
 main section:first-child
 {
@@ -97,7 +99,7 @@ form
 			justify-content: space-between;
 			align-items: center;
 			flex-wrap: wrap;
-			color: ghostwhite;
+			color: gainsboro;
 }
 label, .stats label, .download
 {
@@ -107,7 +109,7 @@ label, .stats label, .download
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			background: rgba(0,0,0,0.3);
+			background: rgba(0,0,0,0.5);
 			border-radius: 5px;
 			margin: 15px 0;
 			padding: 10px;
@@ -125,7 +127,7 @@ label, .stats label, .download
 label span, .stats label span
 {
 			width: 45%;
-			color: ghostwhite;
+			color: gainsboro;
 }
 input, select, button
 {
@@ -137,7 +139,7 @@ input, select, button
 			background: transparent;
 			font-family: Reno;
 			font-weight: 500;
-			color: ghostwhite;
+			color: gainsboro;
 			font-size: 13px;
 }
 #height, #rating{text-align: center}
@@ -159,7 +161,7 @@ select
 .image-edit input{text-align: center}
 .player-info input::placeholder
 {
-			color: ghostwhite;
+			color: gainsboro;
 }
 .player-info label:nth-child(1) input, .player-info label:nth-child(2) input 
 {
@@ -184,7 +186,7 @@ select
 			height: 100%;
 			background: transparent;
 			outline: none;
-			color: ghostwhite;
+			color: gainsboro;
 			border: none;
 			text-transform: uppercase;
 }
@@ -231,11 +233,59 @@ select:focus
 }
 .download:hover
 {
-			background: rgba(255, 231, 50, 0.6);
+			background: rgba(255, 231, 50, 0.8);
 }
 canvas
 {
 			width: 320px;
 			height: 222.5px;
 			margin: 15px auto;
+}
+.goTop
+{
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: fit-content;
+			height: auto;
+			border: none;
+			outline: none;
+			background: transparent;
+			padding: 0;
+			margin: 20px;
+			font-size: 40px;
+			border-radius: 50%;
+			color: gainsboro;
+			visibility: hidden;
+}
+.goTop:hover
+{
+			transform: scale(1.1);
+			color: rgba(255, 231, 50, 0.8);
+}
+footer
+{
+			background: rgba(0,0,0,0.8);
+			padding: 20px;
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			color: gainsboro;
+			text-align: left;
+			font-size: 20px;
+}
+footer i
+{
+			font-size: 30px;
+			margin: 10px 10px 10px 0;
+			color: gainsboro;
+}
+footer i:hover
+{
+			text-shadow: 0 0 10px var(--yellow);
+}
+a,a:active,a:hover,a:link,a:visited
+{
+			text-decoration: none;
+			width: fit-content;
 }
