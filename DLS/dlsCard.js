@@ -48,3 +48,29 @@ for (let i = 0; i < countryName.length; i++)
 			opt.selected = true;
 			countrySel.appendChild(opt);
 }
+
+var goTop = document.createElement('button');
+goTop.className = 'goTop';
+goTop.disabled = true;
+goTop.innerHTML = '<i class="fa-solid fa-circle-chevron-up"></i>';
+goTop.onclick = function()
+{
+			document.documentElement.scrollTop = 0;
+			document.body.scrollTop = 0;
+}
+document.body.appendChild(goTop);
+window.onscroll = function ()
+{
+			var top = document.getElementsByClassName('goTop')[0];
+			if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400)
+			{
+						top.style.visibility = 'visible';
+						top.disabled = false;
+			}
+			else
+			{
+						top.style.visibility = 'hidden';
+						top.disabled = false;
+			}
+}
+
