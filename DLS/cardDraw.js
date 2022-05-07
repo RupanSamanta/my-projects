@@ -35,7 +35,7 @@ yellow = '#eedb10', green = '#10ca08',
 sblue = '#19dab2', rblue = '#4d8af2',
 grey = '#777a85', white = '#ffffff',
 black = '#000', font = '58px Reno',
-statsCoord = [[936,292], [936,427], [936,562], [936,697], [1220,292], [1220,427], [1220,562], [1220,697]],
+statsCoord = [[935,292], [935,427], [935,562], [935,697], [1217,292], [1217,427], [1217,562], [1217,697]],
 horiPos, vertPos, img = new Image(), uplImg = new Image(), 
 uplSrc = 'https://www.futwiz.com/assets/img/fifa21/faces/20801.png';
 
@@ -117,13 +117,20 @@ function drawCard()
 		    ctx.fillText(rating.value, 615, 151);
 		    
 		    ctx.fillStyle = posColor();
-		    ctx.fillRect(552, 250, 144, 86);
+		    ctx.fillRect(554, 250, 142, 86);
 		    var cnt = new Image();
-		    cnt.src = 'https://flagcdn.com/w320/'+country.value+'.png';
+		    if(country.value == 'eng')
+		    			cnt.src = 'https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png';
+		    else if(country.value == 'scot')
+		    			cnt.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/250px-Flag_of_Scotland.svg.png';
+		    else if(country.value == 'wales')
+		    			cnt.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/250px-Flag_of_Wales.svg.png';
+		    else	
+		                        cnt.src = 'https://flagcdn.com/w320/'+country.value+'.png';
 		    cnt.crossOrigin = 'anonymous';
 		    cnt.onload = function ()
 		    {
-		    			ctx.drawImage(cnt,552,360,144,90);
+		    			ctx.drawImage(cnt,554,356,142,90)
 		    }
 		    ctx.textAlign = 'center';
 		    ctx.font = '66px Reno';
