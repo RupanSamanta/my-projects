@@ -261,7 +261,7 @@ canvas
 .goTop:hover
 {
 			transform: scale(1.1);
-			color: rgba(255, 231, 50, 0.8);
+			box-shadow: 0 0 10px 1px var(--yellow);
 }
 footer
 {
