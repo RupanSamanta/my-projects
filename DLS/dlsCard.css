@@ -76,7 +76,7 @@ main
 main section
 {
 			width: 280px;
-			background: rgba(0,0,0,0.2);
+			background: transparent;
 			backdrop-filter: blur(2px);
 			margin: 0 auto 10vw auto;
 			display: flex;
@@ -85,7 +85,8 @@ main section
 			flex-direction: column;
 			border-radius: 10px;
 			padding: 5px 20px;
-			box-shadow: 0 0 15px 0.5px rgba(255, 231, 50, 0.4);
+			box-shadow: 0 0 10px 0.2px rgba(0,0,0,0.8);
+			border: solid 0.1px var(--yellow);
 }
 main section:first-child
 {
@@ -288,4 +289,19 @@ a,a:active,a:hover,a:link,a:visited
 {
 			text-decoration: none;
 			width: fit-content;
+}
+.updates
+{
+			width: 75vw;
+			background: rgba(255,255,255,0.2);
+			margin: 0 auto 10vw auto;
+			border: dashed 2px var(--yellow);
+			color: gainsboro;
+			padding: 10px 0;
+			border-radius: 10px;
+			box-shadow: 0 0 10px 0.2px rgba(0,0,0,0.8);
+}
+.updates li
+{
+			margin: 10px auto;
 }
