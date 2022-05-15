@@ -306,4 +306,16 @@ a,a:active,a:hover,a:link,a:visited
 .updates li
 {
 			margin: 10px auto;
+			list-style: none;
+}
+.updates ul
+{
+			padding: 0;
+}
+.updates li:before
+{
+  content: "\f1e3";
+  font-family: FontAwesome;
+  padding: 0.7em;
+  margin-left: 10px;
 }
