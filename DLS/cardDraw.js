@@ -225,7 +225,7 @@ function posColor()
 			else if(pv == 'lb' || pv == 'cb' || pv == 'rb')
 						pc = green;
 			else if(pv == 'gk')
-						pc = blue;
+						pc = rblue;
 			return pc;
 }
 function readFile()
