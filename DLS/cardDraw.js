@@ -36,6 +36,10 @@ sblue = '#19dab2', rblue = '#4d8af2',
 grey = '#777a85', white = '#ffffff',
 black = '#000', font = '58px Reno',
 statsCoord = [[935,292], [935,427], [935,562], [935,697], [1217,292], [1217,427], [1217,562], [1217,697]],
+attrCoord = [[795,292], [1077,292], [795,427], [1077,427], [795,562], [1077,562], [795,697],  [1077,697]],
+fGK = ['SPE', 'TAC', 'ACC', 'PAS', 'CON', 'GKH', 'STR', 'GKR'],
+fOT = ['SPE', 'STR', 'ACC', 'TAC', 'STA', 'PAS', 'CON', 'SHO'],
+span = document.querySelectorAll('.stats span'),
 horiPos, vertPos, img = new Image(), uplImg = new Image(), 
 uplSrc = 'https://www.futwiz.com/assets/img/fifa21/faces/20801.png';
 
@@ -152,8 +156,29 @@ function drawCard()
 		    ctx.fillStyle = black;
 		    ctx.fillText(foot.value[0], 1185, 159);
 		    
+                    attrName();
 		    writeAttributes();
 			}
+}
+function attrName()
+{
+			ctx.textAlign = 'center';
+			if(position.value == 'GK')
+						for(let i=0; i<fGK.length; i++)
+						{
+									ctx.fillStyle = '#000';
+									ctx.font = '62px Reno';
+		    			ctx.fillText(fGK[i], attrCoord[i][0], attrCoord[i][1]);
+		    			span[i].innerText = fGK[i];
+						}
+			else
+						for(let i=0; i<fOT.length; i++)
+						{
+									ctx.fillStyle = '#000';
+									ctx.font = '62px Reno';
+		    			ctx.fillText(fOT[i], attrCoord[i][0], attrCoord[i][1]);
+		    			span[i].innerText = fOT[i];
+						}
 }
 function writeAttributes()
 {
