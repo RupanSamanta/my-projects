@@ -274,6 +274,8 @@ footer
 			color: gainsboro;
 			text-align: left;
 			font-size: 20px;
+                        border-top: solid 0.5vw var(--yellow);
+		        box-shadow: 0 0 20px 0.5px var(--yellow);
 }
 footer i
 {
