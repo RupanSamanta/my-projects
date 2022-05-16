@@ -235,6 +235,7 @@ select:focus
 .download:hover
 {
 			background: rgba(255, 231, 50, 0.8);
+                        color: black;
 }
 canvas
 {
