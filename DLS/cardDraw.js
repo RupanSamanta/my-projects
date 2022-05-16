@@ -39,10 +39,10 @@ statsCoord = [[935,292], [935,427], [935,562], [935,697], [1217,292], [1217,427]
 attrCoord = [[795,292], [1077,292], [795,427], [1077,427], [795,562], [1077,562], [795,697],  [1077,697]],
 fGK = ['SPE', 'TAC', 'ACC', 'PAS', 'CON', 'GKH', 'STR', 'GKR'],
 fOT = ['SPE', 'STR', 'ACC', 'TAC', 'STA', 'PAS', 'CON', 'SHO'],
-span = document.querySelectorAll('.stats span'),
+span = document.querySelectorAll('.stats span'), urls = document.getElementById('urls'),
 horiPos, vertPos, img = new Image(), uplImg = new Image(), 
 uplSrc = 'https://www.futwiz.com/assets/img/fifa21/faces/20801.png';
-
+urls.value = uplSrc;
 /* selecting all necessary elements */
 
 /* upload image */
@@ -73,6 +73,11 @@ uploadImg.onclick = function ()
 			down.onclick = function ()
 			{
 			      if(confirm('Confirm Download')) download ();
+			}
+                        urls.oninput = function ()
+			{
+						uplSrc = urls.value;
+						drawCard();
 			}
 			for (let i = 0; i < attr.length; i++)
 			{
@@ -116,7 +121,7 @@ function drawCard()
 		    ctx.fillStyle = rateColor();
 		    ctx.fill();
 		    
-		    ctx.font = '89px Reno';
+		    ctx.font = '80px Reno';
 		    ctx.fillStyle = white;
 		    ctx.fillText(rating.value, 615, 151);
 		    
@@ -196,6 +201,17 @@ function writeAttributes()
 						else if(v > 89)
 									ctx.fillStyle = sblue;
 						ctx.font = '62px Reno';
+                                                if(v >= 100)
+						{
+									ctx.save();									
+									ctx.translate(statsCoord[i][0], statsCoord[i][1]);
+									ctx.save();
+									ctx.scale(0.85, 1);
+									ctx.fillText(v, 0, 0);
+									ctx.restore();
+									ctx.restore();
+						}
+						else
 		    ctx.fillText(v, statsCoord[i][0], statsCoord[i][1]);
 			}
 }
