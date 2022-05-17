@@ -8,7 +8,7 @@
 			src: url('https://rupansamanta.github.io/my-projects/DLS/Renogare-Regular.otf');
 }
 *{
-			transition-duration: 0.1s;
+			transition-duration: 0.3s;
 	  text-transform: none;
 	  border: solid 0px blue;
 }
