@@ -320,3 +320,42 @@ a,a:active,a:hover,a:link,a:visited
   padding: 0.7em;
   margin-left: 10px;
 }
+.loader
+{
+			width: 22vw;
+			height: 22vw;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: solid 1vw gainsboro;
+			border-right-color: transparent;
+			animation: load1 2s infinite linear;
+			border-radius: 50%;
+}
+.loader:nth-child(2)
+{
+			width: 28vw;
+			height: 28vw;
+			animation-duration: 3s;
+			animation-direction: reverse;
+}
+#loader
+{
+   position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: gainsboro;
+			font-size: 18vw;
+			animation: load2 2s infinite linear;
+}
+@keyframes load2
+{
+			to{transform: translate(-50%, -50%) rotateZ(-360deg)}
+}
+
+@keyframes load1
+{
+			to{transform: translate(-50%, -50%) rotateZ(360deg)}
+}
