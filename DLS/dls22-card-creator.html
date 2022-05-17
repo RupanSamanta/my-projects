@@ -12,6 +12,9 @@
     <title>DLS 22 Card Creator</title>
 </head>
 <body>
+<div class="loader"></div><div class="loader"></div>
+			<i class="fa-solid fa-futbol" id="loader"></i>
+			<div class="wrapper">
 			<header>
 						<section class="dls-logo"></section>
 						<section class="head-logo">
@@ -96,7 +99,37 @@
 						</div>
 						©rupan
 			</footer>
+</div>
 </body>
+<script>
+			var load1 = document.querySelectorAll('.loader'),
+			load2 = document.querySelector('#loader'),
+			wrap = document.querySelector('.wrapper');
+
+			wrap.style.opacity = 0;
+			wrap.style.display = 'none';
+
+		 document.onreadystatechange = function ()
+		  {		
+		  		if(document.readyState === 'complete') 
+						{	
+									setTimeout(function()
+									{																					
+									load1[0].style.opacity = 0;						
+	  						load2.style.opacity = 0;
+	  						load1[1].style.opacity = 0;
+	  						wrap.style.display = 'block';
+	  					 },2000);
+	  						setTimeout(function()
+	  						{	  								  						
+									load1[1].style.display = 'none';
+									load1[0].style.display = 'none';
+									load2.style.display = 'none';
+									wrap.style.opacity = 1;
+								 },5000);
+						}
+				}
+</script>
 <script src="https://rupansamanta.github.io/my-projects/DLS/dlsCard.js"></script>
 <script src="https://rupansamanta.github.io/my-projects/DLS/cardDraw.js"></script>
 </html>
