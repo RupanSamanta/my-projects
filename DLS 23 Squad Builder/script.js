@@ -154,7 +154,7 @@ function drawCard(cvn, obj) {
    else
       type = "Legendary";
    card_img.src = "assests/images/cards/"+type+".png";
-   card_img.crossorigin = 'anonymous';
+   card_img.crossOrigin = 'anonymous';
    card_img.onload = ()=> {
       ctx.drawImage(card_img, 0, 0, width, height);
       
@@ -198,7 +198,7 @@ function drawCard(cvn, obj) {
       
       let flag = new Image();
       flag.src = `assests/images/flags/${obj.Nationality}.png`;
-      flag.crossorigin = 'anonymous';
+      flag.crossOrigin = 'anonymous';
       flag.onload = ()=> {
         let rat = ratio(flag.width, flag.height);
         ctx.drawImage(flag, 907, 590, 170, rat[1]/rat[0]*170);
@@ -227,7 +227,7 @@ function drawCard(cvn, obj) {
       else
         ctx.fillText(player_name.toUpperCase(),550,1200);
       player_img.src = `https://raw.githubusercontent.com/Rupan17/DLS-Files/main/playerphotos/DLS23/${obj["Player ID"]}.png`;
-      player_img.crossorigin = 'anonymous';
+      player_img.crossOrigin = 'anonymous';
       player_img.onload = ()=> {
         let rat = ratio(player_img.width, player_img.height);
         ctx.drawImage(player_img, 70, 220, rat[0]/rat[1]*800, 800);
