@@ -315,15 +315,16 @@ function updateRatings() {
        nan = 0, ovr = [[0,0],[0,0],[0,0]];
    $.each(btn, (i)=> {
       team_value += Number(btn[i].value);
-      if (!btn[i].name.length == 0) {
-         let num = Number(btn[i].name);
+      let btn_name = btn[i].name;
+      if (!btn_name.length == 0) {
+         let num = Number(btn[i].id.split('-')[1]);
          team_rating += num;
          nan++;
-         if (btn[i].name == "attack") {
+         if (btn_name == "attack") {
             ovr[0][0] += num;
             ovr[0][1]++;
          }
-         else if (btn[i].name == "midfield") {
+         else if (btn_name == "midfield") {
             ovr[1][0] += num;
             ovr[1][1]++;
          }
