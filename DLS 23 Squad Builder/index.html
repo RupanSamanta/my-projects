@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111442">
+  <title>DLS 23 Squad Builder</title>
+  <script src="data/jquery-3.6.4.min.js"></script>
+  <script src="https://kit.fontawesome.com/82872eeccd.js" crossorigin="anonymous"></script>
+   <script src="data/playerData.js"></script>
+   <script src="data/formation.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <span id="dls-logo"></span>
+    </div>
+  </header>
+  <main>
+    <div class="top-header">Squad Builder</div>
+    <section id="pitch"></section>
+    <section>
+      <div class="box">
+        <span>Team Rating - </span>
+        <span id="team-rating">0</span>
+        <p class="hr"></p>
+        <span>Team Value - <img src="assests/images/coin.png" id="coin"></span>
+        <span id="team-value">0</span>
+      </div>
+      <div class="box">
+        <label>
+          <span>Formation</span>
+          <select name="Formation" id="formation"></select>
+        </label>
+      </div>
+      <div class="box">
+         <label class="ovr">
+            <div>
+               <span>Attack</span>
+               <span id="atk">0</span>
+            </div>
+            <div class="progress">
+               <div class="bar" id="attack" style="width: 0"></div>
+            </div>
+         </label>
+         <label class="ovr">
+            <div>
+               <span>Midfield</span>
+               <span id="mid">0</span>
+            </div>
+            <div class="progress">
+               <div class="bar" id="midfield" style="width: 0"></div>
+            </div>
+         </label>
+         <label class="ovr">
+            <div>
+               <span>Defense</span>
+               <span id="def">0</span>
+            </div>
+            <div class="progress">
+               <div class="bar" id="defense" style="width: 0"></div>
+            </div>
+         </label>
+      </div>
+    </section>
+    <section id="add-player-wrapper">
+      <div id="add-player-box">
+        <div id="top">
+           <span>Add Player</span>
+           <button id="close">
+              <i class="fa-solid fa-xmark"></i>
+           </button>
+        </div>
+        <div id="search-box">
+           <label for="search-bar">
+              <span>Search Player</span>
+              <span id="search-bar-button">
+                 <input type="search" name="Search Player" id="search-bar" value="" placeholder="Search Player"/>
+                  <button id="clear">
+                     <i class="fa-solid fa-xmark"></i>
+                  </button>
+              </span>
+           </label>
+           <label for="search">
+              <button class="box-button" id="search">
+                 <i class="fa-solid fa-magnifying-glass"></i>
+                 <span>Search</span>
+              </button>
+           </label>
+        </div>
+        <div id="search-result"></div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
