@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Wish Card</title>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  *{
+      transition: all ease 1s;
+      font-family: 'Pacifico', cursive;
+  }
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #312265;
+}
+
+.card {
+    max-width: 250px;
+    background-color: ;
+    border-radius: 10px;
+    text-align: center;
+    padding: 25px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+h1 {
+    color: black;
+}
+
+img {
+    max-width: calc(100% - 100px);
+}
+#playMusic {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,1);
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: 300;
+    color: #74cf00;
+    animation: col 1.5s ease-in-out 1;
+    z-index: 99999;
+}
+@keyframes col {
+    0% {color: transparent}
+    70% {color: transparent;}
+}
+canvas {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 999;
+}
+    </style>
+</head>
+<body>
+    <div id="playMusic">Let’s Wish for You</div>
+    <div class="card">
+        <h1>Happy Birthday!</h1>
+        <p>Wishing you a fantastic day filled with joy and happiness.</p>
+        <img src="https://www.freepnglogos.com/uploads/balloons-png/balloons-png-balloon-png-transparent-balloon-images-pluspng-23.png" alt="Balloons">
+    </div>
+    <script>
+    const colors = [
+        '#5000ff', '#b900ff', '#ff00f1', '#ff001f',
+        '#ff4900', '#ff9d00', '#fff100', '#a4ff00',
+        '#26ff00', '#00ff57', '#00ffd5', '#0081ff',
+        '#0057ff', '#7b55ff'
+    ],
+    card = document.querySelectorAll('.card')[0],
+    playMusic = document.getElementById('playMusic');
+    
+    playMusic.addEventListener('click', function () {
+  
+      setTimeout(()=> { 
+          playMusic.style.color = "transparent";
+          setTimeout(()=> {
+              playMusic.style.opacity = 0;
+          }, 1000);
+      }, 1000);
+    var audio = new Audio('https://ia800802.us.archive.org/7/items/HappyBirthdaySongInEnglish/Happy-Birthday-Song-In-English%20%281%29.mp3');
+    audio.play();
+});
+    let i = 0;
+    setInterval(()=> {
+        card.style.backgroundColor = colors[i];
+        card.style.boxShadow = '0 10px 50px 5px ' + colors[i];
+        if (i == colors.length - 1)
+            i = 0;
+        else i++;
+    }, 1000);
+    </script>
+</body>
+</html>
