@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#020213">
+    <title>Class XII Program List</title>
+    <link rel="stylesheet" href="XII Program.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+    transition: all 0.35s ease;
+}
+body {
+    width: 100vw;
+    margin: 0;
+    background: url("https://raw.githubusercontent.com/RupanSamanta/my-projects/main/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+#table {
+    width: calc(100vw - 20px);
+    margin: 30px auto;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 10px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#tr:hover {
+    background: rgba(255,255,255,0.15);
+}
+#td {
+    width: 16%;
+    font-size: 12px;
+    text-align: center;
+    color: darkgrey;
+    padding: 10px 5px;
+}
+#td:first-child {
+    width: 6%;
+}
+#td:nth-child(2) {
+    width: 38%;
+}
+#tr:first-child #td {
+    border-bottom: solid .1px darkgray;
+    font-weight: 700;
+}
+input {
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin: auto;
+}
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.25px solid darkgrey;
+  border-radius: 5px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: darkgray;
+}
+input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    color: black;
+}
+
+</style>
+<body></body>
+<script>
+    const table = elem('div');
+let dataList = [];
+
+document.body.onload = ()=> {
+    if (getData() == null)
+        setDatalist();
+    else 
+        setData();
+    setTableHeading();
+    setTableData();
+    table.id = 'table';
+    document.body.appendChild(table);
+}
+
+function setTableHeading() {
+    let tr = elem('div');
+    ['Assg No.', 'Description', 
+     'Code', 'Output', 'Algo',
+     'Variable Desc.'].forEach((v)=> {
+            td = elem('div');
+            td.innerHTML = v;
+            td.id = 'td';
+            tr.appendChild(td);
+     });
+     tr.id = 'tr';
+     table.appendChild(tr);
+}
+
+function setTableData() {
+    dataList.forEach((obj, ind)=> {
+        let tr = elem('div'),
+            td = elem('div');
+        td.innerHTML = ind + 1;
+        td.id = 'td';
+        tr.appendChild(td);
+        td = elem('div');
+        td.id = 'td';
+        td.innerHTML = obj.name;
+        tr.appendChild(td);
+        obj.status.forEach((v, i)=> {
+            td = elem('div');
+            let inp = elem('input');
+            inp.setAttribute('type', 'checkbox');
+            inp.setAttribute('data-col-index', ind);
+            inp.setAttribute('data-row-index', i);
+            inp.checked = v;
+            inp.onclick = ()=> {
+                dataList[ind].status[i] = inp.checked;
+                console.log(ind, i)
+                saveData();
+            }
+            td.appendChild(inp);
+            td.id = 'td';
+            tr.appendChild(td);
+        });
+        tr.id = 'tr';
+        table.appendChild(tr);
+    });
+}
+function elem(e) {
+    return document.createElement(e);
+}
+
+function saveData() {
+    localStorage.setItem('datalist', JSON.stringify(dataList));
+}
+function getData() {
+    return JSON.parse(localStorage.getItem('datalist'));
+}
+function setData() {
+    dataList = getData();
+}
+
+function setDatalist() {
+    ["Disarium Number",
+    "Goldbach Number",
+    "Strontio Number",
+    "Fascinating Number",
+    "Kaprekar Number",
+    "Date Program 1",
+    "Date Program 2",
+    "Transpose Matrix",
+    "Diagonal Matrix",
+    "Matrix Difference",
+    "Matrix Multiplication",
+    "Mirror Matrix",
+    "String Program 1",
+    "String Program 2",
+    "String Program 3",
+    "StringTokenizer 1",
+    "StringTokenizer 2",
+    "Happy Number",
+    "Fibonacci Series",
+    "Palindrome String",
+    "Single Inheritance",
+    "Multilevel Inheritance",
+    "Hierarchical Inheritance",
+    "Stack",
+    "Linear Queue"
+].forEach((v)=> {
+    dataList.push({
+        name: v,
+        status: [true, true, false, false]
+    });
+});
+    saveData();
+}
+
+</script>
+</html>
+  
